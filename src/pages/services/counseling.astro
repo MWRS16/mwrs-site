@@ -1,0 +1,198 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout
+  title="Counseling Services in North Idaho | MWRS"
+  description="Individual, couples, and family counseling in Coeur d’Alene, Ponderay, Priest River, and Oldtown, with telehealth available anywhere in Idaho."
+>
+  <main class="subpage">
+    <!-- Hero -->
+    <section class="subpage-hero">
+      <div class="subpage-hero-inner">
+        <h1>Counseling Services</h1>
+        <p>
+          Counseling at Mental Wellness &amp; Relationship Services (MWRS) is
+          calm, steady, and human-sized. We work with adults, teens, couples,
+          and families across North Idaho to sort through what’s happening,
+          make sense of patterns, and move toward practical next steps.
+        </p>
+        <a href="/contact-us" class="subpage-btn">
+          Start counseling
+        </a>
+      </div>
+    </section>
+
+    <!-- Light SEO body -->
+    <section class="subpage-section">
+      <div class="subpage-inner">
+        <h2>Counseling that meets you where you are</h2>
+        <p>
+          People come to counseling for many reasons: a specific event, a long
+          stretch of feeling low or on edge, a relationship that feels stuck, or
+          a general sense that something has to change. Sessions are
+          collaborative and conversational—you set the pace, and your counselor
+          helps you notice patterns and explore what might actually help.
+        </p>
+
+        <p>
+          We offer individual, couples, and family counseling, with options for
+          in-person visits in Coeur d’Alene, Ponderay, Priest River, and
+          Oldtown, as well as telehealth for Idaho residents.
+        </p>
+
+        <h3>Common reasons people work with us</h3>
+        <ul>
+          <li>Anxiety, panic, or constant “what if” thinking</li>
+          <li>Depression, low motivation, or emotional numbness</li>
+          <li>Relationship or marriage strain</li>
+          <li>Parenting stress and family conflict</li>
+          <li>Trauma, grief, or difficult life transitions</li>
+          <li>Burnout, overwhelm, or feeling “stuck”</li>
+        </ul>
+
+        <p>
+          You don’t need perfect words or a polished story before you reach out.
+          A simple “here’s what’s been going on” is enough to get started.
+        </p>
+      </div>
+    </section>
+
+    <!-- Bottom CTA -->
+    <section class="subpage-section subpage-cta">
+      <div class="subpage-inner">
+        <h2>Ready to take the next step?</h2>
+        <p>
+          Share a bit about what you’re looking for, and our team will help you
+          get matched with a counselor and location that fit your situation.
+        </p>
+        <a href="/contact-us" class="subpage-btn">
+          Start counseling
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <style>
+    .subpage {
+      background: #f9fafb;
+      min-height: 100vh;
+    }
+
+    /* Hero */
+    .subpage-hero {
+      padding: 10rem 1.5rem 3rem;
+      background: #fbfbf9;
+      border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+    }
+
+    .subpage-hero-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .subpage-hero h1 {
+      font-family: "Belleza", sans-serif;
+      font-size: clamp(2rem, 3vw, 2.6rem);
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin: 0 0 1rem;
+      color: #111827;
+    }
+
+    .subpage-hero p {
+      margin: 0 0 1.6rem;
+      font-size: 1rem;
+      line-height: 1.8;
+      color: #4b5563;
+    }
+
+    /* Outline button (same top & bottom) */
+    .subpage-btn {
+      display: inline-block;
+      padding: 0.85rem 1.9rem;
+      border-radius: 999px;
+      border: 1px solid #0f172a;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      text-decoration: none;
+      background: #ffffff;
+      color: #0f172a;
+      box-shadow: 0 6px 16px rgba(15, 23, 42, 0.12);
+      transition:
+        background 0.15s ease,
+        color 0.15s ease,
+        box-shadow 0.15s ease,
+        transform 0.15s ease;
+    }
+
+    .subpage-btn:hover {
+      background: #0f172a;
+      color: #ffffff;
+      transform: translateY(-1px);
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.2);
+    }
+
+    /* Body sections */
+    .subpage-section {
+      padding: 3.0rem 1.5rem 3.2rem;
+      background: #e5e9f3;
+      border-top: 1px solid rgba(15, 23, 42, 0.03);
+    }
+
+    .subpage-cta {
+      background: #fbfbf9;
+      text-align: center;
+      border-top: 1px solid rgba(15, 23, 42, 0.06);
+    }
+
+    .subpage-inner {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .subpage-section h2 {
+      font-family: "Belleza", sans-serif;
+      font-size: 1.2rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin: 0 0 1rem;
+      color: #111827;
+    }
+
+    .subpage-section h3 {
+      margin: 1.1rem 0 0.6rem;
+      font-size: 0.98rem;
+      font-weight: 500;
+      color: #111827;
+    }
+
+    .subpage-section p {
+      margin: 0 0 0.9rem;
+      font-size: 0.96rem;
+      line-height: 1.8;
+      color: #4b5563;
+    }
+
+    .subpage-section ul {
+      margin: 0 0 1rem;
+      padding-left: 1.1rem;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #4b5563;
+    }
+
+    .subpage-section li + li {
+      margin-top: 0.2rem;
+    }
+
+    .subpage-cta p {
+      max-width: 620px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+  </style>
+</Layout>

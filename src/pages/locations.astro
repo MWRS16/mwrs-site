@@ -1,0 +1,250 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+  title="Counseling & Medication Locations in North Idaho | MWRS"
+  description="Find MWRS counseling and medication management locations in Coeur d’Alene, Ponderay, Priest River, and Oldtown, with telehealth services available to clients across Idaho."
+>
+  <main class="locations-page">
+    <!-- ========================================================= -->
+    <!--  TOP TELEHEALTH FEATURE                                   -->
+    <!-- ========================================================= -->
+    <section class="telehealth-feature">
+      <div class="telehealth-inner">
+        <h1>Telehealth Across Idaho</h1>
+        <p>
+          MWRS offers counseling and psychiatric medication management to clients
+          anywhere in Idaho. Meet with a counselor or prescriber from the comfort
+          of your home — including Boise, Meridian, Twin Falls, Idaho Falls, and
+          rural communities.
+        </p>
+
+        <a href="/telehealth" class="telehealth-cta">
+          Start telehealth care
+        </a>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- NORTH IDAHO LOCATIONS                                     -->
+    <!-- ========================================================= -->
+    <section class="locations-physical">
+      <div class="locations-inner">
+        <h2 class="locations-heading">In-Person Locations in North Idaho</h2>
+
+        <div class="locations-grid">
+          <!-- CDA -->
+          <article class="location-card">
+            <h3 class="location-title">Coeur d’Alene</h3>
+            <p class="location-address">
+              1110 W Park Place, Suite 303<br />
+              Coeur d’Alene, ID 83814
+            </p>
+            <p class="location-services">
+              Counseling · Medication Management · Telehealth
+            </p>
+            <a href="/locations/coeur-d-alene" class="location-link">
+              Learn more about Coeur d’Alene →
+            </a>
+          </article>
+
+          <!-- Ponderay -->
+          <article class="location-card">
+            <h3 class="location-title">Ponderay</h3>
+            <p class="location-address">
+              30410 Highway 200<br />
+              Ponderay, ID 83852
+            </p>
+            <p class="location-services">
+              Counseling · Medication Management · Telehealth
+            </p>
+            <a href="/locations/ponderay" class="location-link">
+              Learn more about Ponderay →
+            </a>
+          </article>
+
+          <!-- Priest River -->
+          <article class="location-card">
+            <h3 class="location-title">Priest River</h3>
+            <p class="location-address">
+              50 Main Street<br />
+              Priest River, ID 83856
+            </p>
+            <p class="location-services">
+              Counseling · Telehealth
+            </p>
+            <a href="/locations/priest-river" class="location-link">
+              Learn more about Priest River →
+            </a>
+          </article>
+
+          <!-- Oldtown -->
+          <article class="location-card">
+            <h3 class="location-title">Oldtown</h3>
+            <p class="location-address">
+              251 Jacks Place<br />
+              Oldtown, ID 83822
+            </p>
+            <p class="location-services">
+              Counseling · Equine-Assisted Therapy
+            </p>
+            <a href="/locations/oldtown" class="location-link">
+              Learn more about Oldtown →
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <style>
+    .locations-page {
+      background: #f9fafb;
+      min-height: 100vh;
+    }
+
+    /* ========================================================= */
+    /* TELEHEALTH FEATURE                                         */
+    /* ========================================================= */
+    .telehealth-feature {
+      padding: 10rem 1.5rem 4rem;
+      background: #fbfbf9;
+           background-image: url("/images/paper-texture.png");
+      background-repeat: repeat; /* tile it */
+      background-size: 420px 420px; /* tweak smaller/larger as you like */
+      border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+    }
+
+    .telehealth-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .telehealth-feature h1 {
+      font-family: "Belleza", sans-serif;
+      font-size: clamp(2rem, 3vw, 2.8rem);
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin: 0 0 1rem;
+      color: #111827;
+    }
+
+    .telehealth-feature p {
+      margin: 0 0 1.75rem;
+      font-size: 1rem;
+      line-height: 1.7;
+      color: #4b5563;
+    }
+
+    .telehealth-cta {
+      display: inline-block;
+      padding: 0.95rem 2rem;
+      border-radius: 999px;
+      border: 1px solid #0f172a;
+      background: #ffffff;
+      color: #0f172a;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-decoration: none;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      box-shadow: 0 6px 16px rgba(15, 23, 42, 0.12);
+      transition: all 0.2s ease;
+    }
+
+    .telehealth-cta:hover {
+      background: #0f172a;
+      color: #ffffff;
+      transform: translateY(-1px);
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.2);
+    }
+
+    /* ========================================================= */
+    /* PHYSICAL LOCATIONS                                         */
+    /* ========================================================= */
+    .locations-physical {
+      padding: 3.5rem 1.5rem 4rem;
+      background: #ffffff;
+            background-image: url("/images/paper-texture.png");
+      background-repeat: repeat; /* tile it */
+      background-size: 420px 420px; /* tweak smaller/larger as you like */
+      border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+    }
+
+    .locations-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .locations-heading {
+      text-align: center;
+      font-family: "Belleza", sans-serif;
+      font-size: 1.35rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin: 0 0 2.2rem;
+      color: #111827;
+    }
+
+    .locations-grid {
+      display: grid;
+      gap: 2rem;
+    }
+
+    @media (min-width: 900px) {
+      .locations-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    .location-card {
+      background: #ffffff;
+      border-radius: 22px;
+      padding: 2rem 1.8rem;
+      border: 1px solid rgba(15, 23, 42, 0.08);
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+    }
+
+    .location-title {
+      font-family: "Belleza", sans-serif;
+      font-size: 1.35rem;
+      letter-spacing: 0.04em;
+      margin: 0;
+      color: #111827;
+    }
+
+    .location-address {
+      margin: 0;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #4b5563;
+    }
+
+    .location-services {
+      margin: 0.2rem 0 0;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #0f172a;
+      font-weight: 600;
+    }
+
+    .location-link {
+      margin-top: 0.4rem;
+      font-size: 0.86rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      text-decoration: none;
+      color: #111827;
+    }
+
+    .location-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</Layout>

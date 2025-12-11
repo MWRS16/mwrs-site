@@ -1,0 +1,247 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<!-- Astro -->
+<Layout title="About Mental Wellness & Relationship Services | MWRS">
+    <main class="subpage">
+        <!-- Hero -->
+        <section class="subpage-hero">
+            <div class="subpage-hero-inner">
+                <h1>About MWRS</h1>
+                <p>
+                    Mental Wellness &amp; Relationship Services (MWRS) is a
+                    counseling and medication management practice serving
+                    individuals, couples, and families across North Idaho. Our
+                    team includes counselors, social workers, marriage and
+                    family therapists, and nurse practitioners working together
+                    to provide steady, human-sized mental health care.
+                </p>
+                <a href="/contact-us" class="subpage-btn">
+                    Start counseling or medication care
+                </a>
+            </div>
+        </section>
+
+        <!-- Light SEO body -->
+        <section class="subpage-section">
+            <div class="subpage-inner">
+                <h2>Who we are</h2>
+                <p>
+                    MWRS is a locally rooted mental health practice with offices
+                    in Coeur d’Alene, Ponderay, Priest River, and Oldtown,
+                    Idaho, along with telehealth options for residents across
+                    the state. We focus on practical, relationship-centered care
+                    that feels calm, clear, and workable in real life.
+                </p>
+                <p>
+                    Our clinicians draw from approaches such as CBT, EMDR, IFS,
+                    attachment-based work, somatic and trauma-informed care, and
+                    skills-based therapies. Underneath the techniques, the core
+                    of our work is relationship, safety, and clear next steps.
+                </p>
+
+                <h3>Who we serve</h3>
+                <p>
+                    We work with adults, teens, and families navigating anxiety,
+                    depression, trauma, relationship strain, grief, life
+                    transitions, and the everyday weight of being human. Some
+                    people come in with a very specific concern; others are
+                    simply looking for a steady place to sort things out over
+                    time.
+                </p>
+
+                <ul>
+                    <li>Individual counseling for adults and teens</li>
+                    <li>Couples and marriage counseling</li>
+                    <li>Family counseling</li>
+                    <li>Equine-assisted therapy in Oldtown</li>
+                    <li>
+                        Medication management for Idaho and Washington residents
+                    </li>
+                </ul>
+
+                <h3>Access to care</h3>
+                <p>
+                    MWRS works with a wide range of insurance plans and offers a
+                    Sliding Fee Discount Program based on household size and
+                    income. No one is denied care due to an inability to pay.
+                </p>
+                <p>
+                    You can learn more in our
+                    <a href="/services#sliding-fee"
+                        >Sliding Fee Discount Program</a
+                    >
+                    section or by submitting a request through our intake form.
+                </p>
+            </div>
+        </section>
+
+        <!-- Bottom CTA -->
+        <section class="subpage-section subpage-cta">
+            <div class="subpage-inner">
+                <h2>Ready to take the next step?</h2>
+                <p>
+                    Whether you’re certain about what you need or just starting
+                    to explore options, we’ll meet you where you are and walk
+                    through it together.
+                </p>
+                <a href="/contact-us" class="subpage-btn">
+                    Start counseling or medication care
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <style>
+        .subpage {
+            background: #f9fafb;
+            min-height: 100vh;
+        }
+
+        /* Hero */
+        .subpage-hero {
+            padding: 10rem 1.5rem 3rem;
+            background: #fbfbf9;
+                  background-image: url("/images/paper-texture.png");
+      background-repeat: repeat; /* tile it */
+      background-size: 420px 420px; /* tweak smaller/larger as you like */
+      border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+
+
+        }
+
+        .subpage-hero-inner {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .subpage-hero h1 {
+            font-family: "Belleza", sans-serif;
+            font-size: clamp(2rem, 3vw, 2.6rem);
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            margin: 0 0 1rem;
+            color: #111827;
+        }
+
+        .subpage-hero p {
+            margin: 0 0 1.6rem;
+            font-size: 1rem;
+            line-height: 1.8;
+            color: #4b5563;
+        }
+
+        /* Outline button (same top & bottom) */
+        .subpage-btn {
+            display: inline-block;
+            padding: 0.85rem 1.9rem;
+            border-radius: 999px;
+            border: 1px solid #0f172a;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            text-decoration: none;
+            background: #ffffff;
+            color: #0f172a;
+            box-shadow: 0 6px 16px rgba(15, 23, 42, 0.12);
+            transition:
+                background 0.15s ease,
+                color 0.15s ease,
+                box-shadow 0.15s ease,
+                transform 0.15s ease;
+        }
+
+        .subpage-btn:hover {
+            background: #0f172a;
+            color: #ffffff;
+            transform: translateY(-1px);
+            box-shadow: 0 10px 24px rgba(15, 23, 42, 0.2);
+        }
+
+        /* Body sections */
+        .subpage-section {
+            padding: 3rem 1.5rem 3.2rem;
+            background: #e5e9f3;
+                  background-image: url("/images/paper-texture.png");
+      background-repeat: repeat; /* tile it */
+      background-size: 420px 420px; /* tweak smaller/larger as you like */
+      border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+
+
+        }
+
+        .subpage-cta {
+            background: #fbfbf9;
+            text-align: center;
+            border-top: 1px solid rgba(15, 23, 42, 0.06);
+        }
+
+        .subpage-inner {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .subpage-section h2 {
+            font-family: "Belleza", sans-serif;
+            font-size: 1.2rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            margin: 0 0 1rem;
+            color: #111827;
+        }
+
+        .subpage-section h3 {
+            margin: 1.1rem 0 0.6rem;
+            font-size: 0.98rem;
+            font-weight: 500;
+            color: #111827;
+        }
+
+        .subpage-section p {
+            margin: 0 0 0.9rem;
+            font-size: 0.96rem;
+            line-height: 1.8;
+            color: #4b5563;
+        }
+
+        .subpage-section ul {
+            margin: 0 0 1rem;
+            padding-left: 1.1rem;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #4b5563;
+        }
+
+        .subpage-section li + li {
+            margin-top: 0.2rem;
+        }
+
+        .subpage-cta p {
+            max-width: 620px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Links inside body copy */
+        .subpage-section a {
+            color: #111827;
+            text-decoration: underline;
+        }
+
+        .subpage-section a:hover {
+            text-decoration: underline;
+        }
+        /* Remove underline from ALL subpage buttons */
+        .subpage-btn,
+        .subpage-btn:link,
+        .subpage-btn:visited {
+            text-decoration: none !important;
+        }
+        /* Secondary (outline) button hover — force white text */
+        .subpage-btn:hover {
+            color: #ffffff !important;
+        }
+    </style>
+</Layout>

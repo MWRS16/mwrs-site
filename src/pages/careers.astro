@@ -1,0 +1,436 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+  title="Careers at MWRS | Mental Wellness & Relationship Services"
+  description="Learn about careers at Mental Wellness & Relationship Services (MWRS), a family-run counseling and medication management practice serving North Idaho and beyond."
+>
+  <main class="subpage">
+    <!-- Hero -->
+    <section class="subpage-hero">
+      <div class="subpage-hero-inner">
+        <h1>Careers at MWRS</h1>
+        <p>
+          Mental Wellness &amp; Relationship Services (MWRS) is a family-run,
+          multidisciplinary group practice serving North Idaho and Eastern
+          Washington. We’re building the kind of workplace we always wished
+          existed: steady, collaborative, and sustainable for clinicians.
+        </p>
+        <a
+          href="mailto:admin@mwrservices.org?subject=Career%20Interest%20at%20MWRS"
+          class="subpage-btn"
+        >
+          Email us about positions
+        </a>
+      </div>
+    </section>
+
+    <!-- Overview / why work here -->
+    <section class="subpage-section">
+      <div class="subpage-inner">
+        <h2>Why work with MWRS</h2>
+        <p>
+          MWRS is a locally owned, family-run practice with offices in Coeur
+          d’Alene, Ponderay, Priest River, and Oldtown, plus telehealth services
+          across Idaho. Our team includes counselors, social workers, marriage
+          and family therapists, and nurse practitioners working together to
+          offer thoughtful, human-sized care.
+        </p>
+        <p>
+          We focus on balance and sustainability for clinicians. That includes
+          administrative support, flexible scheduling, and intentional office
+          environments designed to feel calm and workable—not sterile or
+          improvised.
+        </p>
+
+        <h3>What we tend to look for</h3>
+        <ul>
+          <li>
+            Idaho or Washington licensed (or license-eligible) mental health
+            clinicians
+          </li>
+          <li>
+            Interest in relational work: couples, families, systems, or
+            trauma-informed care
+          </li>
+          <li>
+            Comfort with a hybrid model of in-person and telehealth sessions
+          </li>
+          <li>
+            Clinicians who value collaboration, clear communication, and healthy
+            boundaries
+          </li>
+        </ul>
+
+        <p>
+          We regularly hire for full-time and part-time therapist roles and may
+          occasionally have openings for nurse practitioners or other
+          clinical/administrative positions.
+        </p>
+      </div>
+    </section>
+
+    <!-- Simple interest form -->
+    <section class="subpage-section careers-interest" id="share-interest">
+      <div class="subpage-inner">
+        <h2>Share your interest</h2>
+        <p>
+          If you’d like to be considered for current or future openings, you can
+          share a few details below. This isn’t a formal application—just a way
+          to let us know who you are and what you’re looking for.
+        </p>
+
+        <!-- Toggle button -->
+        <button
+          type="button"
+          class="subpage-btn careers-interest-toggle"
+          data-careers-toggle
+        >
+          Share your interest
+        </button>
+
+        <!-- Hidden form -->
+        <form
+          class="careers-interest-form"
+          data-careers-form
+          hidden
+          method="POST"
+          action="https://formspree.io/f/mdkqwbng"
+        >
+          <!-- HTML -->
+          <input
+            type="hidden"
+            name="_redirect"
+            value="https://mwrservices.org/thank-you"
+          />
+          <div class="careers-field">
+            <label for="careers-name">Name</label>
+            <input id="careers-name" name="name" type="text" required />
+          </div>
+
+          <div class="careers-field">
+            <label for="careers-email">Email address</label>
+            <input
+              id="careers-email"
+              name="email"
+              type="email"
+              inputmode="email"
+              required
+            />
+          </div>
+
+          <div class="careers-field">
+            <label for="careers-license">
+              License / role (e.g., LCPC, LCSW, LMFT, LPC, LMSW, PMHNP)
+            </label>
+            <input id="careers-license" name="license_role" type="text" />
+          </div>
+
+          <div class="careers-field">
+            <label for="careers-location">
+              Preferred location or telehealth
+            </label>
+            <input
+              id="careers-location"
+              name="location_preference"
+              type="text"
+              placeholder="CDA, Ponderay, Priest River, Oldtown, Telehealth"
+            />
+          </div>
+
+          <div class="careers-field">
+            <label for="careers-message">
+              Briefly share what you’re looking for
+            </label>
+            <textarea
+              id="careers-message"
+              name="message"
+              placeholder="Hours, client focus, what draws you to MWRS."
+            ></textarea>
+          </div>
+
+          <button type="submit" class="subpage-btn careers-submit">
+            Send interest
+          </button>
+
+          <p id="careers-form-success" class="form-success" hidden>
+            Thanks for reaching out — we’ve received your interest and will
+            review it soon.
+          </p>
+          <p id="careers-form-error" class="form-error" hidden>
+            Something went wrong sending your message. Please try again or email
+            us directly.
+          </p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <style>
+    .subpage {
+      background: #f9fafb;
+      min-height: 100vh;
+    }
+
+    /* Hero (matches other subpages) */
+    .subpage-hero {
+      padding: 10rem 1.5rem 3rem;
+      background: #fbfbf9;
+            background-image: url("/images/paper-texture.png");
+      background-repeat: repeat; /* tile it */
+      background-size: 420px 420px; /* tweak smaller/larger as you like */
+      border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+    }
+
+    .subpage-hero-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .subpage-hero h1 {
+      font-family: "Belleza", sans-serif;
+      font-size: clamp(2rem, 3vw, 2.6rem);
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin: 0 0 1rem;
+      color: #111827;
+    }
+
+    .subpage-hero p {
+      margin: 0 0 1.6rem;
+      font-size: 1rem;
+      line-height: 1.8;
+      color: #4b5563;
+    }
+
+    /* Outline button */
+    .subpage-btn {
+      display: inline-block;
+      padding: 0.85rem 1.9rem;
+      border-radius: 999px;
+      border: 1px solid #0f172a;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      text-decoration: none;
+      background: #ffffff;
+      color: #0f172a;
+      box-shadow: 0 6px 16px rgba(15, 23, 42, 0.12);
+      transition:
+        background 0.15s ease,
+        color 0.15s ease,
+        box-shadow 0.15s ease,
+        transform 0.15s ease;
+    }
+
+    .subpage-btn:hover {
+      background: #0f172a;
+      color: #ffffff;
+      transform: translateY(-1px);
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.2);
+    }
+
+    /* Body sections */
+    .subpage-section {
+      padding: 3rem 1.5rem 3.2rem;
+      background: #e5e9f3;
+            background-image: url("/images/paper-texture.png");
+      background-repeat: repeat; /* tile it */
+      background-size: 420px 420px; /* tweak smaller/larger as you like */
+      border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+    }
+
+    .subpage-cta {
+      background: #fbfbf9;
+      text-align: center;
+      border-top: 1px solid rgba(15, 23, 42, 0.06);
+    }
+
+    .subpage-inner {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .subpage-section h2 {
+      font-family: "Belleza", sans-serif;
+      font-size: 1.2rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin: 0 0 1rem;
+      color: #111827;
+    }
+
+    .subpage-section h3 {
+      margin: 1.1rem 0 0.6rem;
+      font-size: 0.98rem;
+      font-weight: 500;
+      color: #111827;
+    }
+
+    .subpage-section p {
+      margin: 0 0 0.9rem;
+      font-size: 0.96rem;
+      line-height: 1.8;
+      color: #4b5563;
+    }
+
+    .subpage-section ul {
+      margin: 0 0 1rem;
+      padding-left: 1.1rem;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #4b5563;
+    }
+
+    .subpage-section li + li {
+      margin-top: 0.2rem;
+    }
+
+    .subpage-cta p {
+      max-width: 620px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Careers interest block */
+    .careers-interest {
+      background: #fbfbf9;
+    }
+
+    .careers-interest-toggle {
+      margin-top: 1.2rem;
+    }
+
+    /* Form layout */
+    .careers-interest-form {
+      margin-top: 1.4rem;
+      max-width: 520px;
+      display: grid;
+      gap: 0.9rem;
+    }
+
+    .careers-interest-form[hidden] {
+      display: none;
+    }
+
+    .careers-field {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+
+    .careers-field label {
+      font-size: 0.86rem;
+      font-weight: 500;
+      color: #111827;
+    }
+
+    /* Inputs + textarea */
+    .careers-field input,
+    .careers-field textarea {
+      border-radius: 999px;
+      border: 1px solid rgba(15, 23, 42, 0.18);
+      padding: 0.6rem 0.9rem;
+      font-size: 0.9rem;
+      font-family: inherit;
+      background: #f9fafb;
+      outline: none;
+      transition:
+        border-color 0.15s ease,
+        box-shadow 0.15s ease,
+        background 0.15s ease;
+    }
+
+    .careers-field textarea {
+      border-radius: 16px;
+      min-height: 110px;
+      resize: vertical;
+    }
+
+    .careers-field input:focus,
+    .careers-field textarea:focus {
+      border-color: #0f172a;
+      background: #ffffff;
+      box-shadow: 0 0 0 1px rgba(15, 23, 42, 0.15);
+    }
+
+    .careers-submit {
+      margin-top: 0.4rem;
+    }
+
+    /* Success / error messages */
+    .form-success {
+      margin-top: 0.75rem;
+      font-size: 0.9rem;
+      color: #166534;
+    }
+
+    .form-error {
+      margin-top: 0.75rem;
+      font-size: 0.9rem;
+      color: #b91c1c;
+    }
+  </style>
+
+  <script type="module">
+    document.addEventListener("DOMContentLoaded", () => {
+      const toggle = document.querySelector("[data-careers-toggle]");
+      const form = document.querySelector("[data-careers-form]");
+      const successMsg = document.querySelector("#careers-form-success");
+      const errorMsg = document.querySelector("#careers-form-error");
+
+      if (toggle && form) {
+        const closedLabel = "Share your interest";
+        const openLabel = "Hide interest form";
+
+        // Ensure initial label
+        toggle.textContent = closedLabel;
+
+        // Show/hide the form
+        toggle.addEventListener("click", () => {
+          const isHidden = form.hasAttribute("hidden");
+
+          if (isHidden) {
+            form.removeAttribute("hidden");
+            toggle.textContent = openLabel;
+            form.scrollIntoView({ behavior: "smooth", block: "start" });
+          } else {
+            form.setAttribute("hidden", "");
+            toggle.textContent = closedLabel;
+          }
+        });
+
+        // Handle submission via fetch to Formspree
+        form.addEventListener("submit", async (event) => {
+          event.preventDefault();
+
+          if (successMsg) successMsg.hidden = true;
+          if (errorMsg) errorMsg.hidden = true;
+
+          const formData = new FormData(form);
+
+          try {
+            const response = await fetch(form.action, {
+              method: "POST",
+              body: formData,
+              headers: {
+                Accept: "application/json",
+              },
+            });
+
+            if (response.ok) {
+              form.reset();
+              if (successMsg) successMsg.hidden = false;
+            } else {
+              if (errorMsg) errorMsg.hidden = false;
+            }
+          } catch (err) {
+            if (errorMsg) errorMsg.hidden = false;
+          }
+        });
+      }
+    });
+  </script>
+</Layout>

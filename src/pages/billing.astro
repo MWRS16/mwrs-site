@@ -1,0 +1,441 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<!-- Astro -->
+<Layout
+    title="Billing & Payments | Mental Wellness & Relationship Services"
+    description="Learn how billing, insurance, and online payments work at Mental Wellness & Relationship Services (MWRS), including how to pay your bill securely online."
+>
+    <main class="subpage">
+        <!-- Hero -->
+        <section class="subpage-hero">
+            <div class="subpage-hero-inner">
+                <h1>Billing &amp; Payments</h1>
+                <p>
+                    This page outlines how billing works at Mental Wellness
+                    &amp; Relationship Services (MWRS), including insurance,
+                    statements, and options for paying your bill online.
+                </p>
+
+                <!-- Hero CTA button -->
+                <a
+                    href="#"
+                    class="subpage-btn"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Open secure payment page
+                </a>
+
+                <p class="billing-note">
+                    <strong>Note:</strong>
+                    This payment page is hosted by our billing partner (QuickBooks/Intuit).
+                    Your payment details are processed securely through their system
+                    and are not stored on our website.
+                </p>
+            </div>
+        </section>
+
+        <!-- Body -->
+        <!-- Body -->
+<section class="subpage-section subpage-section--highlight">
+    <div class="subpage-inner">
+        <h2>How billing works</h2>
+        ...
+                <p>
+                    MWRS bills your insurance (when applicable) after each
+                    visit. Once your insurance processes the claim, they send us
+                    an Explanation of Benefits (EOB) showing what they paid,
+                    what they adjusted, and what portion is your responsibility.
+                </p>
+                <p>
+                    If you owe a copay, coinsurance, or deductible amount, you
+                    may receive a statement by mail or email. You can pay your
+                    balance online, by phone, or by mailing a check to our main
+                    office.
+                </p>
+
+                <ul>
+                    <li>Insurance is billed after each eligible visit.</li>
+                    <li>
+                        Your plan’s EOB is the final word on what they will pay
+                        and what is assigned to you.
+                    </li>
+                    <li>
+                        Statements are sent when there is a remaining balance
+                        after insurance.
+                    </li>
+                    <li>You can pay online, by phone, or by check.</li>
+                </ul>
+
+                <h2>If something on your bill doesn’t look right</h2>
+                <p>
+                    Billing can be confusing, and it’s okay to ask questions. If
+                    you have concerns about a charge, need a copy of a
+                    statement, or want to talk through options, our admin team
+                    is glad to help.
+                </p>
+            </div>
+        </section>
+
+        <!-- Bottom CTA -->
+        <section class="subpage-section subpage-cta">
+            <div class="subpage-inner">
+                <h2>Questions about a statement?</h2>
+                <!-- Billing questions inline form -->
+                <section class="billing-question-block">
+                    <p>
+                        If you have questions about a statement, charges, or
+                        payment options, you can send a quick billing message
+                        below and our admin team will follow up.
+                    </p>
+
+                    <div class="billing-center">
+                        <!-- Toggle button -->
+                        <button
+                            type="button"
+                            class="subpage-btn billing-question-toggle"
+                            data-billing-toggle
+                        >
+                            Billing questions?
+                        </button>
+
+                        <!-- Hidden inline form -->
+                        <form
+                            class="billing-question-form"
+                            data-billing-form
+                            hidden
+                            method="POST"
+                            action="https://formspree.io/f/xnnegywp"
+                        >
+                            <input
+                                type="hidden"
+                                name="subject"
+                                value="Billing questions"
+                            />
+                            <input
+                                type="hidden"
+                                name="form_name"
+                                value="Billing questions"
+                            />
+                            <input
+                                type="hidden"
+                                name="_redirect"
+                                value="https://mwrservices.org/thank-you"
+                            />
+
+                            <div class="billing-field">
+                                <label for="billing-name">Name</label>
+                                <input
+                                    id="billing-name"
+                                    name="name"
+                                    type="text"
+                                    required
+                                />
+                            </div>
+
+                            <div class="billing-field">
+                                <label for="billing-email">Email address</label>
+                                <input
+                                    id="billing-email"
+                                    name="email"
+                                    type="email"
+                                    required
+                                />
+                            </div>
+
+                            <div class="billing-field">
+                                <label for="billing-phone"
+                                    >Phone number (optional)</label
+                                >
+                                <input
+                                    id="billing-phone"
+                                    name="phone"
+                                    type="tel"
+                                />
+                            </div>
+
+                            <div class="billing-field">
+                                <label for="billing-message">
+                                    Briefly describe your billing question
+                                </label>
+                                <textarea
+                                    id="billing-message"
+                                    name="message"
+                                    rows="3"
+                                    placeholder="Statement date, amount, or what doesn’t look right."
+                                    required></textarea>
+                            </div>
+
+                            <button
+                                type="submit"
+                                class="subpage-btn billing-question-submit"
+                            >
+                                Send billing question
+                            </button>
+                        </form>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <style>
+        .subpage {
+            background: #f9fafb;
+            min-height: 100vh;
+        }
+
+        /* Hero */
+        .subpage-hero {
+            padding: 10rem 1.5rem 3rem;
+            background: #fbfbf9;
+                  background-image: url("/images/paper-texture.png");
+      background-repeat: repeat; /* tile it */
+      background-size: 420px 420px; /* tweak smaller/larger as you like */
+      border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+        }
+
+        .subpage-hero-inner {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .subpage-hero h1 {
+            font-family: "Belleza", sans-serif;
+            font-size: clamp(2rem, 3vw, 2.6rem);
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            margin: 0 0 1rem;
+            color: #111827;
+        }
+
+        .subpage-hero p {
+            margin: 0 0 1.6rem;
+            font-size: 1rem;
+            line-height: 1.8;
+            color: #4b5563;
+        }
+
+            /* Shared sections */
+    .subpage-section {
+      padding: 3rem 1.5rem 3.2rem;
+      background: #e5e9f3;
+            background-image: url("/images/paper-texture.png");
+      background-repeat: repeat; /* tile it */
+      background-size: 420px 420px; /* tweak smaller/larger as you like */
+      border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+    }
+
+    .subpage-cta {
+      background: #fbfbf9;
+      text-align: center;
+      border-top: 1px solid rgba(15, 23, 42, 0.06);
+    }
+
+  
+
+        .subpage-inner {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .subpage-section h2 {
+            font-family: "Belleza", sans-serif;
+            font-size: 1.2rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            margin: 0 0 1rem;
+            color: #111827;
+        }
+
+        .subpage-section h3 {
+            margin: 1.1rem 0 0.6rem;
+            font-size: 0.98rem;
+            font-weight: 500;
+            color: #111827;
+        }
+
+        .subpage-section p {
+            margin: 0 0 0.9rem;
+            font-size: 0.96rem;
+            line-height: 1.8;
+            color: #4b5563;
+        }
+
+        .subpage-section ul {
+            margin: 0 0 1rem;
+            padding-left: 1.1rem;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #4b5563;
+        }
+
+        .subpage-section li + li {
+            margin-top: 0.2rem;
+        }
+
+        .subpage-cta p {
+            max-width: 620px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Button */
+        .subpage-btn {
+            display: inline-block;
+            padding: 0.85rem 1.9rem;
+            border-radius: 999px;
+            border: 1px solid #0f172a;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            text-decoration: none;
+            background: #ffffff;
+            color: #0f172a;
+            box-shadow: 0 6px 16px rgba(15, 23, 42, 0.12);
+            transition:
+                background 0.15s ease,
+                color 0.15s ease,
+                box-shadow 0.15s ease,
+                transform 0.15s ease;
+        }
+        /* Extra space between billing button and note */
+        .subpage-hero .subpage-btn {
+            margin-bottom: 1.1rem;
+        }
+        .subpage-btn:hover {
+            background: #0f172a;
+            color: #ffffff;
+            transform: translateY(-1px);
+            box-shadow: 0 10px 24px rgba(15, 23, 42, 0.2);
+        }
+
+        /* Note under the billing button */
+        /* Note under the billing button */
+        .billing-note {
+            margin: 0 auto;
+            margin-top: 0.75rem; /* space below the button */
+            max-width: 640px;
+
+            /* key bits */
+            display: inline-block; /* lets it center inside the hero */
+            text-align: left; /* text reads naturally */
+
+            font-size: 0.86rem;
+            line-height: 1.6;
+            color: #4b5563;
+        }
+
+        .billing-note strong {
+            font-weight: 600;
+            color: #111827;
+        }
+        /* Billing questions inline block */
+        .billing-question-block {
+            margin-top: 1.8rem;
+        }
+
+        .billing-question-block p {
+            margin-bottom: 1.1rem;
+        }
+
+        .billing-question-toggle {
+            margin-top: 0.25rem;
+            margin-bottom: 0.9rem;
+        }
+
+        .billing-question-form {
+            max-width: 520px;
+            margin-top: 0.4rem;
+            display: grid;
+            gap: 0.85rem;
+        }
+
+        /* Hide the form when the `hidden` attribute is present */
+        .billing-question-form[hidden] {
+            display: none;
+        }
+
+        .billing-field {
+            display: flex;
+            flex-direction: column;
+            gap: 0.3rem;
+        }
+
+        .billing-field label {
+            font-size: 0.86rem;
+            font-weight: 500;
+            color: #111827;
+        }
+
+        .billing-field input,
+        .billing-field textarea {
+            border-radius: 999px;
+            border: 1px solid rgba(15, 23, 42, 0.18);
+            padding: 0.6rem 0.9rem;
+            font-size: 0.9rem;
+            font-family: inherit;
+            background: #f9fafb;
+            outline: none;
+            transition:
+                border-color 0.15s ease,
+                box-shadow 0.15s ease,
+                background 0.15s ease;
+        }
+
+        .billing-field textarea {
+            border-radius: 16px;
+            min-height: 110px;
+            resize: vertical;
+        }
+
+        .billing-field input:focus,
+        .billing-field textarea:focus {
+            border-color: #0f172a;
+            background: #ffffff;
+            box-shadow: 0 0 0 1px rgba(15, 23, 42, 0.15);
+        }
+
+        .billing-question-submit {
+            margin-top: 0.3rem;
+        }
+        .billing-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centers button AND form */
+  width: 100%;
+}
+.billing-question-form {
+  width: 100%;
+  max-width: 620px;
+}
+    </style>
+    <script type="module">
+        document.addEventListener("DOMContentLoaded", () => {
+            const toggle = document.querySelector("[data-billing-toggle]");
+            const form = document.querySelector("[data-billing-form]");
+            if (!toggle || !form) return;
+
+            const closedLabel = "Billing questions?";
+            const openLabel = "Hide billing form";
+
+            toggle.textContent = closedLabel;
+
+            toggle.addEventListener("click", () => {
+                const isHidden = form.hasAttribute("hidden");
+
+                if (isHidden) {
+                    form.removeAttribute("hidden");
+                    toggle.textContent = openLabel;
+                    form.scrollIntoView({ behavior: "smooth", block: "start" });
+                } else {
+                    form.setAttribute("hidden", "");
+                    toggle.textContent = closedLabel;
+                }
+            });
+        });
+    </script>
+</Layout>

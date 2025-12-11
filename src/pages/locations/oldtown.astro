@@ -1,0 +1,204 @@
+<!-- Astro -->
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout
+  title="Counseling & Equine-Assisted Therapy in Oldtown | MWRS"
+  description="Counseling and equine-assisted therapy in Oldtown, Idaho, at MWRS’s outdoor and equine therapy facility."
+>
+  <main class="subpage">
+    <!-- Hero -->
+    <section class="subpage-hero">
+      <div class="subpage-hero-inner">
+        <h1>Oldtown Counseling &amp; Equine Therapy</h1>
+        <p>
+          MWRS offers counseling and equine-assisted therapy in Oldtown, Idaho,
+          at our outdoor and equine therapy facility. This setting provides a
+          calm, experiential alternative to traditional office-based sessions.
+        </p>
+        <a href="/contact-us" class="subpage-btn">
+          Ask about Oldtown sessions
+        </a>
+      </div>
+    </section>
+
+    <!-- Light SEO body -->
+    <section class="subpage-section">
+      <div class="subpage-inner">
+        <h2>Counseling with room to move</h2>
+        <p>
+          Our Oldtown location is designed for clients who feel more comfortable
+          in outdoor or non-traditional spaces. In addition to standard
+          counseling sessions, we offer equine-assisted therapy for individuals,
+          teens, and families when appropriate.
+        </p>
+
+        <p>
+          Equine work can be especially helpful for clients who feel “talked
+          out,” teens who struggle with office settings, or anyone who connects
+          more easily through hands-on experience than through conversation
+          alone.
+        </p>
+
+        <h3>Services available at this location</h3>
+        <ul>
+          <li>Individual counseling for adults and teens</li>
+          <li>Family and parent support</li>
+          <li>Equine-assisted therapy (by appointment)</li>
+        </ul>
+
+        <h3>Address</h3>
+        <p>
+          251 Jacks Place<br />
+          Oldtown, ID 83822
+        </p>
+
+        <p>
+          Our intake team can help you decide whether Oldtown and equine work
+          might be a good fit for you or your family.
+        </p>
+      </div>
+    </section>
+
+    <!-- Bottom CTA -->
+    <section class="subpage-section subpage-cta">
+      <div class="subpage-inner">
+        <h2>Schedule in Oldtown</h2>
+        <p>
+          If you’re interested in equine-assisted therapy or outdoor-based
+          counseling, share a bit about what you’re hoping for, and we’ll help
+          you explore options at our Oldtown location.
+        </p>
+        <a href="/contact-us" class="subpage-btn">
+          Ask about Oldtown sessions
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <style>
+    .subpage {
+      background: #f9fafb;
+      min-height: 100vh;
+    }
+
+    .subpage-hero {
+      padding: 10rem 1.5rem 3rem;
+      background: #fbfbf9;
+           background-image: url("/images/paper-texture.png");
+      background-repeat: repeat; /* tile it */
+      background-size: 420px 420px; /* tweak smaller/larger as you like */
+      border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+    }
+
+    .subpage-hero-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .subpage-hero h1 {
+      font-family: "Belleza", sans-serif;
+      font-size: clamp(2rem, 3vw, 2.6rem);
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin: 0 0 1rem;
+      color: #111827;
+    }
+
+    .subpage-hero p {
+      margin: 0 0 1.6rem;
+      font-size: 1rem;
+      line-height: 1.8;
+      color: #4b5563;
+    }
+
+    .subpage-btn {
+      display: inline-block;
+      padding: 0.85rem 1.9rem;
+      border-radius: 999px;
+      border: 1px solid #0f172a;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      text-decoration: none;
+      background: #ffffff;
+      color: #0f172a;
+      box-shadow: 0 6px 16px rgba(15, 23, 42, 0.12);
+      transition:
+        background 0.15s ease,
+        color 0.15s ease,
+        box-shadow 0.15s ease,
+        transform 0.15s ease;
+    }
+
+    .subpage-btn:hover {
+      background: #0f172a;
+      color: #ffffff;
+      transform: translateY(-1px);
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.2);
+    }
+
+    .subpage-section {
+      padding: 3rem 1.5rem 3.2rem;
+      background: #e5e9f3;
+            background-image: url("/images/paper-texture.png");
+      background-repeat: repeat; /* tile it */
+      background-size: 420px 420px; /* tweak smaller/larger as you like */
+      border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+    }
+
+    .subpage-cta {
+      background: #fbfbf9;
+      text-align: center;
+      border-top: 1px solid rgba(15, 23, 42, 0.06);
+    }
+
+    .subpage-inner {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .subpage-section h2 {
+      font-family: "Belleza", sans-serif;
+      font-size: 1.2rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin: 0 0 1rem;
+      color: #111827;
+    }
+
+    .subpage-section h3 {
+      margin: 1.1rem 0 0.6rem;
+      font-size: 0.98rem;
+      font-weight: 500;
+      color: #111827;
+    }
+
+    .subpage-section p {
+      margin: 0 0 0.9rem;
+      font-size: 0.96rem;
+      line-height: 1.8;
+      color: #4b5563;
+    }
+
+    .subpage-section ul {
+      margin: 0 0 1rem;
+      padding-left: 1.1rem;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #4b5563;
+    }
+
+    .subpage-section li + li {
+      margin-top: 0.2rem;
+    }
+
+    .subpage-cta p {
+      max-width: 620px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+</Layout>

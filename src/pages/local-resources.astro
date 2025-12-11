@@ -1,0 +1,289 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+  title="Local Mental Health & Community Resources | MWRS"
+  description="Local and statewide mental health, crisis, and community support resources for clients of Mental Wellness & Relationship Services (MWRS) in North Idaho and across Idaho."
+>
+  <main class="subpage">
+    <!-- Hero -->
+    <section class="subpage-hero">
+      <div class="subpage-hero-inner">
+        <h1>Local & Community Resources</h1>
+        <p>
+          This page lists crisis, community, and support resources that may be helpful
+          alongside your care at Mental Wellness &amp; Relationship Services (MWRS).
+          These organizations are separate from MWRS, and availability may change over time.
+        </p>
+        <a href="/contact-us" class="subpage-btn">
+          Start care with MWRS
+        </a>
+      </div>
+    </section>
+
+    <!-- Crisis + immediate help -->
+    <section class="subpage-section">
+      <div class="subpage-inner">
+        <h2>If you need immediate help</h2>
+        <p>
+          MWRS is not a crisis center and we do not provide 24/7 monitoring. If you
+          are in crisis or concerned about someone’s immediate safety, please use
+          one of the options below or call 911.
+        </p>
+
+        <h3>Crisis support</h3>
+        <ul>
+          <li>
+            <strong>988 Suicide &amp; Crisis Lifeline</strong> – Call or text
+            <strong>988</strong>, or chat via <a href="https://988lifeline.org" target="_blank" rel="noreferrer">988lifeline.org</a>
+            for 24/7 support.
+          </li>
+          <li>
+            <strong>911</strong> – For medical or safety emergencies, or if someone
+            is in immediate danger.
+          </li>
+          <li>
+            <strong>Local emergency room</strong> – If you are concerned about serious
+            self-harm, risk to others, or rapid changes in mood, going to the nearest
+            ER can be the safest option.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- North Idaho area supports -->
+    <section class="subpage-section">
+      <div class="subpage-inner">
+        <h2>North Idaho area resources</h2>
+        <p>
+          These resources are provided as a starting point and are not exhaustive.
+          Always check each organization’s website or call ahead to confirm services,
+          hours, and eligibility.
+        </p>
+
+        <h3>General medical & hospital care</h3>
+        <ul>
+          <li>
+            Local hospital emergency departments for urgent medical or mental health needs.
+          </li>
+          <li>
+            Primary care clinics and family medicine providers for medical follow-up,
+            physical health concerns, and medication questions outside MWRS.
+          </li>
+        </ul>
+
+        <h3>Community & counseling supports</h3>
+        <ul>
+          <li>
+            Community mental health centers and non-profit counseling agencies that
+            may offer low-cost or grant-funded services.
+          </li>
+          <li>
+            School-based counseling resources for children and teens, available through
+            local school districts.
+          </li>
+          <li>
+            Faith communities, support groups, and local organizations that provide
+            peer support, groups, or practical help during difficult seasons.
+          </li>
+        </ul>
+
+        <h3>Support for families & caregivers</h3>
+        <ul>
+          <li>
+            Parenting classes, family support programs, and therapeutic groups offered
+            through community agencies, schools, or nonprofits.
+          </li>
+          <li>
+            Caregiver and family support groups for those supporting loved ones
+            with mental health or medical conditions.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Online & statewide resources -->
+    <section class="subpage-section">
+      <div class="subpage-inner">
+        <h2>Statewide & online resources</h2>
+        <p>
+          For some clients, online or statewide resources can supplement local care,
+          especially in rural communities or between appointments.
+        </p>
+
+        <h3>Statewide supports</h3>
+        <ul>
+          <li>
+            Idaho-based hotlines, warm lines, and support services that offer phone
+            or online support outside of regular office hours.
+          </li>
+          <li>
+            State and county websites for information on housing, food assistance,
+            transportation, and other basic needs.
+          </li>
+        </ul>
+
+        <h3>Online tools & education</h3>
+        <ul>
+          <li>
+            Reputable mental health education sites that provide information about
+            conditions, coping skills, and treatment options.
+          </li>
+          <li>
+            Skill-building apps (for mood tracking, mindfulness, or habit support)
+            that can complement, but not replace, counseling or medical care.
+          </li>
+        </ul>
+
+        <p>
+          Your MWRS provider can help you sort through which resources make sense
+          for your specific situation and how to use them alongside your care.
+        </p>
+      </div>
+    </section>
+
+    <!-- Bottom CTA -->
+    <section class="subpage-section subpage-cta">
+      <div class="subpage-inner">
+        <h2>Questions about where to start?</h2>
+        <p>
+          If you’re unsure which resource fits your situation, you can reach out to
+          our team. We’ll do our best to point you in a helpful direction and let you
+          know whether MWRS may be a good fit.
+        </p>
+        <a href="/contact-us" class="subpage-btn">
+          Contact MWRS
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <style>
+    .subpage {
+      background: #f9fafb;
+      min-height: 100vh;
+    }
+
+    /* Hero */
+    .subpage-hero {
+      padding: 10rem 1.5rem 3rem;
+      background: #fbfbf9;
+            background-image: url("/images/paper-texture.png");
+      background-repeat: repeat; /* tile it */
+      background-size: 420px 420px; /* tweak smaller/larger as you like */
+      border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+    }
+
+    .subpage-hero-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .subpage-hero h1 {
+      font-family: "Belleza", sans-serif;
+      font-size: clamp(2rem, 3vw, 2.6rem);
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin: 0 0 1rem;
+      color: #111827;
+    }
+
+    .subpage-hero p {
+      margin: 0 0 1.6rem;
+      font-size: 1rem;
+      line-height: 1.8;
+      color: #4b5563;
+    }
+
+    /* Outline button */
+    .subpage-btn {
+      display: inline-block;
+      padding: 0.85rem 1.9rem;
+      border-radius: 999px;
+      border: 1px solid #0f172a;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      text-decoration: none;
+      background: #ffffff;
+      color: #0f172a;
+      box-shadow: 0 6px 16px rgba(15, 23, 42, 0.12);
+      transition:
+        background 0.15s ease,
+        color 0.15s ease,
+        box-shadow 0.15s ease,
+        transform 0.15s ease;
+    }
+
+    .subpage-btn:hover {
+      background: #0f172a;
+      color: #ffffff;
+      transform: translateY(-1px);
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.2);
+    }
+
+    /* Body sections */
+    .subpage-section {
+      padding: 3rem 1.5rem 3.2rem;
+      background: #e5e9f3;
+            background-image: url("/images/paper-texture.png");
+      background-repeat: repeat; /* tile it */
+      background-size: 420px 420px; /* tweak smaller/larger as you like */
+      border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+    }
+
+    .subpage-cta {
+      background: #fbfbf9;
+      text-align: center;
+      border-top: 1px solid rgba(15, 23, 42, 0.06);
+    }
+
+    .subpage-inner {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .subpage-section h2 {
+      font-family: "Belleza", sans-serif;
+      font-size: 1.2rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin: 0 0 1rem;
+      color: #111827;
+    }
+
+    .subpage-section h3 {
+      margin: 1.1rem 0 0.6rem;
+      font-size: 0.98rem;
+      font-weight: 500;
+      color: #111827;
+    }
+
+    .subpage-section p {
+      margin: 0 0 0.9rem;
+      font-size: 0.96rem;
+      line-height: 1.8;
+      color: #4b5563;
+    }
+
+    .subpage-section ul {
+      margin: 0 0 1rem;
+      padding-left: 1.1rem;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #4b5563;
+    }
+
+    .subpage-section li + li {
+      margin-top: 0.2rem;
+    }
+
+    .subpage-cta p {
+      max-width: 620px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+</Layout>

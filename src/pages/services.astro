@@ -1,0 +1,648 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+    title="Counseling, Equine Therapy & Medication Services | MWRS"
+    description="Explore counseling, equine-assisted therapy, and psychiatric medication management services offered by MWRS in North Idaho and via telehealth throughout Idaho."
+>
+    <main class="services-page">
+        <!-- Top intro section -->
+        <section class="services-hero">
+            <div class="services-hero-inner">
+                <h1>Counseling &amp; Medication Services</h1>
+                <p>
+                    Mental Wellness &amp; Relationship Services (MWRS) offers
+                    counseling, equine-assisted therapy, and psychiatric
+                    medication management for individuals, couples, and families
+                    across North Idaho.
+                </p>
+                <a href="/contact-us" class="services-cta"> Get Started </a>
+            </div>
+        </section>
+
+        <!-- Two main service blocks -->
+        <section class="services-grid-section">
+            <div class="services-grid-inner">
+                <div class="services-grid">
+                    <!-- Counseling column -->
+                    <article class="service-panel">
+                        <p class="service-kicker">Counseling &amp; Therapy</p>
+                        <h2 class="service-title">Meet with a counselor</h2>
+
+                        <p class="service-lead">
+                            Calm, thoughtful counseling in a judgment-free
+                            environment, with options for in-person or
+                            telehealth care.
+                        </p>
+
+                        <ul class="service-list">
+                            <li>Individual counseling for adults and teens</li>
+                            <li>Couples and relationship counseling</li>
+                            <li>Family counseling</li>
+                            <li>Equine-assisted therapy (Oldtown location)</li>
+                            <li>Teletherapy available anywhere in Idaho</li>
+                        </ul>
+
+                        <a href="/contact-us" class="service-link">
+                            Start counseling →
+                        </a>
+                    </article>
+
+                    <!-- Medication column -->
+                    <article class="service-panel">
+                        <p class="service-kicker">Medication Management</p>
+                        <h2 class="service-title">Work with a prescriber</h2>
+
+                        <p class="service-lead">
+                            Psychiatric medication management with a focus on
+                            collaboration, clarity, and careful follow-up.
+                        </p>
+
+                        <ul class="service-list">
+                            <li>Psychiatric evaluation for adults and teens</li>
+                            <li>Ongoing medication management</li>
+                            <li>Lab monitoring when clinically appropriate</li>
+                            <li>In-person and telehealth options</li>
+                            <li>Available to Idaho and Washington residents</li>
+                        </ul>
+
+                        <a href="/contact-us#medication" class="service-link">
+                            Start medication care →
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Equine highlight strip with floating card -->
+        <section class="equine-strip">
+            <div class="equine-strip-inner">
+                <article class="equine-card">
+                    <div class="equine-text">
+                        <p class="equine-kicker">Equine-Assisted Therapy</p>
+                        <h2 class="equine-title">
+                            Counseling with horses in Oldtown
+                        </h2>
+
+                        <p>
+                            In addition to traditional office-based counseling,
+                            MWRS offers equine-assisted therapy at our Oldtown
+                            location. Sessions take place in a calm, structured
+                            environment where clients work with horses alongside
+                            a trained therapist.
+                        </p>
+                        <p>
+                            Equine work can be especially helpful for clients
+                            who feel “talked out,” teens who struggle with
+                            office settings, or anyone who connects more easily
+                            through hands-on experience than through
+                            conversation alone.
+                        </p>
+
+                        <a href="/services/equine-therapy" class="equine-cta">
+                            Learn More →
+                        </a>
+                    </div>
+
+                    <aside class="equine-aside">
+                        <h3>Equine therapy may be a good fit if you:</h3>
+                        <ul>
+                            <li>Feel stuck in traditional talk therapy</li>
+                            <li>Prefer experiential or hands-on learning</li>
+                            <li>
+                                Are working through trauma, trust, or boundary
+                                issues
+                            </li>
+                            <li>
+                                Have a teen who struggles to open up in an
+                                office
+                            </li>
+                        </ul>
+                        <p class="equine-note">
+                            Equine sessions are available by appointment in
+                            Oldtown, Idaho. Our intake team can help you decide
+                            whether this is the right setting for you or your
+                            family.
+                        </p>
+                    </aside>
+                </article>
+            </div>
+        </section>
+
+        <!-- Sliding Fee Discount Program -->
+        <!-- Sliding Fee Discount Program -->
+        <section class="services-copy-band sliding-fee-band" id="sliding-fee">
+            <div class="services-copy-inner">
+                <h2>Sliding Fee Discount Program</h2>
+                <p>
+                    MWRS offers a Sliding Fee Discount Program based on
+                    household size and income. Discounts are available for
+                    counseling and medication services for anyone who qualifies.
+                    No one is denied care due to an inability to pay.
+                    Applications are available upon request.
+                </p>
+
+                <!-- Step 1: button that reveals the form -->
+                <button
+                    type="button"
+                    class="sliding-fee-btn"
+                    id="slidingFeeToggle"
+                >
+                    Request sliding fee information
+                </button>
+
+                <!-- Step 2: inline form (hidden by default) -->
+                <form
+                    class="sliding-fee-inline-form"
+                    method="POST"
+                    action="https://formspree.io/f/xblnzwqv"
+                    hidden
+                >
+                    <!-- HTML -->
+                    <input
+                        type="hidden"
+                        name="_redirect"
+                        value="https://mwrservices.org/thank-you"
+                    />
+                    <!-- This helps your sister see what kind of request it is -->
+                    <input
+                        type="hidden"
+                        name="subject"
+                        value="Sliding Fee Inquiry"
+                    />
+                    <input
+                        type="hidden"
+                        name="form_name"
+                        value="Sliding Fee Discount Program"
+                    />
+
+                    <div class="sliding-fee-field">
+                        <label for="sfName">Name</label>
+                        <input
+                            id="sfName"
+                            name="name"
+                            type="text"
+                            autocomplete="name"
+                            required
+                        />
+                    </div>
+
+                    <div class="sliding-fee-field">
+                        <label for="sfEmail">Email address</label>
+                        <input
+                            id="sfEmail"
+                            name="email"
+                            type="email"
+                            autocomplete="email"
+                            required
+                        />
+                    </div>
+
+                    <div class="sliding-fee-field">
+                        <label for="sfMessage">
+                            Anything you’d like us to know (optional)
+                        </label>
+                        <textarea
+                            id="sfMessage"
+                            name="message"
+                            rows="3"
+                            placeholder="You can keep this brief. We’ll follow up with details about the program."
+                        ></textarea>
+                    </div>
+
+                    <button type="submit" class="sliding-fee-submit">
+                        Send request
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <style>
+        .services-page {
+            background: #f9fafb;
+            min-height: 100vh;
+        }
+
+        .services-hero {
+            padding: 10rem 1.5rem 3.5rem;
+            background: #fbfbf9;
+                 background-image: url("/images/paper-texture.png");
+      background-repeat: repeat; /* tile it */
+      background-size: 420px 420px; /* tweak smaller/larger as you like */
+      border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+
+
+        }
+
+        .services-hero-inner {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .services-hero h1 {
+            font-family: "Belleza", sans-serif;
+            font-size: clamp(2rem, 3vw, 2.6rem);
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            margin: 0 0 1rem;
+            color: #111827;
+        }
+
+        .services-hero p {
+            margin: 0 0 1.75rem;
+            font-size: 1rem;
+            line-height: 1.7;
+            color: #4b5563;
+        }
+
+        .services-cta {
+            display: inline-block;
+            padding: 0.9rem 1.9rem;
+            border-radius: 999px;
+            border: 1px solid #0f172a;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: #0f172a;
+            background: #ffffff;
+            box-shadow: 0 6px 16px rgba(15, 23, 42, 0.12);
+            transition:
+                background 0.15s ease,
+                color 0.15s ease,
+                box-shadow 0.15s ease,
+                transform 0.15s ease;
+        }
+
+        .services-cta:hover {
+            background: #0f172a;
+            color: #ffffff;
+            transform: translateY(-1px);
+            box-shadow: 0 10px 24px rgba(15, 23, 42, 0.2);
+        }
+
+        .services-grid-section {
+            padding: 3.5rem 1.5rem 4rem;
+            background: #f9fafb;
+                  background-image: url("/images/paper-texture.png");
+      background-repeat: repeat; /* tile it */
+      background-size: 420px 420px; /* tweak smaller/larger as you like */
+      border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+
+
+        }
+
+        .services-grid-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            gap: 2rem;
+        }
+
+        @media (min-width: 900px) {
+            .services-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        .service-panel {
+            border-radius: 22px;
+            padding: 2.1rem 2rem 2rem;
+            border: 1px solid rgba(15, 23, 42, 0.09);
+            background: #ffffff;
+            box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .service-kicker {
+            margin: 0;
+            font-family: "Belleza", sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.16em;
+            font-size: 0.78rem;
+            color: #6b7280;
+        }
+
+        .service-title {
+            margin: 0;
+            font-size: 1.25rem;
+            font-weight: 400;
+            letter-spacing: 0.02em;
+            color: #111827;
+        }
+
+        .service-lead {
+            margin: 0.25rem 0 0.75rem;
+            font-size: 0.96rem;
+            line-height: 1.7;
+            color: #4b5563;
+        }
+
+        .service-list {
+            margin: 0 0 1.2rem;
+            padding-left: 1.1rem;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #4b5563;
+        }
+
+        .service-list li + li {
+            margin-top: 0.2rem;
+        }
+
+        .service-link {
+            display: inline-block;
+            margin-top: auto;
+            padding: 0.6rem 1.4rem;
+            border-radius: 999px;
+            border: 1px solid #111827;
+            text-decoration: none;
+            font-size: 0.85rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: #111827;
+            transition: all 0.15s ease;
+        }
+
+        .service-link:hover {
+            background: #111827;
+            color: #ffffff;
+        }
+
+        .services-copy-band {
+            padding: 3rem 1.5rem 4rem;
+            background: #fbfbf9;
+            border-top: 1px solid rgba(15, 23, 42, 0.05);
+        }
+
+        .services-copy-inner {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .services-copy-inner h2 {
+            font-family: "Belleza", sans-serif;
+            font-size: 1.2rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            margin: 0 0 1rem;
+            color: #111827;
+        }
+
+        .services-copy-inner p {
+            margin: 0;
+            font-size: 0.95rem;
+            line-height: 1.8;
+            color: #4b5563;
+        }
+
+        /* Equine strip + floating card */
+        .equine-strip {
+            padding: 3.5rem 1.5rem 4rem;
+            background: #e5e9f3; /* soft, warm band behind the card */
+                  background-image: url("/images/paper-texture.png");
+      background-repeat: repeat; /* tile it */
+      background-size: 420px 420px; /* tweak smaller/larger as you like */
+      border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+
+
+        }
+
+        .equine-strip-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .equine-card {
+            background: #ffffff;
+            border-radius: 24px;
+            border: 1px solid rgba(15, 23, 42, 0.08);
+            box-shadow: 0 20px 44px rgba(15, 23, 42, 0.16);
+            padding: 2.1rem 2rem;
+            display: grid;
+            gap: 1.8rem;
+        }
+
+        @media (min-width: 900px) {
+            .equine-card {
+                grid-template-columns: minmax(0, 2fr) minmax(0, 1.4fr);
+                align-items: flex-start;
+                gap: 2.4rem;
+            }
+        }
+
+        .equine-text {
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+        }
+
+        .equine-kicker {
+            margin: 0;
+            font-family: "Belleza", sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            font-size: 0.78rem;
+            color: #6b7280;
+        }
+
+        .equine-title {
+            margin: 0;
+            font-family: "Belleza", sans-serif;
+            font-size: 1.35rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #111827;
+        }
+
+        .equine-text p {
+            margin: 0;
+            font-size: 0.96rem;
+            line-height: 1.8;
+            color: #4b5563;
+        }
+
+        .equine-cta {
+            display: inline-block;
+            margin-top: 0.4rem;
+            padding: 0.75rem 1.7rem;
+            border-radius: 999px;
+            border: 1px solid #111827;
+            text-decoration: none;
+            font-size: 0.86rem;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            background: transparent;
+            color: #111827;
+            transition: all 0.15s ease;
+        }
+
+        .equine-cta:hover {
+            background: #111827;
+            color: #ffffff;
+            box-shadow: 0 10px 26px rgba(15, 23, 42, 0.25);
+            transform: translateY(-1px);
+        }
+
+        .equine-aside h3 {
+            margin: 0 0 0.5rem;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: #111827;
+        }
+
+        .equine-aside ul {
+            margin: 0 0 0.75rem;
+            padding-left: 1.1rem;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: #4b5563;
+        }
+        /* CSS */
+        /* Nudge the right-hand equine column down on desktop */
+        @media (min-width: 900px) {
+            .equine-aside {
+                margin-top: 2.3rem; /* tweak this number up/down to taste */
+            }
+        }
+
+        .equine-note {
+            margin: 0;
+            font-size: 0.86rem;
+            line-height: 1.6;
+            color: #6b7280;
+        }
+
+        /* Sliding Fee section styling */
+        .sliding-fee-band {
+            padding-top: 2.8rem;
+            padding-bottom: 3.8rem;
+        }
+
+        .sliding-fee-btn {
+            display: inline-block;
+            margin-top: 1.4rem;
+            padding: 0.85rem 1.9rem;
+            border-radius: 999px;
+            border: 1px solid #0f172a;
+            text-decoration: none;
+            font-size: 0.95rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            background: #ffffff;
+            color: #0f172a;
+            box-shadow: 0 9px 22px rgba(15, 23, 42, 0.15);
+            transition: all 0.15s ease;
+        }
+
+        .sliding-fee-btn:hover {
+            background: #0f172a;
+            color: #ffffff;
+            transform: translateY(-1px);
+            box-shadow: 0 14px 32px rgba(15, 23, 42, 0.25);
+        }
+
+        /* Inline Sliding Fee mini-form */
+        .sliding-fee-inline-form {
+            margin-top: 1.4rem;
+            max-width: 480px;
+            margin-left: auto;
+            margin-right: auto;
+            display: grid;
+            gap: 0.8rem;
+            text-align: left;
+        }
+
+        .sliding-fee-inline-form[hidden] {
+            display: none;
+        }
+
+        .sliding-fee-field {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+        }
+
+        .sliding-fee-field label {
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #111827;
+        }
+
+        .sliding-fee-field input,
+        .sliding-fee-field textarea {
+            border-radius: 999px;
+            border: 1px solid rgba(15, 23, 42, 0.18);
+            padding: 0.6rem 0.9rem;
+            font-size: 0.9rem;
+            font-family: inherit;
+            background: #f9fafb;
+            outline: none;
+            transition:
+                border-color 0.15s ease,
+                box-shadow 0.15s ease,
+                background 0.15s ease;
+        }
+
+        .sliding-fee-field textarea {
+            border-radius: 16px;
+            min-height: 90px;
+            resize: vertical;
+        }
+
+        .sliding-fee-field input:focus,
+        .sliding-fee-field textarea:focus {
+            border-color: #0f172a;
+            background: #ffffff;
+            box-shadow: 0 0 0 1px rgba(15, 23, 42, 0.15);
+        }
+
+        .sliding-fee-submit {
+            margin-top: 0.4rem;
+            align-self: flex-start;
+            border-radius: 999px;
+            border: 1px solid #0f172a;
+            padding: 0.75rem 1.7rem;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            background: #0f172a;
+            color: #ffffff;
+            cursor: pointer;
+            box-shadow: 0 9px 22px rgba(15, 23, 42, 0.25);
+            transition: all 0.15s ease;
+        }
+
+        .sliding-fee-submit:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 14px 32px rgba(15, 23, 42, 0.35);
+        }
+    </style>
+
+    <script type="module">
+        const slidingBtn = document.querySelector("#slidingFeeToggle");
+        const slidingForm = document.querySelector(".sliding-fee-inline-form");
+
+        if (slidingBtn && slidingForm) {
+            slidingBtn.addEventListener("click", () => {
+                slidingBtn.hidden = true;
+                slidingForm.hidden = false;
+
+                const firstInput = slidingForm.querySelector("input, textarea");
+                if (firstInput) {
+                    firstInput.focus();
+                }
+            });
+        }
+    </script>
+</Layout>

@@ -1,0 +1,402 @@
+---
+const {
+  title = "Mental Wellness & Relationship Services | North Idaho Counseling & Medication Management",
+  description = "Mental health counseling, equine-assisted therapy, and psychiatric medication management for individuals, couples, and families across North Idaho, with offices in Coeur d’Alene, Priest River, Ponderay, and Oldtown.",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>{title}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+
+    <!-- Load Belleza (headings) + Lato (body text) -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Belleza&family=Lato:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <nav class="nav-inner">
+        <a href="/" class="logo">
+          <img src="/images/logoclear.png" alt="MWRS logo" class="logo-img" />
+        </a>
+
+        <!-- Mobile toggle (hidden on desktop) -->
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="nav-links" data-nav-links>
+          <a href="/services">Services</a>
+          <a href="/locations">Locations</a>
+          <a href="/our-team">Our Team</a>
+          <a href="/faq" class="nav-cta">FAQ</a>
+        </div>
+      </nav>
+    </header>
+
+    <slot />
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <!-- Left side: links -->
+        <div class="footer-links">
+          <div class="footer-column">
+            <h3>Practice</h3>
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/services">Services</a>
+            <a href="/locations">Locations</a>
+            <a href="/our-team">Our Team</a>
+            <a href="/careers">Careers</a>
+          </div>
+
+          <div class="footer-column">
+            <h3>For Clients</h3>
+            <a href="/contact-us">Start Care</a>
+            <a href="/faq">FAQ</a>
+            <a href="/telehealth">Telehealth</a>
+            <a href="/local-resources">Local Resources</a>
+            <a href="/billing">Billing & Payments</a>
+            <a href="/services#sliding-fee">Sliding Fee Program</a>
+          </div>
+
+          <div class="footer-column">
+            <h3>Locations</h3>
+            <a href="/locations/coeur-d-alene">Coeur d’Alene</a>
+            <a href="/locations/ponderay">Ponderay</a>
+            <a href="/locations/priest-river">Priest River</a>
+            <a href="/locations/oldtown">Oldtown</a>
+            <a href="/telehealth">Telehealth (Idaho)</a>
+          </div>
+
+          <div class="footer-column">
+            <h3>Legal</h3>
+            <a href="/privacy-policy">Privacy Policy</a>
+            <a href="/terms">Terms of Use</a>
+          </div>
+        </div>
+
+        <!-- Right side: contact block -->
+        <div class="footer-contact">
+          <p class="footer-name">Mental Wellness &amp; Relationship Services</p>
+          <p class="footer-line">
+            1110 W Park Place, Ste 303<br />
+            Coeur d’Alene, ID 83814
+          </p>
+          <p class="footer-line">
+            P: <a href="tel:2082612255">208.261.2255</a>
+            &nbsp;&nbsp; F:
+            <a href="tel:2084737271">208.473.7271</a>
+          </p>
+          <p class="footer-small">© 2025 MWRS. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+
+  <style>
+    body {
+      margin: 0;
+      font-family:
+        "Lato",
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+      background: #ffffff;
+    }
+
+    /* Header / nav */
+    .site-header {
+      position: absolute; /* sits over the hero background */
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 20;
+      padding: 1rem 2rem;
+      background: transparent;
+    }
+
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .logo-img {
+      height: 60px;
+      width: auto;
+      display: block;
+      max-width: 100%;
+    }
+
+    /* Desktop nav links */
+    .nav-links {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-links a {
+      font-family: "Belleza", sans-serif;
+      color: #000000;
+      text-decoration: none;
+      margin-left: 2.25rem;
+      font-size: 1.15rem;
+      letter-spacing: 0.25em;
+      font-weight: 400;
+      opacity: 0.95;
+      transition: all 0.15s ease;
+    }
+
+    .nav-links a:hover {
+      opacity: 1;
+    }
+
+    .nav-cta {
+      padding: 0.4rem 1rem;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    /* Hamburger toggle (hidden on desktop by default) */
+    .nav-toggle {
+      display: none;
+      background: transparent;
+      border: none;
+      padding: 0.25rem;
+      margin-left: 1rem;
+      cursor: pointer;
+    }
+
+    .nav-toggle span {
+      display: block;
+      width: 20px;
+      height: 2px;
+      background: #000000;
+      border-radius: 999px;
+      transition:
+        transform 0.15s ease,
+        opacity 0.15s ease;
+    }
+
+    .nav-toggle span + span {
+      margin-top: 5px;
+    }
+
+    /* Footer */
+    .site-footer {
+      margin-top: 0rem;
+      padding: 2.4rem 1.5rem 2.8rem;
+      background: #000000;
+      color: #e5e7eb;
+      border-top: 1px solid rgba(148, 163, 184, 0.4);
+      font-size: 0.88rem;
+    }
+
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      gap: 2.5rem;
+      align-items: flex-start;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 2.5rem;
+    }
+
+    .footer-column h3 {
+      margin: 0 0 0.6rem;
+      font-size: 0.76rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #9ca3af;
+      font-family: "Belleza", sans-serif;
+    }
+
+    .footer-column a {
+      display: block;
+      margin-bottom: 0.25rem;
+      color: #e5e7eb;
+      text-decoration: none;
+    }
+
+    .footer-column a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-contact {
+      margin-left: auto;
+      text-align: right;
+    }
+
+    .footer-name {
+      margin: 0 0 0.2rem;
+      font-weight: 500;
+      font-family: "Belleza", sans-serif;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .footer-line {
+      margin: 0.1rem 0;
+    }
+
+    .footer-line a {
+      color: #e5e7eb;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(229, 231, 235, 0.3);
+    }
+
+    .footer-line a:hover {
+      border-bottom-color: rgba(229, 231, 235, 0.6);
+    }
+
+    .footer-small {
+      margin-top: 0.5rem;
+      font-size: 0.78rem;
+      color: #9ca3af;
+    }
+
+    /* Mobile: stack footer columns */
+    @media (max-width: 768px) {
+      .site-header {
+        padding: 0.75rem 1.25rem;
+      }
+
+      .nav-inner {
+        max-width: 100%;
+      }
+
+      .logo-img {
+        height: 48px;
+      }
+
+      /* Show hamburger, hide desktop-style nav */
+      .nav-toggle {
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: 64px;
+        right: 1.25rem;
+        left: 1.25rem;
+
+        display: none;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 0.4rem;
+
+        padding: 0.9rem 1.1rem;
+        border-radius: 18px;
+
+        background: rgba(255, 255, 255, 0.9); /* subtle transparency */
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+
+        box-shadow: 0 18px 40px rgba(15, 23, 42, 0.22);
+        z-index: 40;
+      }
+
+      .nav-links.is-open {
+        display: flex;
+      }
+
+      .nav-links a {
+        margin-left: 0;
+        font-size: 0.9rem;
+        letter-spacing: 0.18em;
+      }
+
+      /* Make FAQ look like other links on mobile */
+      .nav-links .nav-cta {
+        padding: 0;
+        border: none;
+        background: transparent;
+        border-radius: 0;
+        box-shadow: none;
+      }
+
+      /* X animation */
+      .nav-toggle.is-open span:first-child {
+        transform: translateY(3.5px) rotate(45deg);
+      }
+
+      .nav-toggle.is-open span:last-child {
+        transform: translateY(-3.5px) rotate(-45deg);
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+
+      .footer-links {
+        flex-direction: column;
+        gap: 1.2rem;
+      }
+
+      .footer-contact {
+        margin-left: 0;
+        text-align: left;
+      }
+    }
+  </style>
+
+<!-- Global styles that should apply to all pages -->
+  <!-- Global styles that should apply to all pages -->
+  <style is:global>
+    /* Purple divider under heroes on all main content pages */
+    .subpage-hero,
+    .faq-hero,
+    .contact-hero,
+    .services-hero,
+    .telehealth-feature,
+    .team-hero {
+      border-bottom: 4px solid #5d00b4 !important; /* MWRS Purple */
+    }
+
+  </style>
+
+  <script type="module">
+    const navToggle = document.querySelector(".nav-toggle");
+    const navLinks = document.querySelector("[data-nav-links]");
+
+    if (navToggle && navLinks) {
+      navToggle.addEventListener("click", () => {
+        const isOpen = navLinks.classList.toggle("is-open");
+        navToggle.classList.toggle("is-open", isOpen);
+        navToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      });
+    }
+  </script>
+</html>

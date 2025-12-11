@@ -1,0 +1,293 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+  title="Mental Health Counseling & Medication Management in North Idaho | MWRS"
+  description="Mental Wellness & Relationship Services (MWRS) provides counseling, equine-assisted therapy, and psychiatric medication management in Coeur d’Alene, Ponderay, Priest River, Oldtown, and via telehealth across Idaho."
+>
+  <!-- HERO -->
+  <section class="hero">
+    <video class="hero-video" autoplay muted loop playsinline>
+      <source src="/videos/mwrs-bg-looped.mp4" type="video/mp4" />
+    </video>
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-inner">
+      <div class="hero-text">
+        <h1>A BETTER LIFE IS WAITING</h1>
+        <p>
+          Our clinicians and nurse practitioners are highly qualified and
+          excited to meet you. We offer counseling, equine-assisted therapy, and
+          psychiatric medication management.
+        </p>
+        <a href="/contact-us" class="btn-primary">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE PATHS -->
+  <section class="service-paths">
+    <div class="service-paths-inner">
+      <div class="service-paths-grid">
+        <!-- Counseling -->
+        <a href="/contact-us" class="service-path-card-link">
+          <article class="service-path-card">
+            <p class="service-path-label">Counseling &amp; Therapy</p>
+            <h2 class="service-path-title">Meet with a counselor</h2>
+            <p class="service-path-text">
+              Individual, couples, and family counseling in Coeur d’Alene,
+              Priest River, Ponderay, and Oldtown, with teletherapy available
+              anywhere in Idaho.
+            </p>
+            <span class="service-path-cta">Start counseling →</span>
+          </article>
+        </a>
+
+        <!-- Medication -->
+        <a href="/contact-us#medication" class="service-path-card-link">
+          <article class="service-path-card">
+            <p class="service-path-label">Medication Management</p>
+            <h2 class="service-path-title">Work with a prescriber</h2>
+            <p class="service-path-text">
+              Psychiatric medication management for Idaho and Washington
+              residents, with in-person and telehealth options and a focus on
+              thoughtful, collaborative care.
+            </p>
+            <span class="service-path-cta">Start medication care →</span>
+          </article>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section class="about-mwrs">
+    <div class="about-inner">
+      <h2>Thoughtful mental health care in North Idaho</h2>
+      <p>
+        Mental Wellness &amp; Relationship Services (MWRS) provides counseling,
+        equine-assisted therapy, and psychiatric medication management to
+        individuals, couples, and families across North Idaho from our offices
+        in Coeur d’Alene, Priest River, Ponderay, and Oldtown — with telehealth
+        available statewide.
+      </p>
+    </div>
+  </section>
+
+  <style>
+    /* HERO */
+    .hero {
+      position: relative;
+      min-height: 75vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      color: #e5e7eb;
+      padding: 6rem 1.5rem 3rem;
+      border-bottom: 4px solid #000000;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 60px;
+      background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.18) 100%
+      );
+      z-index: 6;
+      pointer-events: none;
+    }
+
+    .hero-video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 40%;
+      filter: brightness(0.8) contrast(1.1) saturate(1.05);
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 5;
+      background: linear-gradient(
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0.1),
+        rgba(0, 0, 0, 0.04)
+      );
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 10;
+      max-width: 900px;
+      width: 100%;
+    }
+
+    .hero-text {
+      max-width: 640px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .hero-text h1 {
+      font-family: "Belleza", sans-serif;
+      font-size: clamp(2.2rem, 4vw, 3rem);
+      line-height: 1.1;
+      margin-bottom: 1rem;
+      letter-spacing: 0.02em;
+      font-weight: 400;
+      color: #ffffff;
+    }
+
+    .hero-text p {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+      color: #ffffff;
+      opacity: 1;
+      font-weight: 300;
+      letter-spacing: 0.015em;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      padding: 1rem 1.75rem;
+      border: 2px solid #ffffff;
+      background: transparent;
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 4px;
+      font-size: 1.75rem;
+      letter-spacing: 0.05em;
+      font-weight: 300;
+      transition: all 0.2s ease;
+    }
+
+    .btn-primary:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    /* SERVICES */
+    .service-paths {
+      padding: 3.5rem 1.5rem 4rem;
+      background: #fbfbf9;
+      background-image: url("/images/paper-texture.png");
+      background-repeat: repeat; /* tile it */
+      background-size: 420px 420px; /* tweak smaller/larger as you like */
+      border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+    }
+
+    .service-paths-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .service-paths-grid {
+      display: grid;
+      gap: 2rem;
+    }
+
+    @media (min-width: 900px) {
+      .service-paths-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    .service-path-card-link {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .service-path-card {
+      border-radius: 22px;
+      padding: 2.1rem 2rem;
+      border: 1px solid rgba(15, 23, 42, 0.1);
+      background: #ffffff;
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.1);
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      transition:
+        transform 0.18s ease,
+        box-shadow 0.18s ease;
+      cursor: pointer;
+    }
+
+    .service-path-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 22px 55px rgba(15, 23, 42, 0.16);
+    }
+
+    .service-path-label {
+      font-family: "Belleza", sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: 0.8rem;
+      color: #4b5563;
+      margin: 0;
+    }
+
+    .service-path-title {
+      margin: 0;
+      font-size: 1.15rem;
+      color: #111827;
+    }
+
+    .service-path-text {
+      margin: 0.25rem 0 0.75rem;
+      line-height: 1.7;
+      color: #4b5563;
+      font-size: 0.95rem;
+    }
+
+    .service-path-cta {
+      font-size: 0.9rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #0f172a;
+    }
+
+    /* ABOUT */
+    .about-mwrs {
+      padding: 2.75rem 1.5rem 3.25rem;
+      background: #ffffff;
+        background-image: url("/images/paper-texture.png");
+      background-repeat: repeat; /* tile it */
+      background-size: 420px 420px; /* tweak smaller/larger as you like */
+      border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+    }
+
+    .about-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .about-mwrs h2 {
+      margin: 0 0 1rem;
+      font-family: "Belleza", sans-serif;
+      font-size: 1.4rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .about-mwrs p {
+      margin: 0;
+      font-size: 0.98rem;
+      line-height: 1.7;
+      color: #4b5563;
+    }
+  </style>
+</Layout>

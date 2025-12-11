@@ -1,0 +1,200 @@
+<!-- Astro -->
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout
+  title="Counseling Services in Priest River | MWRS"
+  description="Counseling services in Priest River, Idaho, with options for in-person sessions and telehealth for Idaho residents."
+>
+  <main class="subpage">
+    <!-- Hero -->
+    <section class="subpage-hero">
+      <div class="subpage-hero-inner">
+        <h1>Priest River Counseling</h1>
+        <p>
+          MWRS offers counseling services in Priest River for adults, teens, and
+          families. Clients can meet in person at our Main Street office or
+          choose telehealth visits when that fits better with work, school, or
+          family schedules.
+        </p>
+        <a href="/contact-us" class="subpage-btn">
+          Start in Priest River
+        </a>
+      </div>
+    </section>
+
+    <!-- Light SEO body -->
+    <section class="subpage-section">
+      <div class="subpage-inner">
+        <h2>Counseling in Priest River</h2>
+        <p>
+          Our Priest River location focuses on counseling services, with support
+          for anxiety, depression, relationship strain, parenting stress, and
+          life transitions. We work with adults, teens, and families in a calm,
+          low-pressure setting.
+        </p>
+
+        <p>
+          When you complete the intake form, you can indicate Priest River as
+          your preferred location and let us know whether you are open to
+          telehealth visits. Our team will help you get matched with a counselor
+          whose schedule and focus fit your needs.
+        </p>
+
+        <h3>Services available at this location</h3>
+        <ul>
+          <li>Individual counseling for adults and teens</li>
+          <li>Couples and relationship counseling</li>
+          <li>Family counseling</li>
+          <li>Telehealth visits for Idaho residents</li>
+        </ul>
+
+        <h3>Address</h3>
+        <p>
+          50 Main Street<br />
+          Priest River, ID 83856
+        </p>
+      </div>
+    </section>
+
+    <!-- Bottom CTA -->
+    <section class="subpage-section subpage-cta">
+      <div class="subpage-inner">
+        <h2>Schedule in Priest River</h2>
+        <p>
+          Share a bit about what you’re looking for, and our intake team will
+          help you get scheduled with a counselor at our Priest River office or
+          via telehealth.
+        </p>
+        <a href="/contact-us" class="subpage-btn">
+          Start in Priest River
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <style>
+    .subpage {
+      background: #f9fafb;
+      min-height: 100vh;
+    }
+
+    .subpage-hero {
+      padding: 10rem 1.5rem 3rem;
+          background-image: url("/images/paper-texture.png");
+      background-repeat: repeat; /* tile it */
+      background-size: 420px 420px; /* tweak smaller/larger as you like */
+      border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+    }
+
+    .subpage-hero-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .subpage-hero h1 {
+      font-family: "Belleza", sans-serif;
+      font-size: clamp(2rem, 3vw, 2.6rem);
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin: 0 0 1rem;
+      color: #111827;
+    }
+
+    .subpage-hero p {
+      margin: 0 0 1.6rem;
+      font-size: 1rem;
+      line-height: 1.8;
+      color: #4b5563;
+    }
+
+    .subpage-btn {
+      display: inline-block;
+      padding: 0.85rem 1.9rem;
+      border-radius: 999px;
+      border: 1px solid #0f172a;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      text-decoration: none;
+      background: #ffffff;
+      color: #0f172a;
+      box-shadow: 0 6px 16px rgba(15, 23, 42, 0.12);
+      transition:
+        background 0.15s ease,
+        color 0.15s ease,
+        box-shadow 0.15s ease,
+        transform 0.15s ease;
+    }
+
+    .subpage-btn:hover {
+      background: #0f172a;
+      color: #ffffff;
+      transform: translateY(-1px);
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.2);
+    }
+
+    .subpage-section {
+      padding: 3rem 1.5rem 3.2rem;
+      background: #e5e9f3;
+           background-image: url("/images/paper-texture.png");
+      background-repeat: repeat; /* tile it */
+      background-size: 420px 420px; /* tweak smaller/larger as you like */
+      border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+    }
+
+    .subpage-cta {
+      background: #fbfbf9;
+      text-align: center;
+      border-top: 1px solid rgba(15, 23, 42, 0.06);
+    }
+
+    .subpage-inner {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .subpage-section h2 {
+      font-family: "Belleza", sans-serif;
+      font-size: 1.2rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin: 0 0 1rem;
+      color: #111827;
+    }
+
+    .subpage-section h3 {
+      margin: 1.1rem 0 0.6rem;
+      font-size: 0.98rem;
+      font-weight: 500;
+      color: #111827;
+    }
+
+    .subpage-section p {
+      margin: 0 0 0.9rem;
+      font-size: 0.96rem;
+      line-height: 1.8;
+      color: #4b5563;
+    }
+
+    .subpage-section ul {
+      margin: 0 0 1rem;
+      padding-left: 1.1rem;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #4b5563;
+    }
+
+    .subpage-section li + li {
+      margin-top: 0.2rem;
+    }
+
+    .subpage-cta p {
+      max-width: 620px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+</Layout>

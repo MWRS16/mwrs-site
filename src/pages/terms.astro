@@ -1,0 +1,233 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<!-- Astro -->
+<Layout
+  title="Start Counseling or Medication Care | MWRS"
+  description="Tell us what you’re looking for and our intake team will match you with a counselor or prescriber for counseling or medication management, in person or via telehealth in Idaho."
+>
+  <main class="subpage">
+    <!-- Hero -->
+    <section class="subpage-hero">
+      <div class="subpage-hero-inner">
+        <h1>Terms of Use</h1>
+        <p>
+          These Terms of Use govern your access to and use of the Mental Wellness
+          &amp; Relationship Services (MWRS) website. By visiting or using this
+          site, you agree to these terms.
+        </p>
+      </div>
+    </section>
+
+    <!-- Body -->
+    <section class="subpage-section">
+      <div class="subpage-inner">
+        <h2>Informational purposes only</h2>
+        <p>
+          The content on this website is provided for general informational purposes
+          only. It is not a substitute for professional medical, psychiatric, or
+          psychological advice, diagnosis, or treatment. Always consult a qualified
+          health provider with questions about your own situation.
+        </p>
+
+        <h2>No emergency or crisis services</h2>
+        <p>
+          This website and our online forms are not monitored for emergencies or
+          crisis situations. If you are in immediate danger or experiencing a
+          medical or mental health emergency, call 911 or go to the nearest
+          emergency room. You may also contact your local crisis line or national
+          crisis resources as appropriate for your area.
+        </p>
+
+        <h2>No provider–patient relationship through the website</h2>
+        <p>
+          Visiting this website or submitting an online form does not by itself
+          create a provider–patient relationship with MWRS or any individual
+          clinician. A therapeutic or clinical relationship is only established
+          after you have completed the intake process and begun services with a
+          specific provider.
+        </p>
+
+        <h2>Links to other websites</h2>
+        <p>
+          Our website may include links to third-party websites or resources. These
+          links are provided for convenience only. MWRS does not control and is not
+          responsible for the content, privacy practices, or services of any
+          third-party websites.
+        </p>
+
+        <h2>Use of website content</h2>
+        <p>
+          All text, graphics, and other content on this site are the property of
+          MWRS or are used with permission. You may view, download, or print
+          materials for your personal, non-commercial use only. Any other
+          reproduction, distribution, or modification of site content requires
+          prior written consent.
+        </p>
+
+        <h2>Accuracy and updates</h2>
+        <p>
+          We aim to keep the information on this site current and accurate, but
+          details about services, locations, availability, or policies may change
+          over time. MWRS does not guarantee that all information on the site is
+          complete, up to date, or free from error.
+        </p>
+
+        <h2>Limitation of liability</h2>
+        <p>
+          To the fullest extent permitted by law, MWRS is not liable for any
+          damages arising out of or related to your use of this website, reliance
+          on its content, or inability to access the site.
+        </p>
+
+        <h2>Changes to these terms</h2>
+        <p>
+          We may update these Terms of Use from time to time. Any changes will be
+          posted on this page with an updated effective date. Your continued use
+          of the site after changes are posted constitutes acceptance of the
+          revised terms.
+        </p>
+
+        <p>
+          If you have questions about these terms, you may contact our office for
+          clarification.
+        </p>
+      </div>
+    </section>
+
+    <!-- Bottom CTA -->
+    <section class="subpage-section subpage-cta">
+      <div class="subpage-inner">
+        <h2>Questions about our policies?</h2>
+        <p>
+          If you have questions about our Terms of Use, Privacy Policy, or how we
+          handle information, you’re welcome to reach out to our team.
+        </p>
+        <a href="/contact-us" class="subpage-btn">
+          Contact us
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <style>
+    .subpage {
+      background: #f9fafb;
+      min-height: 100vh;
+    }
+
+    /* Hero */
+    .subpage-hero {
+      padding: 10rem 1.5rem 3rem;
+            background-image: url("/images/paper-texture.png");
+      background-repeat: repeat; /* tile it */
+      background-size: 420px 420px; /* tweak smaller/larger as you like */
+      border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+    }
+
+    .subpage-hero-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .subpage-hero h1 {
+      font-family: "Belleza", sans-serif;
+      font-size: clamp(2rem, 3vw, 2.6rem);
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin: 0 0 1rem;
+      color: #111827;
+    }
+
+    .subpage-hero p {
+      margin: 0 0 1.6rem;
+      font-size: 1rem;
+      line-height: 1.8;
+      color: #4b5563;
+    }
+
+    /* Shared sections */
+    .subpage-section {
+      padding: 3rem 1.5rem 3.2rem;
+      background: #e5e9f3;
+            background-image: url("/images/paper-texture.png");
+      background-repeat: repeat; /* tile it */
+      background-size: 420px 420px; /* tweak smaller/larger as you like */
+      border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+    }
+
+    .subpage-cta {
+      background: #fbfbf9;
+      text-align: center;
+      border-top: 1px solid rgba(15, 23, 42, 0.06);
+    }
+
+    .subpage-inner {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .subpage-section h2 {
+      font-family: "Belleza", sans-serif;
+      font-size: 1.2rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin: 0 0 1rem;
+      color: #111827;
+    }
+
+    .subpage-section p {
+      margin: 0 0 0.9rem;
+      font-size: 0.96rem;
+      line-height: 1.8;
+      color: #4b5563;
+    }
+
+    .subpage-section ul {
+      margin: 0 0 1rem;
+      padding-left: 1.1rem;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #4b5563;
+    }
+
+    .subpage-section li + li {
+      margin-top: 0.2rem;
+    }
+
+    .subpage-cta p {
+      max-width: 620px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Button – same pattern as other subpages */
+    .subpage-btn {
+      display: inline-block;
+      padding: 0.85rem 1.9rem;
+      border-radius: 999px;
+      border: 1px solid #0f172a;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      text-decoration: none;
+      background: #ffffff;
+      color: #0f172a;
+      box-shadow: 0 6px 16px rgba(15, 23, 42, 0.12);
+      transition:
+        background 0.15s ease,
+        color 0.15s ease,
+        box-shadow 0.15s ease,
+        transform 0.15s ease;
+    }
+
+    .subpage-btn:hover {
+      background: #0f172a;
+      color: #ffffff;
+      transform: translateY(-1px);
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.2);
+    }
+  </style>
+</Layout>

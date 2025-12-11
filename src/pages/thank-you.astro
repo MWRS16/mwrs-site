@@ -1,0 +1,138 @@
+<!-- Astro -->
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+  title="Thank You | Mental Wellness & Relationship Services"
+  description="Thank you for reaching out to Mental Wellness & Relationship Services. Our team will review your message and follow up with next steps."
+>
+  <main class="subpage">
+    <section class="subpage-hero">
+      <div class="subpage-hero-inner">
+        <h1>Thank you for reaching out</h1>
+        <p>
+          We’ve received your submission and our team will review it shortly.
+          If a reply is needed, someone from MWRS will follow up by phone or
+          email, usually within a few business days.
+        </p>
+        <a href="/" class="subpage-btn">
+          Return to home
+        </a>
+      </div>
+    </section>
+
+    <section class="subpage-section subpage-cta">
+      <div class="subpage-inner">
+        <h2>In the meantime</h2>
+        <p>
+          You’re welcome to browse our services, locations, or FAQ while you
+          wait for a response.
+        </p>
+        <a href="/faq" class="subpage-btn">
+          Visit the FAQ
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <style>
+    .subpage {
+      background: #f9fafb;
+      min-height: 100vh;
+    }
+
+    .subpage-hero {
+      padding: 10rem 1.5rem 3rem;
+      background: #fbfbf9;
+      border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+    }
+
+    .subpage-hero-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .subpage-hero h1 {
+      font-family: "Belleza", sans-serif;
+      font-size: clamp(2rem, 3vw, 2.6rem);
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin: 0 0 1rem;
+      color: #111827;
+    }
+
+    .subpage-hero p {
+      margin: 0 0 1.6rem;
+      font-size: 1rem;
+      line-height: 1.8;
+      color: #4b5563;
+    }
+
+    .subpage-btn {
+      display: inline-block;
+      padding: 0.85rem 1.9rem;
+      border-radius: 999px;
+      border: 1px solid #0f172a;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      text-decoration: none;
+      background: #ffffff;
+      color: #0f172a;
+      box-shadow: 0 6px 16px rgba(15, 23, 42, 0.12);
+      transition:
+        background 0.15s ease,
+        color 0.15s ease,
+        box-shadow 0.15s ease,
+        transform 0.15s ease;
+    }
+
+    .subpage-btn:hover {
+      background: #0f172a;
+      color: #ffffff;
+      transform: translateY(-1px);
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.2);
+    }
+
+    .subpage-section {
+      padding: 3rem 1.5rem 3.2rem;
+      background: #f9fafb;
+      border-top: 1px solid rgba(15, 23, 42, 0.03);
+    }
+
+    .subpage-cta {
+      background: #fbfbf9;
+      text-align: center;
+      border-top: 1px solid rgba(15, 23, 42, 0.06);
+    }
+
+    .subpage-inner {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .subpage-section h2 {
+      font-family: "Belleza", sans-serif;
+      font-size: 1.2rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin: 0 0 1rem;
+      color: #111827;
+    }
+
+    .subpage-section p {
+      margin: 0 0 0.9rem;
+      font-size: 0.96rem;
+      line-height: 1.8;
+      color: #4b5563;
+    }
+
+    .subpage-cta p {
+      max-width: 620px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+</Layout>

@@ -1,0 +1,225 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<!-- Astro -->
+<Layout
+  title="Telehealth Counseling & Medication Services Across Idaho | MWRS"
+  description="Online counseling and psychiatric medication management for clients anywhere in Idaho. MWRS provides secure telehealth visits for individuals, teens, couples, and families statewide."
+>
+  <main class="subpage">
+    <!-- Hero -->
+    <section class="subpage-hero">
+      <div class="subpage-hero-inner">
+        <h1>Telehealth Services</h1>
+        <p>
+          MWRS offers secure telehealth counseling and medication management for
+          clients across Idaho. Sessions take place through a HIPAA-compliant
+          video platform, giving you flexible access to care from home, work, or
+          anywhere you can find a quiet, private space.
+        </p>
+        <a href="/contact-us" class="subpage-btn">
+          Start telehealth care
+        </a>
+      </div>
+    </section>
+
+    <!-- Body -->
+    <section class="subpage-section">
+      <div class="subpage-inner">
+        <h2>Convenient and flexible</h2>
+        <p>
+          Telehealth works well for many clients, including those with long
+          commutes, tight schedules, caregiving responsibilities, or limited
+          access to in-person services. All you need is a smartphone, tablet, or
+          computer with internet access.
+        </p>
+
+        <h2>Who can use telehealth</h2>
+        <p>
+          We provide telehealth counseling and medication management to adults
+          and teens located anywhere in Idaho. Some clients choose telehealth
+          exclusively; others use a mix of in-person and video sessions based on
+          the season of life they’re in.
+        </p>
+
+        <h2>What telehealth sessions are like</h2>
+        <p>
+          Telehealth appointments function much like in-person visits. You and
+          your provider meet face-to-face on video, discuss what’s been going
+          on, and work toward the goals you’ve set together. If you’re seeking
+          medication care, your provider can evaluate symptoms, adjust treatment
+          plans, and coordinate labs when needed.
+        </p>
+
+        <h3>Telehealth is often a good fit for:</h3>
+        <ul>
+          <li>Busy parents or caregivers</li>
+          <li>Clients who live outside city centers</li>
+          <li>College students or remote workers</li>
+          <li>People with mobility challenges or chronic illness</li>
+          <li>Anyone who feels more comfortable at home</li>
+        </ul>
+
+        <h2>Technology requirements</h2>
+        <p>
+          Telehealth sessions require:
+        </p>
+        <ul>
+          <li>A stable internet connection</li>
+          <li>A device with a camera and microphone</li>
+          <li>A private, confidential space for the duration of the session</li>
+        </ul>
+
+        <p>
+          Before your first appointment, our team will send simple instructions
+          to join your session and test your device if needed.
+        </p>
+      </div>
+    </section>
+
+    <!-- Bottom CTA -->
+    <section class="subpage-section subpage-cta">
+      <div class="subpage-inner">
+        <h2>Ready to begin?</h2>
+        <p>
+          Telehealth makes it easier to start care wherever you’re located in
+          Idaho. Share a few details on our intake form and we’ll match you with
+          the right counselor or prescriber.
+        </p>
+        <a href="/contact-us" class="subpage-btn">
+          Start telehealth care
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <style>
+    .subpage {
+      background: #f9fafb;
+      min-height: 100vh;
+    }
+
+    /* Hero */
+  .subpage-hero {
+  padding: 10rem 1.5rem 3rem;
+  background-color: #fbfbf9;              /* keep your soft white */
+  background-image: url("/images/paper-texture.png");
+  background-repeat: repeat;              /* tile it */
+  background-size: 420px 420px;           /* tweak smaller/larger as you like */
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+    .subpage-hero-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .subpage-hero h1 {
+      font-family: "Belleza", sans-serif;
+      font-size: clamp(2rem, 3vw, 2.6rem);
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin: 0 0 1rem;
+      color: #111827;
+    }
+
+    .subpage-hero p {
+      margin: 0 0 1.6rem;
+      font-size: 1rem;
+      line-height: 1.8;
+      color: #4b5563;
+    }
+
+    /* Shared sections */
+    .subpage-section {
+      padding: 3rem 1.5rem 3.2rem;
+      background: #e5e9f3;
+        background-image: url("/images/paper-texture.png");
+  background-repeat: repeat;              /* tile it */
+  background-size: 420px 420px;           /* tweak smaller/larger as you like */
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08);;
+    }
+
+    .subpage-cta {
+      background: #fbfbf9;
+      text-align: center;
+      border-top: 1px solid rgba(15, 23, 42, 0.06);
+    }
+
+    .subpage-inner {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .subpage-section h2 {
+      font-family: "Belleza", sans-serif;
+      font-size: 1.2rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin: 0 0 1rem;
+      color: #111827;
+    }
+
+    .subpage-section h3 {
+      margin: 1.1rem 0 0.6rem;
+      font-size: 0.98rem;
+      font-weight: 500;
+      color: #111827;
+    }
+
+    .subpage-section p {
+      margin: 0 0 0.9rem;
+      font-size: 0.96rem;
+      line-height: 1.8;
+      color: #4b5563;
+    }
+
+    .subpage-section ul {
+      margin: 0 0 1rem;
+      padding-left: 1.1rem;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #4b5563;
+    }
+
+    .subpage-section li + li {
+      margin-top: 0.2rem;
+    }
+
+    .subpage-cta p {
+      max-width: 620px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Button */
+    .subpage-btn {
+      display: inline-block;
+      padding: 0.85rem 1.9rem;
+      border-radius: 999px;
+      border: 1px solid #0f172a;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      text-decoration: none;
+      background: #ffffff;
+      color: #0f172a;
+      box-shadow: 0 6px 16px rgba(15, 23, 42, 0.12);
+      transition:
+        background 0.15s ease,
+        color 0.15s ease,
+        box-shadow 0.15s ease,
+        transform 0.15s ease;
+    }
+
+    .subpage-btn:hover {
+      background: #0f172a;
+      color: #ffffff;
+      transform: translateY(-1px);
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.2);
+    }
+
+  </style>
+</Layout>

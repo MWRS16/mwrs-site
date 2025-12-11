@@ -1,0 +1,198 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout
+  title="Medication Management in Idaho | MWRS"
+  description="Psychiatric evaluation and medication management for adults and teens in Coeur d’Alene and Ponderay, with telehealth available across Idaho and Washington."
+>
+  <main class="subpage">
+    <!-- Hero -->
+    <section class="subpage-hero">
+      <div class="subpage-hero-inner">
+        <h1>Medication Management</h1>
+        <p>
+          MWRS provides psychiatric medication management for adults and teens.
+          Our nurse practitioners focus on careful evaluation, clear
+          explanations, and ongoing follow-up so medication is one thoughtful
+          part of your care—never the whole story.
+        </p>
+        <a href="/contact-us" class="subpage-btn"> Start medication care </a>
+      </div>
+    </section>
+
+    <!-- Light SEO body -->
+    <section class="subpage-section">
+      <div class="subpage-inner">
+        <h2>Who medication care may help</h2>
+        <p>
+          Medication isn’t the right fit for everyone, but it can be a helpful
+          tool at certain points in life. People often seek medication support
+          when experiencing:
+        </p>
+
+        <ul>
+          <li>Ongoing anxiety or panic symptoms</li>
+          <li>Depressive symptoms that feel hard to shake</li>
+          <li>Sleep disruption related to mood or stress</li>
+          <li>Attention, focus, or impulse-control concerns</li>
+          <li>Mood shifts that make daily life feel unstable</li>
+        </ul>
+
+        <p>
+          You don’t have to know in advance whether you “want meds.” Your
+          provider can help you think through options, including when counseling
+          alone may be the better first step.
+        </p>
+
+        <h3>What to expect from visits</h3>
+        <p>
+          Your first appointment is an evaluation. Your nurse practitioner will
+          ask about your symptoms, history, current medications or supplements,
+          and what has or hasn’t helped in the past.
+        </p>
+        <p>
+          Together you’ll talk through possible options, which may include
+          starting or adjusting a psychiatric medication, coordinating with your
+          counselor, ordering lab work when clinically appropriate, and building
+          non-medication strategies that support your goals.
+        </p>
+      </div>
+    </section>
+
+    <!-- Bottom CTA -->
+    <section class="subpage-section subpage-cta">
+      <div class="subpage-inner">
+        <h2>Ready to talk about medication?</h2>
+        <p>
+          Share a bit about what you’re experiencing, and our team will help you
+          determine whether a medication consultation makes sense for your
+          situation.
+        </p>
+        <a href="/contact-us" class="subpage-btn"> Start medication care </a>
+      </div>
+    </section>
+  </main>
+
+  <style>
+    .subpage {
+      background: #f9fafb;
+      min-height: 100vh;
+    }
+
+    /* Hero */
+    .subpage-hero {
+      padding: 10rem 1.5rem 3rem;
+      background: #fbfbf9;
+      border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+    }
+
+    .subpage-hero-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .subpage-hero h1 {
+      font-family: "Belleza", sans-serif;
+      font-size: clamp(2rem, 3vw, 2.6rem);
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin: 0 0 1rem;
+      color: #111827;
+    }
+
+    .subpage-hero p {
+      margin: 0 0 1.6rem;
+      font-size: 1rem;
+      line-height: 1.8;
+      color: #4b5563;
+    }
+
+    /* Outline button (same top & bottom) */
+    .subpage-btn {
+      display: inline-block;
+      padding: 0.85rem 1.9rem;
+      border-radius: 999px;
+      border: 1px solid #0f172a;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      text-decoration: none;
+      background: #ffffff;
+      color: #0f172a;
+      box-shadow: 0 6px 16px rgba(15, 23, 42, 0.12);
+      transition:
+        background 0.15s ease,
+        color 0.15s ease,
+        box-shadow 0.15s ease,
+        transform 0.15s ease;
+    }
+
+    .subpage-btn:hover {
+      background: #0f172a;
+      color: #ffffff;
+      transform: translateY(-1px);
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.2);
+    }
+
+    /* Body sections */
+    .subpage-section {
+      padding: 3rem 1.5rem 3.2rem;
+      background: #e5e9f3;
+      border-top: 1px solid rgba(15, 23, 42, 0.03);
+    }
+
+    .subpage-cta {
+      background: #fbfbf9;
+      text-align: center;
+      border-top: 1px solid rgba(15, 23, 42, 0.06);
+    }
+
+    .subpage-inner {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .subpage-section h2 {
+      font-family: "Belleza", sans-serif;
+      font-size: 1.2rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin: 0 0 1rem;
+      color: #111827;
+    }
+
+    .subpage-section h3 {
+      margin: 1.1rem 0 0.6rem;
+      font-size: 0.98rem;
+      font-weight: 500;
+      color: #111827;
+    }
+
+    .subpage-section p {
+      margin: 0 0 0.9rem;
+      font-size: 0.96rem;
+      line-height: 1.8;
+      color: #4b5563;
+    }
+
+    .subpage-section ul {
+      margin: 0 0 1rem;
+      padding-left: 1.1rem;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #4b5563;
+    }
+
+    .subpage-section li + li {
+      margin-top: 0.2rem;
+    }
+
+    .subpage-cta p {
+      max-width: 620px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+</Layout>
