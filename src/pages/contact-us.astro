@@ -4,18 +4,16 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout
   title="Start Counseling or Medication Care | MWRS"
-  description="Tell us what you’re looking for and our intake team will match you with a counselor or prescriber for counseling or medication management, in person or via telehealth in Idaho."
+  description="Tell us what you’re looking for and our team will match you with a counselor or prescriber for counseling or medication management, in person or via telehealth in Idaho."
 >
   <main class="contact-page">
-    <!-- Hero / intro -->
     <section class="contact-hero">
       <div class="contact-hero-inner">
         <h1>Start Counseling or Medication Care</h1>
         <p>
-          Tell us a little about what you’re looking for and our team
-          will match you with a counselor or nurse practitioner. We
-          offer in-person care in North Idaho and telehealth
-          throughout the state.
+          Tell us a little about what you’re looking for and our team will match
+          you with a counselor or nurse practitioner. We offer in-person care in
+          North Idaho and telehealth throughout the state.
         </p>
 
         <div class="contact-hero-buttons">
@@ -33,56 +31,51 @@ import Layout from "../layouts/Layout.astro";
           >
             I’m looking for medication care
           </button>
+          <button
+            type="button"
+            class="hero-choice"
+            data-select-care="both_care"
+          >
+            I’m looking for counseling and medication care
+          </button>
         </div>
       </div>
     </section>
 
-    <!-- Main form -->
     <section class="contact-form-section">
       <div class="contact-form-inner">
         <article class="contact-card">
           <h2 class="contact-card-title">Tell us how we can help</h2>
 
-          <!-- Inline success message (hidden by default) -->
           <p class="form-success" data-intake-success hidden>
             Thank you. Your information has been sent. Our intake team will
             follow up by phone or email, usually within 1–2 business days.
           </p>
 
-<!-- Formspree wired form -->
-<form
-  class="intake-form"
-  method="POST"
-  action="https://formspree.io/f/xwpgrywz"
->
-  <!-- Redirect user to thank-you page after successful submit -->
-  <input
-    type="hidden"
-    name="_redirect"
-    value="https://mwrservices.org/thank-you"
-  />
-
-            <!-- dynamic subject goes here -->
+          <form
+            class="intake-form"
+            method="POST"
+            action="https://formspree.io/f/xwpgrywz"
+          >
             <input
               type="hidden"
-              name="_subject"
-              value="New intake request"
+              name="_redirect"
+              value="https://mwrservices.org/thank-you"
             />
+            <input type="hidden" name="_subject" value="New intake request" />
 
-            <!-- Care type gatekeeper -->
             <div class="field-group">
-              <label for="careType"
-                >What type of care are you seeking?</label
-              >
+              <label for="careType">What type of care are you seeking?</label>
               <select id="careType" name="care_type" required>
                 <option value="">Please choose one…</option>
                 <option value="counseling">Counseling</option>
                 <option value="medication">Medication management</option>
-                <option value="not_sure">I’m not sure / both</option>
+                <option value="both_care">
+                  Counseling and medication management
+                </option>
               </select>
             </div>
 
-            <!-- Shared fields -->
             <div class="field-grid">
               <div class="field-group">
                 <label for="name">Name</label>
@@ -102,6 +95,9 @@ import Layout from "../layouts/Layout.astro";
                   name="phone"
                   type="tel"
                   autocomplete="tel"
+                  inputmode="tel"
+                  pattern="^\(?[0-9]{3}\)?[-.\s]?[0-9]{3}[-.\s]?[0-9]{4}$"
+                  title="Please enter a valid 10-digit phone number"
                   required
                 />
               </div>
@@ -121,88 +117,80 @@ import Layout from "../layouts/Layout.astro";
 
               <div class="field-group">
                 <label for="dob">Date of birth</label>
-                <input
-                  id="dob"
-                  name="date_of_birth"
-                  type="date"
-                  required
-                />
+                <input id="dob" name="date_of_birth" type="date" required />
               </div>
             </div>
 
             <div class="field-grid">
               <div class="field-group">
-                <label for="insurance">Insurance</label>
-                <select
-                  id="insurance"
-                  name="insurance"
-                  required
-                >
-                  <option value="">Please choose…</option>
-                  <option value="cash_pay">Cash pay / self-pay</option>
-                  <option value="aetna">Aetna</option>
-                  <option value="blue_cross_idaho">Blue Cross of Idaho</option>
-                  <option value="bpa_eap">BPA EAP</option>
-                  <option value="champ_va">Champ VA</option>
-                  <option value="cigna_evernorth">Cigna/Evernorth</option>
-                  <option value="curalinc_eap">Curalinc EAP</option>
-                  <option value="first_choice">First Choice</option>
-                  <option value="gpa">GPA</option>
-                  <option value="humana">Humana</option>
-                  <option value="kaiser">Kaiser</option>
-                  <option value="magellan">Magellan</option>
-                  <option value="medicaid_idaho">Medicaid (Idaho)</option>
-                  <option value="medicare">Medicare</option>
-                  <option value="molina_idaho">Molina of Idaho</option>
-                  <option value="new_directions_eap">New Directions EAP</option>
-                  <option value="optum">Optum</option>
-                  <option value="pacific_source">Pacific Source</option>
-                  <option value="premera_blue_cross">Premera Blue Cross</option>
-                  <option value="regence_bcbs_any">
-                    Regence BCBS (Any State)
-                  </option>
-                  <option value="tricare_west">TriCare West</option>
-                  <option value="triwest_va">TriWest/VA</option>
-                  <option value="uhc">UHC</option>
-                  <option value="vital_eap">Vital EAP</option>
+                <label for="preferredTime">Preferred time of day</label>
+                <select id="preferredTime" name="preferred_time_of_day">
+                  <option value="any_time">Any time</option>
+                  <option value="morning">Morning</option>
+                  <option value="afternoon">Afternoon</option>
+                  <option value="after_4pm">After 4 PM</option>
+                  <option value="evening">Evening</option>
                 </select>
               </div>
 
               <div class="field-group">
-                <label for="telehealth">
-                  Are you open to telehealth (video sessions)?
-                </label>
-                <select
-                  id="telehealth"
-                  name="telehealth_preference"
-                  required
-                >
+                <label for="telehealth">Telehealth preference</label>
+                <select id="telehealth" name="telehealth_preference" required>
                   <option value="">Please choose…</option>
-                  <option value="yes">Yes, telehealth is fine</option>
-                  <option value="no">No, in-person only</option>
-                  <option value="either">Either in-person or telehealth</option>
+                  <option value="in_person">In-person only</option>
+                  <option value="telehealth_ok">Open to telehealth</option>
+                  <option value="either">Either works</option>
                 </select>
               </div>
             </div>
 
-            <!-- Preferred office (in-person) -->
-            <fieldset class="field-group">
-              <legend>Preferred in-person office (if applicable)</legend>
+            <div class="field-group">
+              <label for="insurance">Insurance</label>
+              <select id="insurance" name="insurance" required>
+                <option value="">Please choose…</option>
+                <option value="cash_pay">Cash pay / self-pay</option>
+                <option value="aetna">Aetna</option>
+                <option value="blue_cross_idaho">Blue Cross of Idaho</option>
+                <option value="bpa_eap">BPA EAP</option>
+                <option value="champ_va">Champ VA</option>
+                <option value="cigna_evernorth">Cigna/Evernorth</option>
+                <option value="curalinc_eap">Curalinc EAP</option>
+                <option value="first_choice">First Choice</option>
+                <option value="gpa">GPA</option>
+                <option value="humana">Humana</option>
+                <option value="kaiser">Kaiser</option>
+                <option value="magellan">Magellan</option>
+                <option value="medicaid_idaho">Medicaid (Idaho)</option>
+                <option value="medicare">Medicare</option>
+                <option value="molina_idaho">Molina of Idaho</option>
+                <option value="new_directions_eap">New Directions EAP</option>
+                <option value="optum">Optum</option>
+                <option value="pacific_source">Pacific Source</option>
+                <option value="premera_blue_cross">Premera Blue Cross</option>
+                <option value="regence_bcbs_any">Regence BCBS (Any State)</option>
+                <option value="tricare_west">TriCare West</option>
+                <option value="triwest_va">TriWest/VA</option>
+                <option value="uhc">UHC</option>
+                <option value="vital_eap">Vital EAP</option>
+              </select>
+            </div>
+
+            <fieldset class="field-group office-fieldset">
+              <legend>Preferred office</legend>
               <p class="field-hint">
-                You can choose more than one. Telehealth is
-                available anywhere in Idaho.
+                Please choose at least one option.
               </p>
 
-              <!-- Counseling + Not sure: all in-person locations -->
               <div
                 class="checkbox-grid office-grid office-grid--counseling"
-                data-office-for="counseling not_sure"
+                data-office-for="counseling both_care"
               >
                 <label>
                   <input
                     type="checkbox"
                     name="office_cda"
                     value="Coeur d’Alene"
+                    data-office-option="counseling"
                   />
                   Coeur d’Alene
                 </label>
@@ -211,6 +199,7 @@ import Layout from "../layouts/Layout.astro";
                     type="checkbox"
                     name="office_ponderay"
                     value="Ponderay"
+                    data-office-option="counseling"
                   />
                   Ponderay
                 </label>
@@ -219,6 +208,7 @@ import Layout from "../layouts/Layout.astro";
                     type="checkbox"
                     name="office_priest_river"
                     value="Priest River"
+                    data-office-option="counseling"
                   />
                   Priest River
                 </label>
@@ -227,6 +217,7 @@ import Layout from "../layouts/Layout.astro";
                     type="checkbox"
                     name="office_oldtown"
                     value="Oldtown"
+                    data-office-option="counseling"
                   />
                   Oldtown
                 </label>
@@ -235,12 +226,12 @@ import Layout from "../layouts/Layout.astro";
                     type="checkbox"
                     name="office_telehealth_only"
                     value="Telehealth only"
+                    data-office-option="counseling"
                   />
                   Telehealth only
                 </label>
               </div>
 
-              <!-- Medication: CDA, Ponderay, Telehealth only -->
               <div
                 class="checkbox-grid office-grid office-grid--medication"
                 data-office-for="medication"
@@ -250,6 +241,7 @@ import Layout from "../layouts/Layout.astro";
                     type="checkbox"
                     name="office_cda_med"
                     value="Coeur d’Alene"
+                    data-office-option="medication"
                   />
                   Coeur d’Alene
                 </label>
@@ -258,6 +250,7 @@ import Layout from "../layouts/Layout.astro";
                     type="checkbox"
                     name="office_ponderay_med"
                     value="Ponderay"
+                    data-office-option="medication"
                   />
                   Ponderay
                 </label>
@@ -266,17 +259,14 @@ import Layout from "../layouts/Layout.astro";
                     type="checkbox"
                     name="office_telehealth_only_med"
                     value="Telehealth only"
+                    data-office-option="medication"
                   />
                   Telehealth only
                 </label>
               </div>
             </fieldset>
 
-            <!-- Counseling-specific -->
-            <div
-              class="intake-subsection"
-              data-section="counseling"
-            >
+            <div class="intake-subsection" data-section="counseling">
               <h3 class="subheading">Counseling details</h3>
 
               <div class="field-group">
@@ -289,30 +279,27 @@ import Layout from "../layouts/Layout.astro";
                   data-required-when="counseling"
                 >
                   <option value="">Please choose…</option>
-                  <option value="individual_adult">Individual adult</option>
-                  <option value="individual_teen">Individual teen</option>
-                  <option value="couples">Couples / marriage</option>
+                  <option value="individual">Individual counseling</option>
+                  <option value="cbt">CBT</option>
+                  <option value="dbt">DBT</option>
+                  <option value="emdr">EMDR</option>
+                  <option value="marriage">Marriage counseling</option>
+                  <option value="couples">Couples counseling</option>
                   <option value="family">Family counseling</option>
+                  <option value="eft">EFT</option>
                   <option value="equine">Equine-assisted therapy</option>
                   <option value="other">Other / not sure</option>
                 </select>
               </div>
             </div>
 
-            <!-- Medication-specific -->
-            <div
-              class="intake-subsection"
-              data-section="medication"
-            >
-              <h3 class="subheading">
-                Medication management details
-              </h3>
+            <div class="intake-subsection" data-section="medication">
+              <h3 class="subheading">Medication management details</h3>
 
               <div class="field-grid">
                 <div class="field-group">
                   <label for="prevDiagnosis">
-                    Have you received a mental health
-                    diagnosis before?
+                    Have you received a mental health diagnosis before?
                   </label>
                   <select
                     id="prevDiagnosis"
@@ -328,8 +315,7 @@ import Layout from "../layouts/Layout.astro";
 
                 <div class="field-group">
                   <label for="currentMeds">
-                    Are you currently taking any psychiatric
-                    medication?
+                    Are you currently taking any psychiatric medication?
                   </label>
                   <select
                     id="currentMeds"
@@ -346,8 +332,7 @@ import Layout from "../layouts/Layout.astro";
               <div class="field-grid">
                 <div class="field-group">
                   <label for="psychEval">
-                    Are you interested in a psychiatric
-                    evaluation?
+                    Are you interested in a psychiatric evaluation?
                   </label>
                   <select
                     id="psychEval"
@@ -363,8 +348,7 @@ import Layout from "../layouts/Layout.astro";
 
                 <div class="field-group">
                   <label for="medConsult">
-                    Are you interested in ongoing medication
-                    management?
+                    Are you interested in ongoing medication management?
                   </label>
                   <select
                     id="medConsult"
@@ -380,29 +364,100 @@ import Layout from "../layouts/Layout.astro";
               </div>
             </div>
 
-            <!-- Not sure / both -->
-            <div class="intake-subsection" data-section="not_sure">
-              <h3 class="subheading">If you’re not sure yet</h3>
+            <div class="intake-subsection" data-section="both_care">
+              <h3 class="subheading">Counseling + medication details</h3>
 
               <div class="field-group">
-                <label for="notSureOpenToMeds">
-                  Are you open to discussing medication
-                  options if your provider recommends it?
+                <label for="bothCareCounselingType">
+                  What type of counseling are you interested in?
                 </label>
                 <select
-                  id="notSureOpenToMeds"
-                  name="not_sure_medication_openness"
-                  data-required-when="not_sure"
+                  id="bothCareCounselingType"
+                  name="both_care_counseling_type"
+                  data-required-when="both_care"
                 >
                   <option value="">Please choose…</option>
-                  <option value="yes">Yes</option>
-                  <option value="maybe">Maybe / I’m not sure</option>
-                  <option value="no">No, I prefer counseling only</option>
+                  <option value="individual">Individual counseling</option>
+                  <option value="cbt">CBT</option>
+                  <option value="dbt">DBT</option>
+                  <option value="emdr">EMDR</option>
+                  <option value="marriage">Marriage counseling</option>
+                  <option value="couples">Couples counseling</option>
+                  <option value="family">Family counseling</option>
+                  <option value="eft">EFT</option>
+                  <option value="equine">Equine-assisted therapy</option>
+                  <option value="other">Other / not sure</option>
                 </select>
+              </div>
+
+              <div class="field-grid">
+                <div class="field-group">
+                  <label for="bothPrevDiagnosis">
+                    Have you received a mental health diagnosis before?
+                  </label>
+                  <select
+                    id="bothPrevDiagnosis"
+                    name="both_previous_diagnosis"
+                    data-required-when="both_care"
+                  >
+                    <option value="">Please choose…</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                    <option value="unsure">I’m not sure</option>
+                  </select>
+                </div>
+
+                <div class="field-group">
+                  <label for="bothCurrentMeds">
+                    Are you currently taking any psychiatric medication?
+                  </label>
+                  <select
+                    id="bothCurrentMeds"
+                    name="both_current_medication"
+                    data-required-when="both_care"
+                  >
+                    <option value="">Please choose…</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="field-grid">
+                <div class="field-group">
+                  <label for="bothPsychEval">
+                    Are you interested in a psychiatric evaluation?
+                  </label>
+                  <select
+                    id="bothPsychEval"
+                    name="both_psych_evaluation_interest"
+                    data-required-when="both_care"
+                  >
+                    <option value="">Please choose…</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                    <option value="unsure">Not sure yet</option>
+                  </select>
+                </div>
+
+                <div class="field-group">
+                  <label for="bothMedConsult">
+                    Are you interested in ongoing medication management?
+                  </label>
+                  <select
+                    id="bothMedConsult"
+                    name="both_medication_management_interest"
+                    data-required-when="both_care"
+                  >
+                    <option value="">Please choose…</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                    <option value="unsure">Not sure yet</option>
+                  </select>
+                </div>
               </div>
             </div>
 
-            <!-- Narrative box (shared) -->
             <div class="field-group">
               <label for="goals">
                 Briefly describe what you’re hoping to work on
@@ -416,8 +471,7 @@ import Layout from "../layouts/Layout.astro";
               ></textarea>
             </div>
 
-            <!-- Acknowledgements -->
-            <fieldset class="field-group small">
+            <fieldset class="field-group small acknowledgements">
               <legend>Before you submit</legend>
               <label class="checkbox-inline">
                 <input
@@ -426,8 +480,8 @@ import Layout from "../layouts/Layout.astro";
                   value="yes"
                   required
                 />
-                I understand this form is not for emergencies and
-                does not guarantee services.
+                I understand this form is not for emergencies and does not
+                guarantee services.
               </label>
               <label class="checkbox-inline">
                 <input
@@ -436,14 +490,12 @@ import Layout from "../layouts/Layout.astro";
                   value="yes"
                   required
                 />
-                I consent to MWRS contacting me by phone or email
-                regarding this inquiry.
+                I consent to MWRS contacting me by phone or email regarding this
+                inquiry.
               </label>
             </fieldset>
 
-            <button type="submit" class="submit-btn">
-              Submit request
-            </button>
+            <button type="submit" class="submit-btn">Submit request</button>
           </form>
         </article>
       </div>
@@ -454,18 +506,18 @@ import Layout from "../layouts/Layout.astro";
     .contact-page {
       background: #f9fafb;
       min-height: 100vh;
-            background-image: url("/images/paper-texture.png");
-      background-repeat: repeat; /* tile it */
-      background-size: 420px 420px; /* tweak smaller/larger as you like */
+      background-image: url("/images/paper-texture.png");
+      background-repeat: repeat;
+      background-size: 420px 420px;
       border-bottom: 1px solid rgba(15, 23, 42, 0.08);
     }
 
     .contact-hero {
       padding: 10rem 1.5rem 3.5rem;
       background: #fbfbf9;
-           background-image: url("/images/paper-texture.png");
-      background-repeat: repeat; /* tile it */
-      background-size: 420px 420px; /* tweak smaller/larger as you like */
+      background-image: url("/images/paper-texture.png");
+      background-repeat: repeat;
+      background-size: 420px 420px;
       border-bottom: 1px solid rgba(15, 23, 42, 0.08);
     }
 
@@ -500,7 +552,7 @@ import Layout from "../layouts/Layout.astro";
 
     .hero-choice {
       border-radius: 999px;
-      border: 2px solid rgb(11, 27, 63);
+      border: 1px solid rgb(11, 27, 63);
       padding: 0.7rem 1.7rem;
       background: #ffffff;
       font-size: 0.9rem;
@@ -623,9 +675,18 @@ import Layout from "../layouts/Layout.astro";
       box-shadow: 0 0 0 1px rgba(15, 23, 42, 0.15);
     }
 
+    .office-fieldset,
+    .acknowledgements {
+      border: 1px solid rgba(15, 23, 42, 0.18);
+      border-radius: 16px;
+      padding: 0.9rem 1rem 1rem;
+      margin-bottom: 1.2rem;
+      background: #ffffff;
+    }
+
     .checkbox-grid {
       display: grid;
-      gap: 0.25rem;
+      gap: 0.35rem;
       grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     }
 
@@ -640,10 +701,11 @@ import Layout from "../layouts/Layout.astro";
       display: flex;
       align-items: flex-start;
       gap: 0.4rem;
-      margin-bottom: 0.35rem;
+      margin-bottom: 0.45rem;
     }
 
-    .checkbox-inline input {
+    .checkbox-inline input,
+    .checkbox-grid input {
       margin-top: 0.2rem;
     }
 
@@ -687,12 +749,10 @@ import Layout from "../layouts/Layout.astro";
       }
     }
 
-    /* Custom select arrows just inside the contact card */
     .contact-card select {
       appearance: none;
       -webkit-appearance: none;
       -moz-appearance: none;
-
       background-image: url("data:image/svg+xml,%3Csvg fill='none' stroke='%236b7280' stroke-width='2' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E");
       background-repeat: no-repeat;
       background-size: 16px;
@@ -706,34 +766,69 @@ import Layout from "../layouts/Layout.astro";
   </style>
 
   <script type="module">
-    // ========= CARE TYPE VISIBILITY + REQUIRED FIELDS =========
     const careSelect = document.querySelector("#careType");
     const subsections = document.querySelectorAll(".intake-subsection");
     const requiredFields = document.querySelectorAll("[data-required-when]");
     const heroButtons = document.querySelectorAll("[data-select-care]");
     const formSection = document.querySelector(".contact-form-section");
     const officeGrids = document.querySelectorAll(".office-grid");
+    const intakeForm = document.querySelector(".intake-form");
+    const successMsg = document.querySelector("[data-intake-success]");
+    const submitBtn = document.querySelector(".submit-btn");
 
     function updateCareView() {
-      const value = careSelect.value;
+      const value = careSelect ? careSelect.value : "";
 
-      // Show the correct counseling / medication / not-sure block
       subsections.forEach((section) => {
-        const sectionType = section.dataset.section;
-        section.hidden = sectionType !== value;
+        section.hidden = section.dataset.section !== value;
       });
 
-      // Toggle required fields based on care type
       requiredFields.forEach((field) => {
         const modes = field.dataset.requiredWhen.split(",");
         field.required = modes.includes(value);
       });
 
-      // Show correct office options
       officeGrids.forEach((grid) => {
         const modes = grid.dataset.officeFor.split(" ");
         grid.style.display = modes.includes(value) ? "grid" : "none";
       });
+    }
+
+    function getActiveOfficeInputs(careType) {
+      if (!intakeForm) return [];
+
+      if (careType === "medication") {
+        return intakeForm.querySelectorAll(
+          'input[data-office-option="medication"]'
+        );
+      }
+
+      if (careType === "counseling" || careType === "both_care") {
+        return intakeForm.querySelectorAll(
+          'input[data-office-option="counseling"]'
+        );
+      }
+
+      return [];
+    }
+
+    function validateOfficeSelection(careType) {
+      const officeInputs = getActiveOfficeInputs(careType);
+      if (!officeInputs.length) return true;
+
+      const oneChecked = Array.from(officeInputs).some((input) => input.checked);
+
+      officeInputs.forEach((input) => {
+        input.setCustomValidity(
+          oneChecked ? "" : "Please choose at least one office option."
+        );
+      });
+
+      if (!oneChecked) {
+        officeInputs[0].reportValidity();
+      }
+
+      return oneChecked;
     }
 
     if (careSelect) {
@@ -742,9 +837,8 @@ import Layout from "../layouts/Layout.astro";
 
     heroButtons.forEach((btn) => {
       btn.addEventListener("click", () => {
-        const value = btn.dataset.selectCare;
         if (!careSelect) return;
-        careSelect.value = value;
+        careSelect.value = btn.dataset.selectCare;
         updateCareView();
         formSection?.scrollIntoView({
           behavior: "smooth",
@@ -753,33 +847,43 @@ import Layout from "../layouts/Layout.astro";
       });
     });
 
-    // Initialize on load
-    if (careSelect) updateCareView();
-
-    // ========= FORMSPREE SUBMIT (AJAX) + DYNAMIC SUBJECT =========
-    const intakeForm = document.querySelector(".intake-form");
-    const successMsg = document.querySelector("[data-intake-success]");
-    const submitBtn = document.querySelector(".submit-btn");
+    if (careSelect) {
+      updateCareView();
+    }
 
     if (intakeForm) {
+      const officeInputs = intakeForm.querySelectorAll(
+        "input[data-office-option]"
+      );
+
+      officeInputs.forEach((input) => {
+        input.addEventListener("change", () => {
+          if (careSelect) validateOfficeSelection(careSelect.value);
+        });
+      });
+
       intakeForm.addEventListener("submit", async (event) => {
         event.preventDefault();
 
-        const formData = new FormData(intakeForm);
-        const careType = formData.get("care_type") || "other";
+        const careType = careSelect ? careSelect.value : "";
 
-        // Build a subject line your sister will recognize
+        if (!validateOfficeSelection(careType)) {
+          return;
+        }
+
+        const formData = new FormData(intakeForm);
+
         let subject = "New intake request";
         if (careType === "counseling") {
           subject = "New intake: Counseling request";
         } else if (careType === "medication") {
           subject = "New intake: Medication management request";
-        } else if (careType === "not_sure") {
-          subject = "New intake: Counseling / medication (not sure yet)";
+        } else if (careType === "both_care") {
+          subject = "New intake: Counseling + medication management request";
         }
+
         formData.set("_subject", subject);
 
-        // Optional: disable button while sending
         if (submitBtn) submitBtn.disabled = true;
 
         try {
@@ -791,15 +895,16 @@ import Layout from "../layouts/Layout.astro";
 
           if (response.ok) {
             intakeForm.reset();
+
             if (careSelect) {
               careSelect.value = "";
               updateCareView();
             }
+
             if (successMsg) {
               successMsg.hidden = false;
             }
           } else {
-            // If Formspree returns an error, you could add an error message here.
             console.error("Formspree error", await response.text());
           }
         } catch (err) {

@@ -1,0 +1,412 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+    title="Medication Refill Request | MWRS"
+    description="Request a refill for an existing prescription. Please allow 1–2 business days for processing."
+>
+    <main class="contact-page">
+        <section class="contact-hero">
+            <div class="contact-hero-inner">
+                <h1>Medication Refill Request</h1>
+                <p>
+                    Use this form to request a refill for an existing
+                    prescription. Please allow 1–2 business days for processing.
+                </p>
+            </div>
+        </section>
+
+        <section class="contact-form-section">
+            <div class="contact-form-inner">
+                <article class="contact-card">
+                    <h2 class="contact-card-title">Refill request</h2>
+
+                    <form
+                        class="refill-form"
+                        method="POST"
+                        action="https://formspree.io/f/xwpgrywz"
+                    >
+                        <input
+                            type="hidden"
+                            name="_subject"
+                            value="Medication refill request"
+                        />
+
+                        <div class="field-grid">
+                            <div class="field-group">
+                                <label for="name">Name</label>
+                                <input
+                                    id="name"
+                                    name="name"
+                                    type="text"
+                                    autocomplete="name"
+                                    required
+                                />
+                            </div>
+
+                            <div class="field-group">
+                                <label for="dob">Date of birth</label>
+                                <input
+                                    id="dob"
+                                    name="dob"
+                                    type="date"
+                                    required
+                                />
+                            </div>
+                        </div>
+
+                        <div class="field-grid">
+                            <div class="field-group">
+                                <label for="phone">Phone number</label>
+                                <input
+                                    id="phone"
+                                    name="phone"
+                                    type="tel"
+                                    autocomplete="tel"
+                                    inputmode="tel"
+                                    pattern="^\(?[0-9]{3}\)?[-.\s]?[0-9]{3}[-.\s]?[0-9]{4}$"
+                                    title="Please enter a valid 10-digit phone number"
+                                    required
+                                />
+                            </div>
+
+                            <div class="field-group">
+                                <label for="medication">Medication name</label>
+                                <input
+                                    id="medication"
+                                    name="medication"
+                                    type="text"
+                                    required
+                                />
+                            </div>
+                        </div>
+
+                        <div class="field-group">
+                            <label for="pharmacy"
+                                >Pharmacy (name + location)</label
+                            >
+                            <input
+                                id="pharmacy"
+                                name="pharmacy"
+                                type="text"
+                                required
+                            />
+                        </div>
+
+                        <div class="field-group">
+                            <label for="notes"
+                                >Additional notes (optional)</label
+                            >
+                            <textarea
+                                id="notes"
+                                name="notes"
+                                rows="4"
+                                placeholder="Anything else our team should know about this refill request?"
+                            ></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn">
+                            Submit refill request
+                        </button>
+                    </form>
+                </article>
+
+                <section class="faq-list-section refill-faq-section">
+  <div class="faq-list-inner">
+    <h2 class="contact-card-title">Frequently Asked Questions</h2>
+
+    <details class="faq-item">
+      <summary class="faq-question">How long does a refill take?</summary>
+      <div class="faq-answer">
+        <p>
+          Please allow 1–2 business days for our team to review your request
+          and respond with next steps. Not all requests can be filled
+          immediately—some may require provider review or a follow-up
+          appointment.
+        </p>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary class="faq-question">What if I need it urgently?</summary>
+      <div class="faq-answer">
+        <p>
+          Please submit refill requests at least <strong>1 week before</strong>
+          your medication runs out.
+        </p>
+        <p>For urgent needs:</p>
+        <p>• Call our office directly during business hours</p>
+        <p>
+          • If after hours, contact your pharmacy to request a temporary refill
+          or visit urgent care if appropriate
+        </p>
+        <p><strong>This form is not monitored for urgent requests.</strong></p>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary class="faq-question">Do I need an appointment?</summary>
+      <div class="faq-answer">
+        <p>
+          Some refill requests require a follow-up visit. Our team will review
+          your request and contact you within 1–2 business days if an
+          appointment is needed.
+        </p>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary class="faq-question">Can I request a new medication here?</summary>
+      <div class="faq-answer">
+        <p>
+          No. This form is for refills of current or previously prescribed
+          medications only.
+        </p>
+      </div>
+    </details>
+  </div>
+</section>
+            </div>
+        </section>
+    </main>
+
+    <style>
+        .contact-page {
+            background: #f9fafb;
+            min-height: 100vh;
+            background-image: url("/images/paper-texture.png");
+            background-repeat: repeat;
+            background-size: 420px 420px;
+            border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+        }
+
+        .contact-hero {
+            padding: 10rem 1.5rem 3.5rem;
+            background: #fbfbf9;
+            background-image: url("/images/paper-texture.png");
+            background-repeat: repeat;
+            background-size: 420px 420px;
+            border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+        }
+
+        .contact-hero-inner {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact-hero h1 {
+            font-family: "Belleza", sans-serif;
+            font-size: clamp(2rem, 3vw, 2.6rem);
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            margin: 0 0 1rem;
+            color: #111827;
+        }
+
+        .contact-hero p {
+            margin: 0;
+            font-size: 1rem;
+            line-height: 1.7;
+            color: #4b5563;
+        }
+
+        .contact-form-section {
+            padding: 3.5rem 1.5rem 4rem;
+        }
+
+        .contact-form-inner {
+            max-width: 900px;
+            margin: 0 auto;
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .contact-card {
+            border-radius: 26px;
+            background: #ffffff;
+            box-shadow: 0 22px 50px rgba(15, 23, 42, 0.12);
+            border: 1px solid rgba(15, 23, 42, 0.08);
+            padding: 2.3rem 2.2rem 2.4rem;
+        }
+
+        .contact-card-title {
+            margin: 0 0 1.1rem;
+            font-size: 1.2rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            font-family: "Belleza", sans-serif;
+            color: #111827;
+        }
+
+        .field-group {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 1.05rem;
+        }
+
+        .field-grid {
+            display: grid;
+            gap: 1rem;
+            margin-bottom: 0.4rem;
+        }
+
+        @media (min-width: 720px) {
+            .field-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        label {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #111827;
+            margin-bottom: 0.25rem;
+        }
+
+        input[type="text"],
+        input[type="tel"],
+        input[type="date"],
+        textarea {
+            border-radius: 999px;
+            border: 1px solid rgba(15, 23, 42, 0.18);
+            padding: 0.65rem 0.9rem;
+            font-size: 0.9rem;
+            font-family: inherit;
+            background: #f9fafb;
+            outline: none;
+            transition:
+                border-color 0.15s ease,
+                box-shadow 0.15s ease,
+                background 0.15s ease;
+        }
+
+        textarea {
+            border-radius: 16px;
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        input:focus,
+        textarea:focus {
+            border-color: #0f172a;
+            background: #ffffff;
+            box-shadow: 0 0 0 1px rgba(15, 23, 42, 0.15);
+        }
+
+        .submit-btn {
+            margin-top: 1.2rem;
+            display: inline-block;
+            border-radius: 999px;
+            border: 1px solid #0f172a;
+            padding: 0.9rem 1.9rem;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            background: #0f172a;
+            color: #ffffff;
+            cursor: pointer;
+            box-shadow: 0 9px 22px rgba(15, 23, 42, 0.25);
+            transition: all 0.15s ease;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 14px 32px rgba(15, 23, 42, 0.35);
+        }
+
+        .faq-list {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .faq-item h3 {
+            margin: 0 0 0.35rem;
+            font-size: 1rem;
+            color: #111827;
+        }
+
+        .faq-item p {
+            margin: 0;
+            color: #4b5563;
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 720px) {
+            .contact-card {
+                padding: 1.8rem 1.4rem 2rem;
+            }
+        }
+        .faq-list-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.faq-list-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+
+.faq-item {
+  border-radius: 20px;
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+  padding: 1.1rem 1.4rem;
+}
+
+.faq-item summary {
+  list-style: none;
+  cursor: pointer;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-question {
+  font-size: 0.98rem;
+  font-weight: 500;
+  color: #111827;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.faq-item summary::after {
+  content: "+";
+  font-size: 1.2rem;
+  color: #6b7280;
+  flex-shrink: 0;
+  transition:
+    transform 0.15s ease,
+    color 0.15s ease;
+}
+
+.faq-item[open] summary::after {
+  content: "–";
+  color: #111827;
+}
+
+.faq-answer {
+  margin-top: 0.6rem;
+  font-size: 0.94rem;
+  line-height: 1.7;
+  color: #4b5563;
+}
+
+.faq-answer p {
+  margin: 0 0 0.8rem;
+}
+
+.faq-answer p:last-child {
+  margin-bottom: 0;
+}
+    </style>
+</Layout>
