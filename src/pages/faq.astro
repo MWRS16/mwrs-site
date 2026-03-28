@@ -4,8 +4,8 @@ import Layout from "../layouts/Layout.astro";
 
 <!-- Astro -->
 <Layout
-  title="Frequently Asked Questions | MWRS"
-  description="Answers to common questions about counseling, medication management, insurance, telehealth, and getting started with care at Mental Wellness & Relationship Services (MWRS)."
+    title="Frequently Asked Questions | MWRS"
+    description="Answers to common questions about counseling, medication management, insurance, telehealth, and getting started with care at Mental Wellness & Relationship Services (MWRS)."
 >
     <main class="faq-page">
         <!-- Hero / intro -->
@@ -35,9 +35,9 @@ import Layout from "../layouts/Layout.astro";
                             <a href="/contact-us"
                                 >Start Counseling or Medication Care</a
                             >
-                            form. Our intake team will review your information,
-                            check availability, and contact you to discuss next steps
-                            and scheduling.
+                            form. Our intake team will review your information, check
+                            availability, and contact you to discuss next steps and
+                            scheduling.
                         </p>
                     </div>
                 </details>
@@ -153,10 +153,16 @@ import Layout from "../layouts/Layout.astro";
                             <a href="/contact-us"
                                 >Start Counseling or Medication Care</a
                             >
-                            form you can select “I’m not sure / both.” Our team
-                            will review your responses and may recommend starting
-                            with counseling, a medication consultation, or a combination
+                            form you can select “I’m not sure / both.” Our team will
+                            review your responses and may recommend starting with
+                            counseling, a medication consultation, or a combination
                             depending on your symptoms and preferences.
+                        </p>
+                        <p>
+                            If you want to learn more about what medication
+                            support looks like, you can also visit our <a
+                                href="/psychiatry">Medication Management page</a
+                            >.
                         </p>
                     </div>
                 </details>
@@ -167,13 +173,17 @@ import Layout from "../layouts/Layout.astro";
                         What should I expect in my first appointment?
                     </summary>
                     <div class="faq-answer">
-                        <p>
-                            The first visit is mostly about getting to know you.
-                            Your provider will ask about your concerns, history,
-                            and what you hope to change. You are always welcome
-                            to move at your own pace, and you do not have to
-                            share anything you’re not ready to talk about yet.
-                        </p>
+      <p>
+  The first visit is mostly about getting to know you.
+  Your provider will ask about your concerns, history,
+  and what you hope to change. You are always welcome
+  to move at your own pace, and you do not have to
+  share anything you’re not ready to talk about yet.
+  If you’re seeking medication care specifically, you can
+  also visit our
+  <a href="/psychiatry">Medication Management page</a> to
+  learn more about the process.
+</p>
                     </div>
                 </details>
 
@@ -191,7 +201,10 @@ import Layout from "../layouts/Layout.astro";
                             form.
                         </p>
                         <p>
-                            <a href="/billing#billing-questions" class="faq-link">
+                            <a
+                                href="/billing#billing-questions"
+                                class="faq-link"
+                            >
                                 Go to Billing & Payments →
                             </a>
                         </p>
@@ -226,19 +239,19 @@ import Layout from "../layouts/Layout.astro";
         .faq-page {
             background: #e5e9f3;
             min-height: 100vh;
-                  background-image: url("/images/paper-texture.png");
-      background-repeat: repeat; /* tile it */
-      background-size: 420px 420px; /* tweak smaller/larger as you like */
-      border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+            background-image: url("/images/paper-texture.png");
+            background-repeat: repeat; /* tile it */
+            background-size: 420px 420px; /* tweak smaller/larger as you like */
+            border-bottom: 1px solid rgba(15, 23, 42, 0.08);
         }
 
         .faq-hero {
             padding: 10rem 1.5rem 3.5rem;
             background: #fbfbf9;
-                  background-image: url("/images/paper-texture.png");
-      background-repeat: repeat; /* tile it */
-      background-size: 420px 420px; /* tweak smaller/larger as you like */
-      border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+            background-image: url("/images/paper-texture.png");
+            background-repeat: repeat; /* tile it */
+            background-size: 420px 420px; /* tweak smaller/larger as you like */
+            border-bottom: 1px solid rgba(15, 23, 42, 0.08);
         }
 
         .faq-hero-inner {

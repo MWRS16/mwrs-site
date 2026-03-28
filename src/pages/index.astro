@@ -6,40 +6,42 @@ import Layout from "../layouts/Layout.astro";
   title="Counseling & Medication Management in Idaho | Mental Wellness & Relationship Services"
   description="MWRS provides mental health counseling and psychiatric medication management for individuals, couples, and families across Idaho, with in-person and telehealth options."
 >
-  <!-- HERO -->
+  <!-- Hero -->
   <section class="hero">
- <!-- HTML -->
-<video
-  class="hero-video"
-  autoplay
-  muted
-  loop
-  playsinline
-  poster="/images/mwrs-home-hero-poster.webp"
->
-  <source src="/videos/mwrs-bg-looped-small.mp4" type="video/mp4" />
-</video>
+    <video
+      class="hero-video"
+      autoplay
+      muted
+      loop
+      playsinline
+      poster="/images/mwrs-home-hero-poster.webp"
+    >
+      <source src="/videos/mwrs-bg-looped-small.mp4" type="video/mp4" />
+    </video>
 
     <div class="hero-overlay"></div>
 
     <div class="hero-inner">
       <div class="hero-text">
         <h1>A BETTER LIFE IS WAITING</h1>
-<p class="hero-text">
-  Our clinicians and nurse practitioners are highly qualified and excited to meet you. 
-  We offer counseling, equine-assisted therapy, and psychiatric medication management.
-  <strong>We’re here to help you move toward a better life, no matter what season you’re in.</strong>
-</p>
+        <p>
+          Our clinicians and nurse practitioners are highly qualified and
+          excited to meet you. We offer counseling, equine-assisted therapy, and
+          psychiatric medication management.
+          <strong>
+            We’re here to help you move toward a better life, no matter what
+            season you’re in.
+          </strong>
+        </p>
         <a href="/contact-us" class="btn-primary">Contact Us</a>
       </div>
     </div>
   </section>
 
-  <!-- SERVICE PATHS -->
+  <!-- Service paths -->
   <section class="service-paths">
     <div class="service-paths-inner">
       <div class="service-paths-grid">
-        <!-- Counseling -->
         <a href="/contact-us" class="service-path-card-link">
           <article class="service-path-card">
             <p class="service-path-label">Counseling &amp; Therapy</p>
@@ -49,28 +51,44 @@ import Layout from "../layouts/Layout.astro";
               Priest River, Ponderay, and Oldtown, with teletherapy available
               anywhere in Idaho.
             </p>
-            <span class="service-path-cta">Start counseling →</span>
+            <span class="service-path-cta"
+              >Request a counseling appointment →</span
+            >
           </article>
         </a>
 
-        <!-- Medication -->
-        <a href="/contact-us#medication" class="service-path-card-link">
+        <a href="/psychiatry" class="service-path-card-link">
           <article class="service-path-card">
             <p class="service-path-label">Medication Management</p>
-            <h2 class="service-path-title">Work with a prescriber</h2>
+            <h2 class="service-path-title">Meet with a prescriber</h2>
             <p class="service-path-text">
-              Psychiatric medication management for Idaho and Washington
-              residents, with in-person and telehealth options and a focus on
-              thoughtful, collaborative care.
+              Medication support for anxiety, depression, ADHD, and related
+              concerns — with in-person visits in Coeur d’Alene and Ponderay,
+              plus telehealth across Idaho.
             </p>
-            <span class="service-path-cta">Start medication care →</span>
+            <span class="service-path-cta"
+              >Request a medication appointment →</span
+            >
           </article>
         </a>
       </div>
     </div>
   </section>
 
-  <!-- ABOUT SECTION -->
+  <!-- Care guidance -->
+  <section class="care-guidance">
+    <div class="care-guidance-inner">
+      <h2>Not sure where to start?</h2>
+      <p>
+        Some people are looking for counseling. Others want to explore whether
+        medication could help with anxiety, depression, ADHD, or other concerns.
+        We can help you figure out the right starting point.
+      </p>
+      <a href="/contact-us" class="care-guidance-link">Get Started →</a>
+    </div>
+  </section>
+
+  <!-- About -->
   <section class="about-mwrs">
     <div class="about-inner">
       <h2>Thoughtful mental health care in North Idaho</h2>
@@ -85,7 +103,7 @@ import Layout from "../layouts/Layout.astro";
   </section>
 
   <style>
-    /* HERO */
+    /* Hero */
     .hero {
       position: relative;
       min-height: 75vh;
@@ -186,14 +204,20 @@ import Layout from "../layouts/Layout.astro";
       background: rgba(255, 255, 255, 0.1);
     }
 
-    /* SERVICES */
+    /* Shared textured section background */
+    .service-paths,
+    .care-guidance,
+    .about-mwrs {
+      background-image: url("/images/paper-texture.png");
+      background-repeat: repeat;
+      background-size: 420px 420px;
+      border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+    }
+
+    /* Service paths */
     .service-paths {
       padding: 3.5rem 1.5rem 4rem;
-      background: #fbfbf9;
-      background-image: url("/images/paper-texture.png");
-      background-repeat: repeat; /* tile it */
-      background-size: 420px 420px; /* tweak smaller/larger as you like */
-      border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+      background-color: #fbfbf9;
     }
 
     .service-paths-inner {
@@ -204,6 +228,7 @@ import Layout from "../layouts/Layout.astro";
     .service-paths-grid {
       display: grid;
       gap: 2rem;
+      align-items: stretch;
     }
 
     @media (min-width: 900px) {
@@ -213,20 +238,21 @@ import Layout from "../layouts/Layout.astro";
     }
 
     .service-path-card-link {
-      display: block;
+      display: flex;
       text-decoration: none;
       color: inherit;
     }
 
     .service-path-card {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
       border-radius: 22px;
       padding: 2.1rem 2rem;
       border: 1px solid rgba(15, 23, 42, 0.1);
       background: #ffffff;
       box-shadow: 0 18px 40px rgba(15, 23, 42, 0.1);
-      display: flex;
-      flex-direction: column;
-      gap: 0.6rem;
       transition:
         transform 0.18s ease,
         box-shadow 0.18s ease;
@@ -239,12 +265,12 @@ import Layout from "../layouts/Layout.astro";
     }
 
     .service-path-label {
+      margin: 0;
       font-family: "Belleza", sans-serif;
       text-transform: uppercase;
       letter-spacing: 0.16em;
       font-size: 0.8rem;
       color: #4b5563;
-      margin: 0;
     }
 
     .service-path-title {
@@ -261,20 +287,75 @@ import Layout from "../layouts/Layout.astro";
     }
 
     .service-path-cta {
-      font-size: 0.9rem;
-      letter-spacing: 0.08em;
+      margin-top: auto;
+      display: inline-block;
+      padding: 0.6rem 1.4rem;
+      border-radius: 999px;
+      border: 1px solid #111827;
+      text-decoration: none;
+      font-size: 0.85rem;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
-      color: #0f172a;
+      color: #111827;
+      transition: all 0.15s ease;
     }
 
-    /* ABOUT */
+    .service-path-card:hover .service-path-cta {
+      background: #111827;
+      color: #ffffff;
+    }
+
+    /* Care guidance */
+    .care-guidance {
+      padding: 2.5rem 1.5rem;
+      background-color: #fbfbf9;
+    }
+
+    .care-guidance-inner {
+      max-width: 760px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .care-guidance h2 {
+      margin: 0 0 0.75rem;
+      font-family: "Belleza", sans-serif;
+      font-size: 1.2rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #111827;
+    }
+
+    .care-guidance p {
+      margin: 0 auto 1rem;
+      font-size: 1rem;
+      line-height: 1.7;
+      color: #4b5563;
+    }
+
+    .care-guidance-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      padding: 0.6rem 1.4rem;
+      border-radius: 999px;
+      border: 1px solid #111827;
+      text-decoration: none;
+      font-size: 0.85rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #111827;
+      transition: all 0.15s ease;
+    }
+
+    .care-guidance-link:hover {
+      background: #111827;
+      color: #ffffff;
+    }
+
+    /* About */
     .about-mwrs {
       padding: 2.75rem 1.5rem 3.25rem;
-      background: #ffffff;
-        background-image: url("/images/paper-texture.png");
-      background-repeat: repeat; /* tile it */
-      background-size: 420px 420px; /* tweak smaller/larger as you like */
-      border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+      background-color: #ffffff;
     }
 
     .about-inner {
