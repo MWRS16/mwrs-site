@@ -373,26 +373,26 @@ import Layout from "../layouts/Layout.astro";
     }
 
     /* ── Filled button — for low-contrast sections ───── */
-    .btn-filled {
-      display: inline-block;
-      padding: 0.6rem 1.4rem;
-      border-radius: 999px;
-      background: #7d6fb3;
-      color: #ffffff;
-      border: 1px solid #7d6fb3;
-      text-decoration: none;
-      font-size: 0.85rem;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      transition: all 0.15s ease;
-    }
+.btn-filled {
+  display: inline-block;
+  padding: 0.6rem 1.4rem;
+  border-radius: 999px;
+  background: transparent;
+  color: #0f172a;
+  border: 1px solid #0f172a;
+  text-decoration: none;
+  font-size: 0.85rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  transition: all 0.15s ease;
+}
 
-    .btn-filled:hover {
-      background: #6a5fa0;
-      border-color: #6a5fa0;
-      transform: translateY(-1px);
-    }
-
+.btn-filled:hover {
+  background: #0f172a;
+  color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.25);
+}
     /* ── About ────────────────────────────────────────── */
     .about-mwrs {
       padding: 2.75rem 1.5rem 3.25rem;
