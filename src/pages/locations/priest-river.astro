@@ -1,4 +1,3 @@
-<!-- Astro -->
 ---
 import Layout from "../../layouts/Layout.astro";
 ---
@@ -7,90 +6,118 @@ import Layout from "../../layouts/Layout.astro";
   title="Counseling Services in Priest River | MWRS"
   description="Counseling services in Priest River, Idaho, with options for in-person sessions and telehealth for Idaho residents."
 >
-  <main class="subpage">
+  <main class="location-page">
+
     <!-- Hero -->
     <section class="subpage-hero">
-      <div class="subpage-hero-inner">
-        <h1>Priest River Counseling</h1>
+      <div class="section-inner">
+        <h1>Priest River</h1>
         <p>
-          MWRS offers counseling services in Priest River for adults, teens, and
-          families. Clients can meet in person at our Main Street office or
-          choose telehealth visits when that fits better with work, school, or
-          family schedules.
+          MWRS offers counseling services in Priest River for adults, teens,
+          and families. Clients can meet in person at our Main Street office
+          or choose telehealth visits when that fits better with work, school,
+          or family schedules.
         </p>
-        <a href="/contact-us" class="subpage-btn">
+        <a href="/contact-us" class="btn-outline btn-outline--counseling">
           Start in Priest River
         </a>
       </div>
     </section>
 
-    <!-- Light SEO body -->
-    <section class="subpage-section">
-      <div class="subpage-inner">
-        <h2>Counseling in Priest River</h2>
-        <p>
-          Our Priest River location focuses on counseling services, with support
-          for anxiety, depression, relationship strain, parenting stress, and
-          life transitions. We work with adults, teens, and families in a calm,
-          low-pressure setting.
-        </p>
-
-        <p>
-          When you complete the intake form, you can indicate Priest River as
-          your preferred location and let us know whether you are open to
-          telehealth visits. Our team will help you get matched with a counselor
-          whose schedule and focus fit your needs.
-        </p>
-
-        <h3>Services available at this location</h3>
-        <ul>
-          <li>Individual counseling for adults and teens</li>
-          <li>Couples and relationship counseling</li>
-          <li>Family counseling</li>
-          <li>Telehealth visits for Idaho residents</li>
-        </ul>
-
-        <h3>Address</h3>
-        <p>
-          50 Main Street<br />
-          Priest River, ID 83856
-        </p>
+    <!-- Info card -->
+    <section class="location-info-section">
+      <div class="location-info-inner">
+        <article class="location-info-card">
+          <div class="location-info-content">
+            <p class="card-kicker">Priest River Office</p>
+            <h2 class="location-info-title">50 Main Street</h2>
+            <p class="location-info-address">Priest River, ID 83856</p>
+            <div class="location-contact">
+              <a href="tel:2082612255">P: 208.261.2255</a>
+              <a href="tel:2084737271">F: 208.473.7271</a>
+              <a href="mailto:info@mwrservices.org">info@mwrservices.org</a>
+            </div>
+            <p class="location-info-note">
+              Our Priest River office serves clients in the Priest River area
+              and surrounding communities. Telehealth is also available for
+              Idaho residents who prefer video visits.
+            </p>
+            <div class="location-services-offered">
+              <a href="/services" class="service-tag service-tag--counseling">Counseling</a>
+              <a href="/telehealth" class="service-tag">Telehealth</a>
+            </div>
+          </div>
+          <div class="location-map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2724.5!2d-116.9077!3d48.1827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x549a9e5b5b5b5b5b%3A0x3!2s50+Main+St%2C+Priest+River%2C+ID+83856!5e0!3m2!1sen!2sus!4v1234567890"
+              width="100%"
+              height="100%"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="MWRS Priest River office location"
+            ></iframe>
+          </div>
+        </article>
       </div>
     </section>
 
-    <!-- Bottom CTA -->
-    <section class="subpage-section subpage-cta">
-      <div class="subpage-inner">
+    <!-- Single counseling card -->
+    <section class="location-services">
+      <div class="location-services-inner">
+        <article class="card card--counseling">
+          <p class="card-kicker">Counseling &amp; Therapy</p>
+          <h2 class="card-title">Meet with a counselor</h2>
+          <p class="card-lead">
+            Individual, couples, and family counseling in a calm setting in
+            Priest River, with telehealth available statewide.
+          </p>
+          <ul class="card-list">
+            <li>Individual counseling for adults and teens</li>
+            <li>Couples and relationship counseling</li>
+            <li>Family counseling</li>
+            <li>In-person and telehealth options</li>
+            <li>Support for anxiety, depression, life transitions, and more</li>
+          </ul>
+          <a href="/contact-us" class="btn-outline btn-outline--counseling">
+            Start counseling →
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="location-cta">
+      <div class="section-inner">
         <h2>Schedule in Priest River</h2>
         <p>
-          Share a bit about what you’re looking for, and our intake team will
-          help you get scheduled with a counselor at our Priest River office or
-          via telehealth.
+          Share a bit about what you're looking for, and our intake team will
+          help you get scheduled with a counselor at our Priest River office
+          or via telehealth.
         </p>
-        <a href="/contact-us" class="subpage-btn">
+        <a href="/contact-us" class="btn-outline btn-outline--counseling">
           Start in Priest River
         </a>
       </div>
     </section>
+
   </main>
 
   <style>
-    .subpage {
+    .location-page {
       background: #f9fafb;
       min-height: 100vh;
     }
 
+    /* ── Hero ─────────────────────────────────────────── */
     .subpage-hero {
-      padding: 10rem 1.5rem 3rem;
-          background-image: url("/images/paper-texture.png");
-      background-repeat: repeat; /* tile it */
-      background-size: 420px 420px; /* tweak smaller/larger as you like */
+      padding: 10rem 1.5rem 3.5rem;
+      background-color: #fbfbf9;
+      background-image: url("/images/paper-texture.png");
+      background-repeat: repeat;
+      background-size: 420px 420px;
       border-bottom: 1px solid rgba(15, 23, 42, 0.08);
-    }
-
-    .subpage-hero-inner {
-      max-width: 900px;
-      margin: 0 auto;
       text-align: center;
     }
 
@@ -104,59 +131,219 @@ import Layout from "../../layouts/Layout.astro";
     }
 
     .subpage-hero p {
-      margin: 0 0 1.6rem;
+      margin: 0 0 1.75rem;
       font-size: 1rem;
       line-height: 1.8;
       color: #4b5563;
     }
 
-    .subpage-btn {
-      display: inline-block;
-      padding: 0.85rem 1.9rem;
-      border-radius: 999px;
-      border: 1px solid #0f172a;
-      font-size: 0.9rem;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      text-decoration: none;
-      background: #ffffff;
-      color: #0f172a;
-      box-shadow: 0 6px 16px rgba(15, 23, 42, 0.12);
-      transition:
-        background 0.15s ease,
-        color 0.15s ease,
-        box-shadow 0.15s ease,
-        transform 0.15s ease;
-    }
-
-    .subpage-btn:hover {
-      background: #0f172a;
-      color: #ffffff;
-      transform: translateY(-1px);
-      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.2);
-    }
-
-    .subpage-section {
-      padding: 3rem 1.5rem 3.2rem;
-      background: #e5e9f3;
-           background-image: url("/images/paper-texture.png");
-      background-repeat: repeat; /* tile it */
-      background-size: 420px 420px; /* tweak smaller/larger as you like */
-      border-bottom: 1px solid rgba(15, 23, 42, 0.08);
-    }
-
-    .subpage-cta {
-      background: #fbfbf9;
-      text-align: center;
-      border-top: 1px solid rgba(15, 23, 42, 0.06);
-    }
-
-    .subpage-inner {
+    /* ── Shared wrappers ──────────────────────────────── */
+    .section-inner {
       max-width: 900px;
       margin: 0 auto;
     }
 
-    .subpage-section h2 {
+    /* ── Info card ────────────────────────────────────── */
+    .location-info-section {
+      padding: 3.5rem 1.5rem 4rem;
+      background-color: #ffffff;
+      background-image: url("/images/paper-texture.png");
+      background-repeat: repeat;
+      background-size: 420px 420px;
+      border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+    }
+
+    .location-info-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .location-info-card {
+      display: grid;
+      grid-template-columns: 1fr 400px;
+      border-radius: 22px;
+      overflow: hidden;
+      border: 1.5px solid rgba(155, 142, 196, 0.5);
+      box-shadow: 0 22px 50px rgba(15, 23, 42, 0.1);
+      background: #ffffff;
+    }
+
+    .location-info-content {
+      padding: 2.2rem 2.4rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .location-info-title {
+      margin: 0;
+      font-family: "Belleza", sans-serif;
+      font-size: 1.3rem;
+      letter-spacing: 0.04em;
+      color: #111827;
+      font-weight: 400;
+    }
+
+    .location-info-address {
+      margin: 0;
+      font-size: 0.95rem;
+      color: #4b5563;
+    }
+
+    .location-contact {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+      margin: 0.2rem 0;
+    }
+
+    .location-contact a {
+      font-size: 0.9rem;
+      color: #4b5563;
+      text-decoration: none;
+    }
+
+    .location-contact a:hover {
+      color: #7d6fb3;
+      text-decoration: underline;
+    }
+
+    .location-info-note {
+      margin: 0.2rem 0 0;
+      font-size: 0.88rem;
+      line-height: 1.6;
+      color: #6b7280;
+    }
+
+    .location-services-offered {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.4rem;
+    }
+
+    .service-tag {
+      display: inline-block;
+      padding: 0.3rem 0.8rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-family: "Belleza", sans-serif;
+      border: 1px solid rgba(15, 23, 42, 0.15);
+      color: #4b5563;
+      text-decoration: none;
+      transition: all 0.15s ease;
+    }
+
+    .service-tag:hover { background: rgba(15, 23, 42, 0.06); }
+
+    .service-tag--counseling {
+      border-color: rgba(155, 142, 196, 0.6);
+      color: #7d6fb3;
+    }
+
+    .service-tag--counseling:hover { background: rgba(155, 142, 196, 0.1); }
+
+    .location-map {
+      min-height: 360px;
+    }
+
+    .location-map iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 360px;
+      display: block;
+      border-radius: 0 20px 20px 0;
+    }
+
+    @media (max-width: 900px) {
+      .location-info-card {
+        grid-template-columns: 1fr;
+      }
+      .location-map {
+        min-height: 260px;
+      }
+      .location-map iframe {
+        border-radius: 0 0 20px 20px !important;
+        min-height: 260px;
+      }
+    }
+
+    /* ── Single service card ──────────────────────────── */
+    .location-services {
+      padding: 3.5rem 1.5rem 4rem;
+      background-color: #f9fafb;
+      background-image: url("/images/paper-texture.png");
+      background-repeat: repeat;
+      background-size: 420px 420px;
+      border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+    }
+
+    .location-services-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .card {
+      border-radius: 22px;
+      padding: 2.1rem 2rem 2rem;
+      background: #ffffff;
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .card--counseling { border: 1.5px solid rgba(155, 142, 196, 0.5); }
+
+    .card-kicker {
+      margin: 0;
+      font-family: "Belleza", sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: 0.78rem;
+      color: #7d6fb3;
+    }
+
+    .card-title {
+      margin: 0;
+      font-size: 1.25rem;
+      font-weight: 400;
+      color: #111827;
+    }
+
+    .card-lead {
+      margin: 0.25rem 0 0.5rem;
+      font-size: 0.96rem;
+      line-height: 1.7;
+      color: #4b5563;
+    }
+
+    .card-list {
+      margin: 0 0 1rem;
+      padding-left: 1.1rem;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #4b5563;
+    }
+
+    .card-list li + li { margin-top: 0.2rem; }
+
+    /* ── CTA ──────────────────────────────────────────── */
+    .location-cta {
+      padding: 3rem 1.5rem 3.5rem;
+      background-color: #fbfbf9;
+      background-image: url("/images/paper-texture.png");
+      background-repeat: repeat;
+      background-size: 420px 420px;
+      border-top: 1px solid rgba(15, 23, 42, 0.06);
+      text-align: center;
+    }
+
+    .location-cta h2 {
       font-family: "Belleza", sans-serif;
       font-size: 1.2rem;
       letter-spacing: 0.18em;
@@ -165,36 +352,41 @@ import Layout from "../../layouts/Layout.astro";
       color: #111827;
     }
 
-    .subpage-section h3 {
-      margin: 1.1rem 0 0.6rem;
-      font-size: 0.98rem;
-      font-weight: 500;
-      color: #111827;
-    }
-
-    .subpage-section p {
-      margin: 0 0 0.9rem;
+    .location-cta p {
+      max-width: 580px;
+      margin: 0 auto 1.6rem;
       font-size: 0.96rem;
       line-height: 1.8;
       color: #4b5563;
     }
 
-    .subpage-section ul {
-      margin: 0 0 1rem;
-      padding-left: 1.1rem;
-      font-size: 0.95rem;
-      line-height: 1.6;
-      color: #4b5563;
+    /* ── Outline buttons ──────────────────────────────── */
+    .btn-outline {
+      display: inline-block;
+      margin-top: auto;
+      padding: 0.75rem 1.6rem;
+      border-radius: 999px;
+      border: 1px solid;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      text-decoration: none;
+      background: #ffffff;
+      box-shadow: 0 6px 16px rgba(15, 23, 42, 0.1);
+      transition: background 0.15s ease, color 0.15s ease,
+        box-shadow 0.15s ease, transform 0.15s ease;
     }
 
-    .subpage-section li + li {
-      margin-top: 0.2rem;
+    .btn-outline--counseling {
+      border-color: #7d6fb3;
+      color: #7d6fb3;
     }
 
-    .subpage-cta p {
-      max-width: 620px;
-      margin-left: auto;
-      margin-right: auto;
+    .btn-outline--counseling:hover {
+      background: #7d6fb3;
+      color: #ffffff;
+      transform: translateY(-1px);
+      box-shadow: 0 10px 24px rgba(125, 111, 179, 0.3);
     }
   </style>
 </Layout>

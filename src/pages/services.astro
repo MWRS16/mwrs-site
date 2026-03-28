@@ -7,32 +7,38 @@ import Layout from "../layouts/Layout.astro";
     description="Explore counseling and psychiatric medication management services offered by MWRS in North Idaho and via telehealth throughout Idaho."
 >
     <main class="services-page">
+        <!-- Hero -->
         <section class="services-hero">
-            <div class="services-hero-inner">
+            <div class="section-inner">
                 <h1>Counseling &amp; Medication Services</h1>
                 <p>
                     Mental Wellness &amp; Relationship Services (MWRS) offers
                     counseling and psychiatric medication management for
                     individuals, couples, and families across North Idaho.
                 </p>
-                <a href="/contact-us" class="services-cta">Get Started</a>
+                <a
+                    href="/contact-us"
+                    class="btn-outline btn-outline--counseling"
+                >
+                    Get Started
+                </a>
             </div>
         </section>
 
+        <!-- Service cards -->
         <section class="services-grid-section">
             <div class="services-grid-inner">
                 <div class="services-grid">
-                    <article class="service-panel">
-                        <p class="service-kicker">Counseling &amp; Therapy</p>
-                        <h2 class="service-title">Meet with a counselor</h2>
-
-                        <p class="service-lead">
+                    <!-- Counseling -->
+                    <article class="card card--counseling">
+                        <p class="card-kicker">Counseling &amp; Therapy</p>
+                        <h2 class="card-title">Meet with a counselor</h2>
+                        <p class="card-lead">
                             Calm, thoughtful counseling in a judgment-free
                             environment, with options for in-person or
                             telehealth care.
                         </p>
-
-                        <ul class="service-list">
+                        <ul class="card-list">
                             <li>Individual counseling for adults and teens</li>
                             <li>Couples and relationship counseling</li>
                             <li>Family counseling</li>
@@ -40,34 +46,52 @@ import Layout from "../layouts/Layout.astro";
                                 Eye Movement Desensitization and Reprocessing
                                 (EMDR)
                             </li>
-                            <li>Available to Idaho clients via in-person and telehealth visits</li>
-                            <li>A good fit if you’re looking to talk things through, build insight, or work through life changes</li>
+                            <li>
+                                Available to Idaho clients via in-person and
+                                telehealth visits
+                            </li>
+                            <li>
+                                A good fit if you're looking to talk things
+                                through, build insight, or work through life
+                                changes
+                            </li>
                         </ul>
-
-                        <a href="/contact-us" class="service-link">
+                        <a
+                            href="/contact-us"
+                            class="btn-outline btn-outline--counseling"
+                        >
                             Start counseling →
                         </a>
                     </article>
 
-                    <article class="service-panel">
-                        <p class="service-kicker">Medication Management</p>
-                        <h2 class="service-title">Meet with a prescriber</h2>
-
-                        <p class="service-lead">
+                    <!-- Medication -->
+                    <article class="card card--medication">
+                        <p class="card-kicker card-kicker--medication">
+                            Medication Management
+                        </p>
+                        <h2 class="card-title">Meet with a prescriber</h2>
+                        <p class="card-lead">
                             Psychiatric medication management with a focus on
                             collaboration, clarity, and careful follow-up.
                         </p>
-
-                        <ul class="service-list">
+                        <ul class="card-list">
                             <li>Psychiatric evaluation for adults and teens</li>
                             <li>Ongoing medication management</li>
                             <li>Lab monitoring when clinically appropriate</li>
                             <li>In-person and telehealth options</li>
-                            <li>Available to Idaho clients via in-person and telehealth visits</li>
-                            <li>Care is collaborative, with thoughtful adjustments over time based on your response</li>
+                            <li>
+                                Available to Idaho clients via in-person and
+                                telehealth visits
+                            </li>
+                            <li>
+                                Care is collaborative, with thoughtful
+                                adjustments over time based on your response
+                            </li>
                         </ul>
-
-                        <a href="/psychiatry" class="service-link">
+                        <a
+                            href="/psychiatry"
+                            class="btn-outline btn-outline--medication"
+                        >
                             Start medication care →
                         </a>
                     </article>
@@ -75,193 +99,51 @@ import Layout from "../layouts/Layout.astro";
             </div>
         </section>
 
-        <section class="refill-strip">
-            <div class="refill-strip-inner">
-                <article class="refill-strip-card">
-                    <div class="refill-strip-header">
-                        <p class="refill-kicker">Existing Patients</p>
-                        <h2 class="refill-title">Medication Refill Request</h2>
+        <!-- Refill + Sliding fee — compact cards -->
+        <section class="compact-cards-section">
+            <div class="refill-section-inner">
+                <article
+                    class="refill-card refill-card--neutral"
+                    id="sliding-fee"
+                >
+                    <div class="refill-card-header">
+                        <p class="card-kicker">Financial Assistance</p>
+                        <h2 class="refill-title">
+                            Sliding Fee Discount Program
+                        </h2>
                         <p class="refill-intro">
-                            If you are an existing patient and need a refill for
-                            a current or previously prescribed medication, use
-                            the form below. Please allow 1–2 business days for
-                            review and next steps.
+                            MWRS offers discounts based on household size and
+                            income for counseling and medication services. No
+                            one is denied care due to an inability to pay.
                         </p>
                     </div>
-
-                    <form
-                        class="refill-inline-form"
-                        method="POST"
-                        action="https://formspree.io/f/xwpgrywz"
+                    <a
+                        href="/contact-us"
+                        class="btn-outline btn-outline--counseling"
                     >
-                        <input
-                            type="hidden"
-                            name="_subject"
-                            value="Medication refill request"
-                        />
-
-                        <div class="refill-grid">
-                            <div class="refill-field">
-                                <label for="refill-name">Name</label>
-                                <input
-                                    id="refill-name"
-                                    name="name"
-                                    type="text"
-                                    autocomplete="name"
-                                    required
-                                />
-                            </div>
-
-                            <div class="refill-field">
-                                <label for="refill-dob">Date of birth</label>
-                                <input
-                                    id="refill-dob"
-                                    name="dob"
-                                    type="date"
-                                    required
-                                />
-                            </div>
-                        </div>
-
-                        <div class="refill-grid">
-                            <div class="refill-field">
-                                <label for="refill-phone">Phone number</label>
-                                <input
-                                    id="refill-phone"
-                                    name="phone"
-                                    type="tel"
-                                    autocomplete="tel"
-                                    inputmode="tel"
-                                    pattern="^\(?[0-9]{3}\)?[-.\s]?[0-9]{3}[-.\s]?[0-9]{4}$"
-                                    title="Please enter a valid 10-digit phone number"
-                                    required
-                                />
-                            </div>
-
-                            <div class="refill-field">
-                                <label for="refill-medication"
-                                    >Medication name</label
-                                >
-                                <input
-                                    id="refill-medication"
-                                    name="medication"
-                                    type="text"
-                                    required
-                                />
-                            </div>
-                        </div>
-
-                        <div class="refill-field">
-                            <label for="refill-pharmacy"
-                                >Pharmacy (name + location)</label
-                            >
-                            <input
-                                id="refill-pharmacy"
-                                name="pharmacy"
-                                type="text"
-                                required
-                            />
-                        </div>
-
-                        <div class="refill-field">
-                            <label for="refill-notes"
-                                >Additional notes (optional)</label
-                            >
-                            <textarea
-                                id="refill-notes"
-                                name="notes"
-                                rows="4"
-                                placeholder="Anything else our team should know about this refill request?"
-                            ></textarea>
-                        </div>
-
-                        <button type="submit" class="refill-submit-btn">
-                            Submit refill request
-                        </button>
-                    </form>
+                        Request information →
+                    </a>
                 </article>
-            </div>
-        </section>
 
-        <section class="services-copy-band sliding-fee-band" id="sliding-fee">
-            <div class="services-copy-inner">
-                <h2>Sliding Fee Discount Program</h2>
-                <p>
-                    MWRS offers a Sliding Fee Discount Program based on
-                    household size and income. Discounts are available for
-                    counseling and medication services for anyone who qualifies.
-                    No one is denied care due to an inability to pay.
-                    Applications are available upon request.
-                </p>
-
-                <button
-                    type="button"
-                    class="sliding-fee-btn"
-                    id="slidingFeeToggle"
-                >
-                    Request sliding fee information
-                </button>
-
-                <form
-                    class="sliding-fee-inline-form"
-                    method="POST"
-                    action="https://formspree.io/f/xblnzwqv"
-                    hidden
-                >
-                    <input
-                        type="hidden"
-                        name="_redirect"
-                        value="https://mwrservices.org/thank-you"
-                    />
-                    <input
-                        type="hidden"
-                        name="subject"
-                        value="Sliding Fee Inquiry"
-                    />
-                    <input
-                        type="hidden"
-                        name="form_name"
-                        value="Sliding Fee Discount Program"
-                    />
-
-                    <div class="sliding-fee-field">
-                        <label for="sfName">Name</label>
-                        <input
-                            id="sfName"
-                            name="name"
-                            type="text"
-                            autocomplete="name"
-                            required
-                        />
+                <article class="refill-card">
+                    <div class="refill-card-header">
+                        <p class="card-kicker card-kicker--medication">
+                            Existing Patients
+                        </p>
+                        <h2 class="refill-title">Medication Refill Request</h2>
+                        <p class="refill-intro">
+                            Already a patient? Request a refill for a current or
+                            previously prescribed medication. Allow 1–2 business
+                            days for processing.
+                        </p>
                     </div>
-
-                    <div class="sliding-fee-field">
-                        <label for="sfEmail">Email address</label>
-                        <input
-                            id="sfEmail"
-                            name="email"
-                            type="email"
-                            autocomplete="email"
-                            required
-                        />
-                    </div>
-
-                    <div class="sliding-fee-field">
-                        <label for="sfMessage">
-                            Anything you’d like us to know (optional)
-                        </label>
-                        <textarea
-                            id="sfMessage"
-                            name="message"
-                            rows="3"
-                            placeholder="You can keep this brief. We’ll follow up with details about the program."
-                        ></textarea>
-                    </div>
-
-                    <button type="submit" class="sliding-fee-submit">
-                        Send request
-                    </button>
-                </form>
+                    <a
+                        href="/medication-refill"
+                        class="btn-outline btn-outline--medication"
+                    >
+                        Request a refill →
+                    </a>
+                </article>
             </div>
         </section>
     </main>
@@ -272,18 +154,14 @@ import Layout from "../layouts/Layout.astro";
             min-height: 100vh;
         }
 
+        /* ── Hero ─────────────────────────────────────────── */
         .services-hero {
             padding: 10rem 1.5rem 3.5rem;
-            background: #fbfbf9;
+            background-color: #fbfbf9;
             background-image: url("/images/paper-texture.png");
             background-repeat: repeat;
             background-size: 420px 420px;
-            border-bottom: 1px solid rgba(15, 23, 42, 0.08);
-        }
-
-        .services-hero-inner {
-            max-width: 900px;
-            margin: 0 auto;
+            border-bottom: 3px solid #9b8ec4;
             text-align: center;
         }
 
@@ -303,36 +181,16 @@ import Layout from "../layouts/Layout.astro";
             color: #4b5563;
         }
 
-        .services-cta {
-            display: inline-block;
-            padding: 0.9rem 1.9rem;
-            border-radius: 999px;
-            border: 1px solid #0f172a;
-            text-decoration: none;
-            font-size: 0.95rem;
-            font-weight: 600;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            color: #0f172a;
-            background: #ffffff;
-            box-shadow: 0 6px 16px rgba(15, 23, 42, 0.12);
-            transition:
-                background 0.15s ease,
-                color 0.15s ease,
-                box-shadow 0.15s ease,
-                transform 0.15s ease;
+        /* ── Shared section wrapper ───────────────────────── */
+        .section-inner {
+            max-width: 900px;
+            margin: 0 auto;
         }
 
-        .services-cta:hover {
-            background: #0f172a;
-            color: #ffffff;
-            transform: translateY(-1px);
-            box-shadow: 0 10px 24px rgba(15, 23, 42, 0.2);
-        }
-
+        /* ── Service cards grid ───────────────────────────── */
         .services-grid-section {
             padding: 3.5rem 1.5rem 4rem;
-            background: #f9fafb;
+            background-color: #f9fafb;
             background-image: url("/images/paper-texture.png");
             background-repeat: repeat;
             background-size: 420px 420px;
@@ -355,10 +213,10 @@ import Layout from "../layouts/Layout.astro";
             }
         }
 
-        .service-panel {
+        /* ── Cards ────────────────────────────────────────── */
+        .card {
             border-radius: 22px;
             padding: 2.1rem 2rem 2rem;
-            border: 1px solid rgba(15, 23, 42, 0.09);
             background: #ffffff;
             box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
             display: flex;
@@ -366,16 +224,28 @@ import Layout from "../layouts/Layout.astro";
             gap: 0.75rem;
         }
 
-        .service-kicker {
+        .card--counseling {
+            border: 1.5px solid rgba(155, 142, 196, 0.5);
+        }
+
+        .card--medication {
+            border: 1.5px solid rgba(138, 180, 164, 0.5);
+        }
+
+        .card-kicker {
             margin: 0;
             font-family: "Belleza", sans-serif;
             text-transform: uppercase;
             letter-spacing: 0.16em;
             font-size: 0.78rem;
-            color: #6b7280;
+            color: #7d6fb3;
         }
 
-        .service-title {
+        .card-kicker--medication {
+            color: #6a9e8e;
+        }
+
+        .card-title {
             margin: 0;
             font-size: 1.25rem;
             font-weight: 400;
@@ -383,14 +253,14 @@ import Layout from "../layouts/Layout.astro";
             color: #111827;
         }
 
-        .service-lead {
+        .card-lead {
             margin: 0.25rem 0 0.75rem;
             font-size: 0.96rem;
             line-height: 1.7;
             color: #4b5563;
         }
 
-        .service-list {
+        .card-list {
             margin: 0 0 1.2rem;
             padding-left: 1.1rem;
             font-size: 0.95rem;
@@ -398,69 +268,154 @@ import Layout from "../layouts/Layout.astro";
             color: #4b5563;
         }
 
-        .service-list li + li {
+        .card-list li + li {
             margin-top: 0.2rem;
         }
 
-        .service-link {
+        /* ── Outline buttons ──────────────────────────────── */
+        .btn-outline {
             display: inline-block;
             margin-top: auto;
-            padding: 0.6rem 1.4rem;
+            padding: 0.75rem 1.6rem;
             border-radius: 999px;
-            border: 1px solid #111827;
-            text-decoration: none;
+            border: 1px solid;
             font-size: 0.85rem;
-            letter-spacing: 0.14em;
             text-transform: uppercase;
+            letter-spacing: 0.14em;
+            text-decoration: none;
+            background: #ffffff;
+            box-shadow: 0 6px 16px rgba(15, 23, 42, 0.1);
+            transition:
+                background 0.15s ease,
+                color 0.15s ease,
+                box-shadow 0.15s ease,
+                transform 0.15s ease;
+            cursor: pointer;
+            font-family: inherit;
+        }
+
+        .btn-outline--counseling {
+            border-color: #7d6fb3;
+            color: #7d6fb3;
+        }
+
+        .btn-outline--counseling:hover {
+            background: #7d6fb3;
+            color: #ffffff;
+            transform: translateY(-1px);
+            box-shadow: 0 10px 24px rgba(125, 111, 179, 0.3);
+        }
+
+        .btn-outline--medication {
+            border-color: #6a9e8e;
+            color: #6a9e8e;
+        }
+
+        .btn-outline--medication:hover {
+            background: #6a9e8e;
+            color: #ffffff;
+            transform: translateY(-1px);
+            box-shadow: 0 10px 24px rgba(106, 158, 142, 0.3);
+        }
+
+        .btn-outline--neutral {
+            border-color: #111827;
             color: #111827;
+        }
+
+        .btn-outline--neutral:hover {
+            background: #111827;
+            color: #ffffff;
+            transform: translateY(-1px);
+            box-shadow: 0 10px 24px rgba(15, 23, 42, 0.2);
+        }
+
+        /* ── Filled buttons ───────────────────────────────── */
+        .btn-filled {
+            margin-top: 1.2rem;
+            display: inline-block;
+            border-radius: 999px;
+            border: 1px solid;
+            padding: 0.9rem 1.9rem;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            cursor: pointer;
+            font-family: inherit;
             transition: all 0.15s ease;
         }
 
-        .service-link:hover {
-            background: #111827;
+        .btn-filled--medication {
+            background: #6a9e8e;
+            border-color: #6a9e8e;
             color: #ffffff;
+            box-shadow: 0 9px 22px rgba(106, 158, 142, 0.3);
         }
 
-        .refill-strip {
+        .btn-filled--medication:hover {
+            background: #598a7a;
+            border-color: #598a7a;
+            transform: translateY(-1px);
+            box-shadow: 0 14px 32px rgba(106, 158, 142, 0.4);
+        }
+
+        .btn-filled--neutral {
+            background: #111827;
+            border-color: #111827;
+            color: #ffffff;
+            box-shadow: 0 9px 22px rgba(15, 23, 42, 0.25);
+        }
+
+        .btn-filled--neutral:hover {
+            background: #1f2937;
+            transform: translateY(-1px);
+            box-shadow: 0 14px 32px rgba(15, 23, 42, 0.35);
+        }
+
+        /* ── Compact cards section ────────────────────────── */
+        .compact-cards-section {
             padding: 4rem 1.5rem;
-            background: #e5e9f3;
+            background-color: #e5e9f3;
             background-image: url("/images/paper-texture.png");
             background-repeat: repeat;
             background-size: 420px 420px;
             border-bottom: 1px solid rgba(15, 23, 42, 0.08);
         }
 
-        .refill-strip-inner {
+        .refill-section-inner {
             max-width: 1100px;
             margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
         }
 
-        .refill-strip-card {
-            border-radius: 28px;
-            padding: 2.4rem 2.3rem;
+        .refill-card {
+            border-radius: 22px;
+            padding: 2.2rem 2.4rem;
             background: #ffffff;
-            border: 1px solid rgba(15, 23, 42, 0.08);
-            box-shadow: 0 22px 50px rgba(15, 23, 42, 0.08);
+            border: 1.5px solid rgba(138, 180, 164, 0.5);
+            box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+            flex-wrap: wrap;
         }
 
-        .refill-strip-header {
-            max-width: 780px;
-            margin-bottom: 1.6rem;
+        .refill-card--neutral {
+            border-color: rgba(155, 142, 196, 0.5);
         }
 
-        .refill-kicker {
-            margin: 0 0 0.45rem;
-            font-size: 0.82rem;
-            letter-spacing: 0.18em;
-            text-transform: uppercase;
-            color: #4b5563;
-            font-family: "Belleza", sans-serif;
+        .refill-card-header {
+            flex: 1;
+            min-width: 0;
         }
 
         .refill-title {
-            margin: 0 0 0.8rem;
+            margin: 0.3rem 0 0.6rem;
             font-family: "Belleza", sans-serif;
-            font-size: clamp(1.7rem, 2.5vw, 2.2rem);
+            font-size: 1.4rem;
             letter-spacing: 0.1em;
             text-transform: uppercase;
             color: #111827;
@@ -470,241 +425,16 @@ import Layout from "../layouts/Layout.astro";
             margin: 0;
             color: #4b5563;
             line-height: 1.75;
-            font-size: 1rem;
-        }
-
-        .refill-grid {
-            display: grid;
-            gap: 1rem;
-            margin-bottom: 0.4rem;
-        }
-
-        @media (min-width: 720px) {
-            .refill-grid {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-            }
-        }
-
-        .refill-field {
-            display: flex;
-            flex-direction: column;
-            margin-bottom: 1.05rem;
-        }
-
-        .refill-field label {
-            font-size: 0.9rem;
-            font-weight: 500;
-            color: #111827;
-            margin-bottom: 0.25rem;
-        }
-
-        .refill-inline-form input[type="text"],
-        .refill-inline-form input[type="tel"],
-        .refill-inline-form input[type="date"],
-        .refill-inline-form textarea {
-            border-radius: 999px;
-            border: 1px solid rgba(15, 23, 42, 0.18);
-            padding: 0.7rem 0.95rem;
             font-size: 0.95rem;
-            font-family: inherit;
-            background: #f9fafb;
-            outline: none;
-            transition:
-                border-color 0.15s ease,
-                box-shadow 0.15s ease,
-                background 0.15s ease;
-        }
-
-        .refill-inline-form textarea {
-            border-radius: 16px;
-            resize: vertical;
-            min-height: 120px;
-        }
-
-        .refill-inline-form input:focus,
-        .refill-inline-form textarea:focus {
-            border-color: #0f172a;
-            background: #ffffff;
-            box-shadow: 0 0 0 1px rgba(15, 23, 42, 0.15);
-        }
-
-        .refill-submit-btn {
-            margin-top: 1.2rem;
-            display: inline-block;
-            border-radius: 999px;
-            border: 1px solid #0f172a;
-            padding: 0.9rem 1.9rem;
-            font-size: 0.95rem;
-            text-transform: uppercase;
-            letter-spacing: 0.15em;
-            background: #0f172a;
-            color: #ffffff;
-            cursor: pointer;
-            box-shadow: 0 9px 22px rgba(15, 23, 42, 0.25);
-            transition: all 0.15s ease;
-        }
-
-        .refill-submit-btn:hover {
-            transform: translateY(-1px);
-            box-shadow: 0 14px 32px rgba(15, 23, 42, 0.35);
-        }
-
-        .services-copy-band {
-            padding: 3rem 1.5rem 4rem;
-            background: #fbfbf9;
-            border-top: 1px solid rgba(15, 23, 42, 0.05);
-            background-image: url("/images/paper-texture.png");
-            background-repeat: repeat;
-            background-size: 420px 420px;
-        }
-
-        .services-copy-inner {
-            max-width: 900px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .services-copy-inner h2 {
-            font-family: "Belleza", sans-serif;
-            font-size: 1.2rem;
-            letter-spacing: 0.18em;
-            text-transform: uppercase;
-            margin: 0 0 1rem;
-            color: #111827;
-        }
-
-        .services-copy-inner p {
-            margin: 0;
-            font-size: 0.95rem;
-            line-height: 1.8;
-            color: #4b5563;
-        }
-
-        .sliding-fee-band {
-            padding-top: 2.8rem;
-            padding-bottom: 3.8rem;
-        }
-
-        .sliding-fee-btn {
-            display: inline-block;
-            margin-top: 1.4rem;
-            padding: 0.85rem 1.9rem;
-            border-radius: 999px;
-            border: 1px solid #0f172a;
-            text-decoration: none;
-            font-size: 0.95rem;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            background: #ffffff;
-            color: #0f172a;
-            box-shadow: 0 9px 22px rgba(15, 23, 42, 0.15);
-            transition: all 0.15s ease;
-            cursor: pointer;
-        }
-
-        .sliding-fee-btn:hover {
-            background: #0f172a;
-            color: #ffffff;
-            transform: translateY(-1px);
-            box-shadow: 0 14px 32px rgba(15, 23, 42, 0.25);
-        }
-
-        .sliding-fee-inline-form {
-            margin-top: 1.4rem;
-            max-width: 480px;
-            margin-left: auto;
-            margin-right: auto;
-            display: grid;
-            gap: 0.8rem;
-            text-align: left;
-        }
-
-        .sliding-fee-inline-form[hidden] {
-            display: none;
-        }
-
-        .sliding-fee-field {
-            display: flex;
-            flex-direction: column;
-            gap: 0.25rem;
-        }
-
-        .sliding-fee-field label {
-            font-size: 0.85rem;
-            font-weight: 500;
-            color: #111827;
-        }
-
-        .sliding-fee-field input,
-        .sliding-fee-field textarea {
-            border-radius: 999px;
-            border: 1px solid rgba(15, 23, 42, 0.18);
-            padding: 0.6rem 0.9rem;
-            font-size: 0.9rem;
-            font-family: inherit;
-            background: #f9fafb;
-            outline: none;
-            transition:
-                border-color 0.15s ease,
-                box-shadow 0.15s ease,
-                background 0.15s ease;
-        }
-
-        .sliding-fee-field textarea {
-            border-radius: 16px;
-            min-height: 90px;
-            resize: vertical;
-        }
-
-        .sliding-fee-field input:focus,
-        .sliding-fee-field textarea:focus {
-            border-color: #0f172a;
-            background: #ffffff;
-            box-shadow: 0 0 0 1px rgba(15, 23, 42, 0.15);
-        }
-
-        .sliding-fee-submit {
-            margin-top: 0.4rem;
-            align-self: flex-start;
-            border-radius: 999px;
-            border: 1px solid #0f172a;
-            padding: 0.75rem 1.7rem;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 0.14em;
-            background: #0f172a;
-            color: #ffffff;
-            cursor: pointer;
-            box-shadow: 0 9px 22px rgba(15, 23, 42, 0.25);
-            transition: all 0.15s ease;
-        }
-
-        .sliding-fee-submit:hover {
-            transform: translateY(-1px);
-            box-shadow: 0 14px 32px rgba(15, 23, 42, 0.35);
+            max-width: 600px;
         }
 
         @media (max-width: 720px) {
-            .refill-strip-card {
-                padding: 1.8rem 1.4rem 2rem;
+            .refill-card {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 1.8rem 1.4rem;
             }
         }
     </style>
-
-    <script type="module">
-        const slidingBtn = document.querySelector("#slidingFeeToggle");
-        const slidingForm = document.querySelector(".sliding-fee-inline-form");
-
-        if (slidingBtn && slidingForm) {
-            slidingBtn.addEventListener("click", () => {
-                slidingBtn.hidden = true;
-                slidingForm.hidden = false;
-
-                const firstInput = slidingForm.querySelector("input, textarea");
-                if (firstInput) {
-                    firstInput.focus();
-                }
-            });
-        }
-    </script>
 </Layout>

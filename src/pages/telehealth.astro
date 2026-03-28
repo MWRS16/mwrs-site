@@ -2,15 +2,15 @@
 import Layout from "../layouts/Layout.astro";
 ---
 
-<!-- Astro -->
 <Layout
   title="Telehealth Counseling & Medication Services Across Idaho | MWRS"
   description="Online counseling and psychiatric medication management for clients anywhere in Idaho. MWRS provides secure telehealth visits for individuals, teens, couples, and families statewide."
 >
-  <main class="subpage">
+  <main class="telehealth-page">
+
     <!-- Hero -->
     <section class="subpage-hero">
-      <div class="subpage-hero-inner">
+      <div class="section-inner">
         <h1>Telehealth Services</h1>
         <p>
           MWRS offers secure telehealth counseling and medication management for
@@ -18,95 +18,143 @@ import Layout from "../layouts/Layout.astro";
           video platform, giving you flexible access to care from home, work, or
           anywhere you can find a quiet, private space.
         </p>
-        <a href="/contact-us" class="subpage-btn"> Start telehealth care </a>
+        <a href="/contact-us" class="btn-outline btn-outline--counseling">
+          Start telehealth care
+        </a>
       </div>
     </section>
 
-    <!-- Body -->
-    <section class="subpage-section">
-      <div class="subpage-inner">
-        <h2>Convenient and flexible</h2>
+    <!-- Two service cards -->
+    <section class="telehealth-services">
+      <div class="services-inner">
+        <div class="services-grid">
+
+          <article class="card card--counseling">
+            <p class="card-kicker">Counseling &amp; Therapy</p>
+            <h2 class="card-title">Telehealth counseling</h2>
+            <p class="card-lead">
+              Individual, couples, and family counseling available to clients
+              anywhere in Idaho via secure video.
+            </p>
+            <ul class="card-list">
+              <li>Individual counseling for adults and teens</li>
+              <li>Couples and relationship counseling</li>
+              <li>Family counseling</li>
+              <li>EMDR via telehealth</li>
+              <li>Same clinicians, same approach — just on video</li>
+            </ul>
+            <a href="/contact-us" class="btn-outline btn-outline--counseling">
+              Start counseling →
+            </a>
+          </article>
+
+          <article class="card card--medication">
+            <p class="card-kicker card-kicker--medication">Medication Management</p>
+            <h2 class="card-title">Telehealth medication care</h2>
+            <p class="card-lead">
+              Psychiatric evaluation and ongoing medication management for
+              adults and teens anywhere in Idaho.
+            </p>
+            <ul class="card-list">
+              <li>Psychiatric evaluation via video</li>
+              <li>Ongoing medication management</li>
+              <li>Lab coordination when clinically appropriate</li>
+              <li>Available to Idaho residents statewide</li>
+              <li>Collaborative, careful follow-up over time</li>
+            </ul>
+            <a href="/psychiatry" class="btn-outline btn-outline--medication">
+              Start medication care →
+            </a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Good fit section -->
+    <section class="telehealth-fit">
+      <div class="section-inner">
+        <h2>Who telehealth works well for</h2>
         <p>
           Telehealth works well for many clients, including those with long
           commutes, tight schedules, caregiving responsibilities, or limited
-          access to in-person services. All you need is a smartphone, tablet, or
-          computer with internet access.
+          access to in-person services. Some clients use telehealth exclusively;
+          others mix in-person and video sessions based on what works best.
         </p>
-
-        <h2>Who can use telehealth</h2>
-        <p>
-          We provide telehealth counseling and medication management to adults
-          and teens located anywhere in Idaho. Some clients choose telehealth
-          exclusively; others use a mix of in-person and video sessions based on
-          the season of life they’re in.
-        </p>
-
-        <h2>What telehealth sessions are like</h2>
-        <p>
-          Telehealth appointments function much like in-person visits. You and
-          your provider meet face-to-face on video, discuss what’s been going
-          on, and work toward the goals you’ve set together. If you’re seeking
-          medication care, your provider can evaluate symptoms, adjust treatment
-          plans, and coordinate labs when needed.
-        </p>
-
-        <h3>Telehealth is often a good fit for:</h3>
-        <ul>
-          <li>Busy parents or caregivers</li>
-          <li>Clients who live outside city centers</li>
-          <li>College students or remote workers</li>
-          <li>People with mobility challenges or chronic illness</li>
-          <li>Anyone who feels more comfortable at home</li>
-        </ul>
-
-        <h2>Technology requirements</h2>
-        <p>Telehealth sessions require:</p>
-        <ul>
-          <li>A stable internet connection</li>
-          <li>A device with a camera and microphone</li>
-          <li>A private, confidential space for the duration of the session</li>
-        </ul>
-
-        <p>
-          Before your first appointment, our team will send simple instructions
-          to join your session and test your device if needed.
-        </p>
+        <div class="fit-grid">
+          <div class="fit-card">
+            <p class="fit-label">Busy parents &amp; caregivers</p>
+            <p class="fit-text">Skip the commute and attend sessions from home between school pickups or work calls.</p>
+          </div>
+          <div class="fit-card">
+            <p class="fit-label">Rural &amp; remote clients</p>
+            <p class="fit-text">Access the same quality care as our in-person clients, no matter where you are in Idaho.</p>
+          </div>
+          <div class="fit-card">
+            <p class="fit-label">Students &amp; remote workers</p>
+            <p class="fit-text">Fit appointments around a flexible schedule without disrupting your day.</p>
+          </div>
+          <div class="fit-card">
+            <p class="fit-label">Those who prefer home</p>
+            <p class="fit-text">Some people open up more easily in a familiar environment. Telehealth makes that possible.</p>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- Bottom CTA -->
-    <section class="subpage-section subpage-cta">
-      <div class="subpage-inner">
+    <!-- Tech requirements -->
+    <section class="telehealth-tech">
+      <div class="section-inner">
+        <div class="tech-card">
+          <div class="tech-card-content">
+            <p class="card-kicker">Getting started</p>
+            <h2 class="tech-title">What you need</h2>
+            <p class="tech-intro">
+              Telehealth sessions are simple to join. Before your first
+              appointment, our team will send instructions and help you test
+              your setup if needed.
+            </p>
+          </div>
+          <ul class="tech-list">
+            <li>A stable internet connection</li>
+            <li>A device with a camera and microphone (phone, tablet, or computer)</li>
+            <li>A private, quiet space for the duration of your session</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="telehealth-cta">
+      <div class="section-inner">
         <h2>Ready to begin?</h2>
         <p>
-          Telehealth makes it easier to start care wherever you’re located in
-          Idaho. Share a few details on our intake form and we’ll match you with
+          Telehealth makes it easier to start care wherever you're located in
+          Idaho. Share a few details on our intake form and we'll match you with
           the right counselor or prescriber.
         </p>
-        <a href="/contact-us" class="subpage-btn"> Start telehealth care </a>
+        <a href="/contact-us" class="btn-outline btn-outline--counseling">
+          Start telehealth care
+        </a>
       </div>
     </section>
+
   </main>
 
   <style>
-    .subpage {
+    .telehealth-page {
       background: #f9fafb;
       min-height: 100vh;
     }
 
-    /* Hero */
+    /* ── Hero ─────────────────────────────────────────── */
     .subpage-hero {
-      padding: 10rem 1.5rem 3rem;
-      background-color: #fbfbf9; /* keep your soft white */
+      padding: 10rem 1.5rem 3.5rem;
+      background-color: #fbfbf9;
       background-image: url("/images/paper-texture.png");
-      background-repeat: repeat; /* tile it */
-      background-size: 420px 420px; /* tweak smaller/larger as you like */
+      background-repeat: repeat;
+      background-size: 420px 420px;
       border-bottom: 1px solid rgba(15, 23, 42, 0.08);
-    }
-
-    .subpage-hero-inner {
-      max-width: 900px;
-      margin: 0 auto;
       text-align: center;
     }
 
@@ -120,34 +168,223 @@ import Layout from "../layouts/Layout.astro";
     }
 
     .subpage-hero p {
-      margin: 0 0 1.6rem;
+      margin: 0 0 1.75rem;
       font-size: 1rem;
       line-height: 1.8;
       color: #4b5563;
     }
 
-    /* Shared sections */
-    .subpage-section {
-      padding: 3rem 1.5rem 3.2rem;
-      background: #e5e9f3;
-      background-image: url("/images/paper-texture.png");
-      background-repeat: repeat; /* tile it */
-      background-size: 420px 420px; /* tweak smaller/larger as you like */
-      border-bottom: 1px solid rgba(15, 23, 42, 0.08);
-    }
-
-    .subpage-cta {
-      background: #fbfbf9;
-      text-align: center;
-      border-top: 1px solid rgba(15, 23, 42, 0.06);
-    }
-
-    .subpage-inner {
-      max-width: 900px;
+    /* ── Shared section wrapper ───────────────────────── */
+    .section-inner {
+      max-width: 1100px;
       margin: 0 auto;
     }
 
-    .subpage-section h2 {
+    /* ── Service cards ────────────────────────────────── */
+    .telehealth-services {
+      padding: 3.5rem 1.5rem 4rem;
+      background-color: #f9fafb;
+      background-image: url("/images/paper-texture.png");
+      background-repeat: repeat;
+      background-size: 420px 420px;
+      border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+    }
+
+    .services-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .services-grid {
+      display: grid;
+      gap: 2rem;
+    }
+
+    @media (min-width: 900px) {
+      .services-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    .card {
+      border-radius: 22px;
+      padding: 2.1rem 2rem 2rem;
+      background: #ffffff;
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .card--counseling { border: 1.5px solid rgba(155, 142, 196, 0.5); }
+    .card--medication { border: 1.5px solid rgba(138, 180, 164, 0.5); }
+
+    .card-kicker {
+      margin: 0;
+      font-family: "Belleza", sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: 0.78rem;
+      color: #7d6fb3;
+    }
+
+    .card-kicker--medication { color: #6a9e8e; }
+
+    .card-title {
+      margin: 0;
+      font-size: 1.25rem;
+      font-weight: 400;
+      letter-spacing: 0.02em;
+      color: #111827;
+    }
+
+    .card-lead {
+      margin: 0.25rem 0 0.5rem;
+      font-size: 0.96rem;
+      line-height: 1.7;
+      color: #4b5563;
+    }
+
+    .card-list {
+      margin: 0 0 1rem;
+      padding-left: 1.1rem;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #4b5563;
+      flex: 1;
+    }
+
+    .card-list li + li { margin-top: 0.2rem; }
+
+    /* ── Good fit section ─────────────────────────────── */
+    .telehealth-fit {
+      padding: 3.5rem 1.5rem 4rem;
+      background-color: #e5e9f3;
+      background-image: url("/images/paper-texture.png");
+      background-repeat: repeat;
+      background-size: 420px 420px;
+      border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+    }
+
+    .telehealth-fit h2 {
+      font-family: "Belleza", sans-serif;
+      font-size: 1.2rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin: 0 0 0.75rem;
+      color: #111827;
+    }
+
+    .telehealth-fit > .section-inner > p {
+      margin: 0 0 2rem;
+      font-size: 0.96rem;
+      line-height: 1.8;
+      color: #4b5563;
+      max-width: 780px;
+    }
+
+    .fit-grid {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @media (max-width: 700px) {
+      .fit-grid { grid-template-columns: 1fr; }
+    }
+
+    .fit-card {
+      background: #ffffff;
+      border-radius: 18px;
+      padding: 1.4rem 1.6rem;
+      border: 1.5px solid rgba(155, 142, 196, 0.5);
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.07);
+    }
+
+    .fit-label {
+      margin: 0 0 0.4rem;
+      font-family: "Belleza", sans-serif;
+      font-size: 0.9rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #7d6fb3;
+    }
+
+    .fit-text {
+      margin: 0;
+      font-size: 0.93rem;
+      line-height: 1.7;
+      color: #4b5563;
+    }
+
+    /* ── Tech requirements ────────────────────────────── */
+    .telehealth-tech {
+      padding: 3.5rem 1.5rem 4rem;
+      background-color: #fbfbf9;
+      background-image: url("/images/paper-texture.png");
+      background-repeat: repeat;
+      background-size: 420px 420px;
+      border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+    }
+
+    .tech-card {
+      background: #ffffff;
+      border-radius: 22px;
+      padding: 2.2rem 2.4rem;
+      border: 1.5px solid rgba(155, 142, 196, 0.5);
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+      display: flex;
+      gap: 3rem;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
+    .tech-card-content {
+      flex: 1;
+      min-width: 240px;
+    }
+
+    .tech-title {
+      margin: 0.3rem 0 0.6rem;
+      font-family: "Belleza", sans-serif;
+      font-size: 1.4rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #111827;
+    }
+
+    .tech-intro {
+      margin: 0;
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: #4b5563;
+    }
+
+    .tech-list {
+      flex: 1;
+      min-width: 240px;
+      margin: 0;
+      padding-left: 1.1rem;
+      font-size: 0.95rem;
+      line-height: 1.8;
+      color: #4b5563;
+      align-self: center;
+    }
+
+    .tech-list li + li { margin-top: 0.4rem; }
+
+    /* ── CTA ──────────────────────────────────────────── */
+    .telehealth-cta {
+      padding: 3rem 1.5rem 3.5rem;
+      background-color: #fbfbf9;
+      background-image: url("/images/paper-texture.png");
+      background-repeat: repeat;
+      background-size: 420px 420px;
+      border-top: 1px solid rgba(15, 23, 42, 0.06);
+      text-align: center;
+    }
+
+    .telehealth-cta h2 {
       font-family: "Belleza", sans-serif;
       font-size: 1.2rem;
       letter-spacing: 0.18em;
@@ -156,63 +393,53 @@ import Layout from "../layouts/Layout.astro";
       color: #111827;
     }
 
-    .subpage-section h3 {
-      margin: 1.1rem 0 0.6rem;
-      font-size: 0.98rem;
-      font-weight: 500;
-      color: #111827;
-    }
-
-    .subpage-section p {
-      margin: 0 0 0.9rem;
+    .telehealth-cta p {
+      max-width: 580px;
+      margin: 0 auto 1.6rem;
       font-size: 0.96rem;
       line-height: 1.8;
       color: #4b5563;
     }
 
-    .subpage-section ul {
-      margin: 0 0 1rem;
-      padding-left: 1.1rem;
-      font-size: 0.95rem;
-      line-height: 1.6;
-      color: #4b5563;
-    }
-
-    .subpage-section li + li {
-      margin-top: 0.2rem;
-    }
-
-    .subpage-cta p {
-      max-width: 620px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    /* Button */
-    .subpage-btn {
+    /* ── Outline buttons ──────────────────────────────── */
+    .btn-outline {
       display: inline-block;
-      padding: 0.85rem 1.9rem;
+      margin-top: auto;
+      padding: 0.75rem 1.6rem;
       border-radius: 999px;
-      border: 1px solid #0f172a;
-      font-size: 0.9rem;
+      border: 1px solid;
+      font-size: 0.85rem;
       text-transform: uppercase;
       letter-spacing: 0.14em;
       text-decoration: none;
       background: #ffffff;
-      color: #0f172a;
-      box-shadow: 0 6px 16px rgba(15, 23, 42, 0.12);
-      transition:
-        background 0.15s ease,
-        color 0.15s ease,
-        box-shadow 0.15s ease,
-        transform 0.15s ease;
+      box-shadow: 0 6px 16px rgba(15, 23, 42, 0.1);
+      transition: background 0.15s ease, color 0.15s ease,
+        box-shadow 0.15s ease, transform 0.15s ease;
     }
 
-    .subpage-btn:hover {
-      background: #0f172a;
+    .btn-outline--counseling {
+      border-color: #7d6fb3;
+      color: #7d6fb3;
+    }
+
+    .btn-outline--counseling:hover {
+      background: #7d6fb3;
       color: #ffffff;
       transform: translateY(-1px);
-      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.2);
+      box-shadow: 0 10px 24px rgba(125, 111, 179, 0.3);
+    }
+
+    .btn-outline--medication {
+      border-color: #6a9e8e;
+      color: #6a9e8e;
+    }
+
+    .btn-outline--medication:hover {
+      background: #6a9e8e;
+      color: #ffffff;
+      transform: translateY(-1px);
+      box-shadow: 0 10px 24px rgba(106, 158, 142, 0.3);
     }
   </style>
 </Layout>

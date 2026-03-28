@@ -1,4 +1,3 @@
-<!-- Astro -->
 ---
 import Layout from "../layouts/Layout.astro";
 ---
@@ -7,50 +6,68 @@ import Layout from "../layouts/Layout.astro";
   title="Thank You | Mental Wellness & Relationship Services"
   description="Thank you for reaching out to Mental Wellness & Relationship Services. Our team will review your message and follow up with next steps."
 >
-  <main class="subpage">
+  <main class="thankyou-page">
+
+    <!-- Hero -->
     <section class="subpage-hero">
-      <div class="subpage-hero-inner">
+      <div class="section-inner">
         <h1>Thank you for reaching out</h1>
         <p>
-          We’ve received your submission and our team will review it shortly.
+          We've received your submission and our team will review it shortly.
           If a reply is needed, someone from MWRS will follow up by phone or
-          email, usually within a few business days.
+          email, usually within 1–2 business days.
         </p>
-        <a href="/" class="subpage-btn">
+        <a href="/" class="btn-outline btn-outline--counseling">
           Return to home
         </a>
       </div>
     </section>
 
-    <section class="subpage-section subpage-cta">
-      <div class="subpage-inner">
+    <!-- In the meantime -->
+    <section class="thankyou-links">
+      <div class="section-inner">
         <h2>In the meantime</h2>
-        <p>
-          You’re welcome to browse our services, locations, or FAQ while you
-          wait for a response.
-        </p>
-        <a href="/faq" class="subpage-btn">
-          Visit the FAQ
-        </a>
+        <p>You're welcome to explore more about our services and team while you wait.</p>
+        <div class="link-cards">
+
+          <a href="/faq" class="link-card">
+            <p class="card-kicker">Have questions?</p>
+            <p class="link-card-title">Visit the FAQ</p>
+            <p class="link-card-text">Answers to common questions about counseling, medication, insurance, and getting started.</p>
+          </a>
+
+          <a href="/our-team" class="link-card">
+            <p class="card-kicker">Meet your team</p>
+            <p class="link-card-title">Our Providers</p>
+            <p class="link-card-text">Learn about the counselors and nurse practitioners who provide care at MWRS.</p>
+          </a>
+
+          <a href="/locations" class="link-card">
+            <p class="card-kicker">Find us</p>
+            <p class="link-card-title">Locations &amp; Telehealth</p>
+            <p class="link-card-text">In-person offices in Coeur d'Alene, Ponderay, Priest River, and Oldtown — plus telehealth statewide.</p>
+          </a>
+
+        </div>
       </div>
     </section>
+
   </main>
 
   <style>
-    .subpage {
+    .thankyou-page {
       background: #f9fafb;
       min-height: 100vh;
     }
 
+    /* ── Hero ─────────────────────────────────────────── */
     .subpage-hero {
-      padding: 10rem 1.5rem 3rem;
-      background: #fbfbf9;
+      padding: 10rem 1.5rem 4rem;
+      background-color: #fbfbf9;
+      background-image: url("/images/paper-texture.png");
+      background-repeat: repeat;
+      background-size: 420px 420px;
       border-bottom: 1px solid rgba(15, 23, 42, 0.08);
-    }
-
-    .subpage-hero-inner {
-      max-width: 900px;
-      margin: 0 auto;
       text-align: center;
     }
 
@@ -64,75 +81,128 @@ import Layout from "../layouts/Layout.astro";
     }
 
     .subpage-hero p {
-      margin: 0 0 1.6rem;
+      margin: 0 0 1.75rem;
       font-size: 1rem;
       line-height: 1.8;
       color: #4b5563;
+      max-width: 580px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
-    .subpage-btn {
+    /* ── Shared section wrapper ───────────────────────── */
+    .section-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    /* ── Link cards section ───────────────────────────── */
+    .thankyou-links {
+      padding: 3.5rem 1.5rem 4rem;
+      background-color: #e5e9f3;
+      background-image: url("/images/paper-texture.png");
+      background-repeat: repeat;
+      background-size: 420px 420px;
+    }
+
+    .thankyou-links h2 {
+      font-family: "Belleza", sans-serif;
+      font-size: 1.2rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin: 0 0 0.5rem;
+      color: #111827;
+      text-align: center;
+    }
+
+    .thankyou-links > .section-inner > p {
+      text-align: center;
+      font-size: 0.96rem;
+      color: #4b5563;
+      margin: 0 0 2rem;
+    }
+
+    .link-cards {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    @media (max-width: 800px) {
+      .link-cards {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .link-card {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 1.8rem 1.6rem;
+      border: 1.5px solid rgba(155, 142, 196, 0.5);
+      box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .link-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 22px 50px rgba(15, 23, 42, 0.12);
+    }
+
+    .card-kicker {
+      margin: 0;
+      font-family: "Belleza", sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: 0.78rem;
+      color: #7d6fb3;
+    }
+
+    .link-card-title {
+      margin: 0;
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: #111827;
+      letter-spacing: 0.02em;
+    }
+
+    .link-card-text {
+      margin: 0.2rem 0 0;
+      font-size: 0.9rem;
+      line-height: 1.7;
+      color: #4b5563;
+    }
+
+    /* ── Outline button ───────────────────────────────── */
+    .btn-outline {
       display: inline-block;
       padding: 0.85rem 1.9rem;
       border-radius: 999px;
-      border: 1px solid #0f172a;
+      border: 1px solid;
       font-size: 0.9rem;
       text-transform: uppercase;
       letter-spacing: 0.14em;
       text-decoration: none;
       background: #ffffff;
-      color: #0f172a;
       box-shadow: 0 6px 16px rgba(15, 23, 42, 0.12);
-      transition:
-        background 0.15s ease,
-        color 0.15s ease,
-        box-shadow 0.15s ease,
-        transform 0.15s ease;
+      transition: background 0.15s ease, color 0.15s ease,
+        box-shadow 0.15s ease, transform 0.15s ease;
     }
 
-    .subpage-btn:hover {
-      background: #0f172a;
+    .btn-outline--counseling {
+      border-color: #7d6fb3;
+      color: #7d6fb3;
+    }
+
+    .btn-outline--counseling:hover {
+      background: #7d6fb3;
       color: #ffffff;
       transform: translateY(-1px);
-      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.2);
-    }
-
-    .subpage-section {
-      padding: 3rem 1.5rem 3.2rem;
-      background: #f9fafb;
-      border-top: 1px solid rgba(15, 23, 42, 0.03);
-    }
-
-    .subpage-cta {
-      background: #fbfbf9;
-      text-align: center;
-      border-top: 1px solid rgba(15, 23, 42, 0.06);
-    }
-
-    .subpage-inner {
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
-    .subpage-section h2 {
-      font-family: "Belleza", sans-serif;
-      font-size: 1.2rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      margin: 0 0 1rem;
-      color: #111827;
-    }
-
-    .subpage-section p {
-      margin: 0 0 0.9rem;
-      font-size: 0.96rem;
-      line-height: 1.8;
-      color: #4b5563;
-    }
-
-    .subpage-cta p {
-      max-width: 620px;
-      margin-left: auto;
-      margin-right: auto;
+      box-shadow: 0 10px 24px rgba(125, 111, 179, 0.3);
     }
   </style>
 </Layout>

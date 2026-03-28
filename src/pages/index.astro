@@ -29,11 +29,11 @@ import Layout from "../layouts/Layout.astro";
           excited to meet you. We offer counseling, equine-assisted therapy, and
           psychiatric medication management.
           <strong>
-            We’re here to help you move toward a better life, no matter what
-            season you’re in.
+            We're here to help you move toward a better life, no matter what
+            season you're in.
           </strong>
         </p>
-        <a href="/contact-us" class="btn-primary">Contact Us</a>
+        <a href="/contact-us" class="btn-hero">Contact Us</a>
       </div>
     </div>
   </section>
@@ -42,35 +42,35 @@ import Layout from "../layouts/Layout.astro";
   <section class="service-paths">
     <div class="service-paths-inner">
       <div class="service-paths-grid">
-        <a href="/contact-us" class="service-path-card-link">
-          <article class="service-path-card">
-            <p class="service-path-label">Counseling &amp; Therapy</p>
-            <h2 class="service-path-title">Meet with a counselor</h2>
-            <p class="service-path-text">
-              Individual, couples, and family counseling in Coeur d’Alene,
+
+        <!-- Counseling card — lavender -->
+        <a href="/contact-us" class="card-wrap">
+          <article class="card card--counseling">
+            <p class="card-kicker">Counseling &amp; Therapy</p>
+            <h2 class="card-title">Meet with a counselor</h2>
+            <p class="card-text">
+              Individual, couples, and family counseling in Coeur d'Alene,
               Priest River, Ponderay, and Oldtown, with teletherapy available
               anywhere in Idaho.
             </p>
-            <span class="service-path-cta"
-              >Request a counseling appointment →</span
-            >
+            <span class="btn-outline btn-outline--counseling">Request a counseling appointment →</span>
           </article>
         </a>
 
-        <a href="/psychiatry" class="service-path-card-link">
-          <article class="service-path-card">
-            <p class="service-path-label">Medication Management</p>
-            <h2 class="service-path-title">Meet with a prescriber</h2>
-            <p class="service-path-text">
+        <!-- Medication card — sage -->
+        <a href="/psychiatry" class="card-wrap">
+          <article class="card card--medication">
+            <p class="card-kicker card-kicker--medication">Medication Management</p>
+            <h2 class="card-title">Meet with a prescriber</h2>
+            <p class="card-text">
               Medication support for anxiety, depression, ADHD, and related
-              concerns — with in-person visits in Coeur d’Alene and Ponderay,
+              concerns — with in-person visits in Coeur d'Alene and Ponderay,
               plus telehealth across Idaho.
             </p>
-            <span class="service-path-cta"
-              >Request a medication appointment →</span
-            >
+            <span class="btn-outline btn-outline--medication">Request a medication appointment →</span>
           </article>
         </a>
+
       </div>
     </div>
   </section>
@@ -78,13 +78,15 @@ import Layout from "../layouts/Layout.astro";
   <!-- Care guidance -->
   <section class="care-guidance">
     <div class="care-guidance-inner">
-      <h2>Not sure where to start?</h2>
-      <p>
-        Some people are looking for counseling. Others want to explore whether
-        medication could help with anxiety, depression, ADHD, or other concerns.
-        We can help you figure out the right starting point.
-      </p>
-      <a href="/contact-us" class="care-guidance-link">Get Started →</a>
+      <div class="care-guidance-card">
+        <h2>Not sure where to start?</h2>
+        <p>
+          Some people are looking for counseling. Others want to explore whether
+          medication could help with anxiety, depression, ADHD, or other concerns.
+          We can help you figure out the right starting point.
+        </p>
+        <a href="/contact-us" class="btn-filled">Get Started →</a>
+      </div>
     </div>
   </section>
 
@@ -96,14 +98,14 @@ import Layout from "../layouts/Layout.astro";
         Mental Wellness &amp; Relationship Services (MWRS) provides counseling,
         equine-assisted therapy, and psychiatric medication management to
         individuals, couples, and families across North Idaho from our offices
-        in Coeur d’Alene, Priest River, Ponderay, and Oldtown — with telehealth
+        in Coeur d'Alene, Priest River, Ponderay, and Oldtown — with telehealth
         available statewide.
       </p>
     </div>
   </section>
 
   <style>
-    /* Hero */
+    /* ── Hero ─────────────────────────────────────────── */
     .hero {
       position: relative;
       min-height: 75vh;
@@ -113,7 +115,7 @@ import Layout from "../layouts/Layout.astro";
       overflow: hidden;
       color: #e5e7eb;
       padding: 6rem 1.5rem 3rem;
-      border-bottom: 4px solid #000000;
+      border-bottom: 3px solid #9b8ec4;
     }
 
     .hero::after {
@@ -186,7 +188,8 @@ import Layout from "../layouts/Layout.astro";
       letter-spacing: 0.015em;
     }
 
-    .btn-primary {
+    /* Hero button — white, stands alone over video */
+    .btn-hero {
       display: inline-block;
       padding: 1rem 1.75rem;
       border: 2px solid #ffffff;
@@ -200,11 +203,11 @@ import Layout from "../layouts/Layout.astro";
       transition: all 0.2s ease;
     }
 
-    .btn-primary:hover {
+    .btn-hero:hover {
       background: rgba(255, 255, 255, 0.1);
     }
 
-    /* Shared textured section background */
+    /* ── Shared section backgrounds ───────────────────── */
     .service-paths,
     .care-guidance,
     .about-mwrs {
@@ -214,7 +217,7 @@ import Layout from "../layouts/Layout.astro";
       border-bottom: 1px solid rgba(15, 23, 42, 0.08);
     }
 
-    /* Service paths */
+    /* ── Service paths ────────────────────────────────── */
     .service-paths {
       padding: 3.5rem 1.5rem 4rem;
       background-color: #fbfbf9;
@@ -237,75 +240,103 @@ import Layout from "../layouts/Layout.astro";
       }
     }
 
-    .service-path-card-link {
+    /* ── Cards ────────────────────────────────────────── */
+    .card-wrap {
       display: flex;
       text-decoration: none;
       color: inherit;
     }
 
-    .service-path-card {
+    .card {
       flex: 1;
       display: flex;
       flex-direction: column;
       gap: 0.6rem;
       border-radius: 22px;
       padding: 2.1rem 2rem;
-      border: 1px solid rgba(15, 23, 42, 0.1);
       background: #ffffff;
       box-shadow: 0 18px 40px rgba(15, 23, 42, 0.1);
-      transition:
-        transform 0.18s ease,
-        box-shadow 0.18s ease;
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
       cursor: pointer;
     }
 
-    .service-path-card:hover {
+    .card--counseling {
+      border: 1.5px solid rgba(155, 142, 196, 0.5);
+    }
+
+    .card--medication {
+      border: 1.5px solid rgba(138, 180, 164, 0.5);
+    }
+
+    .card:hover {
       transform: translateY(-4px);
       box-shadow: 0 22px 55px rgba(15, 23, 42, 0.16);
     }
 
-    .service-path-label {
+    /* ── Card kicker labels ───────────────────────────── */
+    .card-kicker {
       margin: 0;
       font-family: "Belleza", sans-serif;
       text-transform: uppercase;
       letter-spacing: 0.16em;
       font-size: 0.8rem;
-      color: #4b5563;
+      color: #9b8ec4; /* lavender — default */
     }
 
-    .service-path-title {
+    .card-kicker--medication {
+      color: #8ab4a4; /* sage */
+    }
+
+    .card-title {
       margin: 0;
       font-size: 1.15rem;
       color: #111827;
     }
 
-    .service-path-text {
+    .card-text {
       margin: 0.25rem 0 0.75rem;
       line-height: 1.7;
       color: #4b5563;
       font-size: 0.95rem;
     }
 
-    .service-path-cta {
+    /* ── Outline buttons ──────────────────────────────── */
+    .btn-outline {
       margin-top: auto;
       display: inline-block;
       padding: 0.6rem 1.4rem;
       border-radius: 999px;
-      border: 1px solid #111827;
+      border: 1px solid;
       text-decoration: none;
       font-size: 0.85rem;
       letter-spacing: 0.14em;
       text-transform: uppercase;
-      color: #111827;
       transition: all 0.15s ease;
     }
 
-    .service-path-card:hover .service-path-cta {
-      background: #111827;
+    .btn-outline--counseling {
+      border-color: #7d6fb3;
+      color: #7d6fb3;
+    }
+
+    .btn-outline--counseling:hover,
+    .card--counseling:hover .btn-outline--counseling {
+      background: #7d6fb3;
       color: #ffffff;
     }
 
-    /* Care guidance */
+    .btn-outline--medication {
+      border-color: #6a9e8e;
+      color: #6a9e8e;
+    }
+
+    .btn-outline--medication:hover,
+    .card--medication:hover .btn-outline--medication {
+      background: #6a9e8e;
+      color: #ffffff;
+    }
+
+    /* ── Care guidance ────────────────────────────────── */
     .care-guidance {
       padding: 2.5rem 1.5rem;
       background-color: #fbfbf9;
@@ -314,6 +345,14 @@ import Layout from "../layouts/Layout.astro";
     .care-guidance-inner {
       max-width: 760px;
       margin: 0 auto;
+    }
+
+    .care-guidance-card {
+      background: #ffffff;
+      border-radius: 22px;
+      padding: 2.5rem 2rem;
+      border: 1.5px solid rgba(155, 142, 196, 0.5);
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
       text-align: center;
     }
 
@@ -333,26 +372,28 @@ import Layout from "../layouts/Layout.astro";
       color: #4b5563;
     }
 
-    .care-guidance-link {
+    /* ── Filled button — for low-contrast sections ───── */
+    .btn-filled {
       display: inline-block;
-      margin-top: 0.5rem;
       padding: 0.6rem 1.4rem;
       border-radius: 999px;
-      border: 1px solid #111827;
+      background: #7d6fb3;
+      color: #ffffff;
+      border: 1px solid #7d6fb3;
       text-decoration: none;
       font-size: 0.85rem;
       letter-spacing: 0.14em;
       text-transform: uppercase;
-      color: #111827;
       transition: all 0.15s ease;
     }
 
-    .care-guidance-link:hover {
-      background: #111827;
-      color: #ffffff;
+    .btn-filled:hover {
+      background: #6a5fa0;
+      border-color: #6a5fa0;
+      transform: translateY(-1px);
     }
 
-    /* About */
+    /* ── About ────────────────────────────────────────── */
     .about-mwrs {
       padding: 2.75rem 1.5rem 3.25rem;
       background-color: #ffffff;

@@ -4,54 +4,72 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout
   title="Counseling & Medication Locations in North Idaho | MWRS"
-  description="Find MWRS counseling and medication management locations in Coeur d’Alene, Ponderay, Priest River, and Oldtown, with telehealth services available to clients across Idaho."
+  description="Find MWRS counseling and medication management locations in Coeur d'Alene, Ponderay, Priest River, and Oldtown, with telehealth services available to clients across Idaho."
 >
   <main class="locations-page">
-    <!-- ========================================================= -->
-    <!--  TOP TELEHEALTH FEATURE                                   -->
-    <!-- ========================================================= -->
-    <section class="telehealth-feature">
-      <div class="telehealth-inner">
-        <h1>Telehealth Across Idaho</h1>
-        <p>
-          MWRS offers counseling and psychiatric medication management to clients
-          anywhere in Idaho. Meet with a counselor or prescriber from the comfort
-          of your home — including Boise, Meridian, Twin Falls, Idaho Falls, and
-          rural communities.
-        </p>
 
-        <a href="/telehealth" class="telehealth-cta">
+    <!-- Hero / Telehealth -->
+    <section class="subpage-hero">
+      <div class="section-inner">
+        <h1>Counseling & Medication Care in Idaho</h1>
+        <p>
+          MWRS offers counseling and psychiatric medication management to
+          clients anywhere in Idaho. Meet with a counselor or prescriber from
+          the comfort of your home — including Boise, Meridian, Twin Falls,
+          Idaho Falls, and rural communities.
+        </p>
+        <a href="/telehealth" class="btn-outline btn-outline--counseling">
           Start telehealth care
         </a>
       </div>
     </section>
 
-    <!-- ========================================================= -->
-    <!-- NORTH IDAHO LOCATIONS                                     -->
-    <!-- ========================================================= -->
-    <section class="locations-physical">
-      <div class="locations-inner">
-        <h2 class="locations-heading">In-Person Locations in North Idaho</h2>
+    <!-- Locations -->
+    <section class="locations-section">
+      <div class="section-inner">
+        <h2 class="locations-heading">Locations in North Idaho</h2>
 
-        <div class="locations-grid">
-          <!-- CDA -->
-          <article class="location-card">
-            <h3 class="location-title">Coeur d’Alene</h3>
+        <!-- CDA — featured full-width card -->
+        <article class="card card--featured card--counseling">
+          <div class="card--featured-content">
+            <p class="card-kicker">Primary Office</p>
+            <h3 class="card-title">Coeur d'Alene</h3>
             <p class="location-address">
               1110 W Park Place, Suite 303<br />
-              Coeur d’Alene, ID 83814
+              Coeur d'Alene, ID 83814
             </p>
+            <div class="location-contact">
+              <a href="tel:2082612255">P: 208.261.2255</a>
+              <a href="tel:2084737271">F: 208.473.7271</a>
+              <a href="mailto:info@mwrservices.org">info@mwrservices.org</a>
+            </div>
             <p class="location-services">
               Counseling · Medication Management · Telehealth
             </p>
-            <a href="/locations/coeur-d-alene" class="location-link">
-              Learn more about Coeur d’Alene →
+            <a href="/locations/coeur-d-alene" class="btn-outline btn-outline--counseling">
+              Learn more about Coeur d'Alene →
             </a>
-          </article>
+          </div>
+          <div class="card--featured-map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2728.123456789!2d-116.7927!3d47.6777!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x549a7a9a9a9a9a9a%3A0x1!2s1110+W+Park+Pl+%23303%2C+Coeur+d%27Alene%2C+ID+83814!5e0!3m2!1sen!2sus!4v1234567890"
+              width="100%"
+              height="100%"
+              style="border:0; border-radius: 0 20px 20px 0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="MWRS Coeur d'Alene office location"
+            ></iframe>
+          </div>
+        </article>
 
-          <!-- Ponderay -->
-          <article class="location-card">
-            <h3 class="location-title">Ponderay</h3>
+        <!-- Other three locations -->
+        <div class="locations-grid">
+
+          <article class="card card--counseling">
+            <p class="card-kicker">North Idaho</p>
+            <h3 class="card-title">Ponderay</h3>
             <p class="location-address">
               30410 Highway 200<br />
               Ponderay, ID 83852
@@ -59,14 +77,14 @@ import Layout from "../layouts/Layout.astro";
             <p class="location-services">
               Counseling · Medication Management · Telehealth
             </p>
-            <a href="/locations/ponderay" class="location-link">
-              Learn more about Ponderay →
+            <a href="/locations/ponderay" class="btn-outline btn-outline--counseling">
+              Learn more →
             </a>
           </article>
 
-          <!-- Priest River -->
-          <article class="location-card">
-            <h3 class="location-title">Priest River</h3>
+          <article class="card card--counseling">
+            <p class="card-kicker">North Idaho</p>
+            <h3 class="card-title">Priest River</h3>
             <p class="location-address">
               50 Main Street<br />
               Priest River, ID 83856
@@ -74,14 +92,14 @@ import Layout from "../layouts/Layout.astro";
             <p class="location-services">
               Counseling · Telehealth
             </p>
-            <a href="/locations/priest-river" class="location-link">
-              Learn more about Priest River →
+            <a href="/locations/priest-river" class="btn-outline btn-outline--counseling">
+              Learn more →
             </a>
           </article>
 
-          <!-- Oldtown -->
-          <article class="location-card">
-            <h3 class="location-title">Oldtown</h3>
+          <article class="card card--counseling">
+            <p class="card-kicker">North Idaho</p>
+            <h3 class="card-title">Oldtown</h3>
             <p class="location-address">
               251 Jacks Place<br />
               Oldtown, ID 83822
@@ -89,13 +107,29 @@ import Layout from "../layouts/Layout.astro";
             <p class="location-services">
               Counseling · Equine-Assisted Therapy
             </p>
-            <a href="/locations/oldtown" class="location-link">
-              Learn more about Oldtown →
+            <a href="/locations/oldtown" class="btn-outline btn-outline--counseling">
+              Learn more →
             </a>
           </article>
+
         </div>
       </div>
     </section>
+
+    <!-- CTA -->
+    <section class="locations-cta">
+      <div class="section-inner">
+        <h2>Not sure which location is right for you?</h2>
+        <p>
+          Fill out our intake form and our team will match you with the right
+          clinician and location based on your needs and availability.
+        </p>
+        <a href="/contact-us" class="btn-outline btn-outline--counseling">
+          Start care with MWRS
+        </a>
+      </div>
+    </section>
+
   </main>
 
   <style>
@@ -104,113 +138,167 @@ import Layout from "../layouts/Layout.astro";
       min-height: 100vh;
     }
 
-    /* ========================================================= */
-    /* TELEHEALTH FEATURE                                         */
-    /* ========================================================= */
-    .telehealth-feature {
-      padding: 10rem 1.5rem 4rem;
-      background: #fbfbf9;
-           background-image: url("/images/paper-texture.png");
-      background-repeat: repeat; /* tile it */
-      background-size: 420px 420px; /* tweak smaller/larger as you like */
+    /* ── Hero ─────────────────────────────────────────── */
+    .subpage-hero {
+      padding: 10rem 1.5rem 3.5rem;
+      background-color: #fbfbf9;
+      background-image: url("/images/paper-texture.png");
+      background-repeat: repeat;
+      background-size: 420px 420px;
       border-bottom: 1px solid rgba(15, 23, 42, 0.08);
-    }
-
-    .telehealth-inner {
-      max-width: 900px;
-      margin: 0 auto;
       text-align: center;
     }
 
-    .telehealth-feature h1 {
+    .subpage-hero h1 {
       font-family: "Belleza", sans-serif;
-      font-size: clamp(2rem, 3vw, 2.8rem);
-      letter-spacing: 0.14em;
+      font-size: clamp(2rem, 3vw, 2.6rem);
+      letter-spacing: 0.16em;
       text-transform: uppercase;
       margin: 0 0 1rem;
       color: #111827;
     }
 
-    .telehealth-feature p {
+    .subpage-hero p {
       margin: 0 0 1.75rem;
       font-size: 1rem;
       line-height: 1.7;
       color: #4b5563;
     }
 
-    .telehealth-cta {
-      display: inline-block;
-      padding: 0.95rem 2rem;
-      border-radius: 999px;
-      border: 1px solid #0f172a;
-      background: #ffffff;
-      color: #0f172a;
-      font-weight: 600;
-      letter-spacing: 0.14em;
-      text-decoration: none;
-      font-size: 0.95rem;
-      text-transform: uppercase;
-      box-shadow: 0 6px 16px rgba(15, 23, 42, 0.12);
-      transition: all 0.2s ease;
-    }
-
-    .telehealth-cta:hover {
-      background: #0f172a;
-      color: #ffffff;
-      transform: translateY(-1px);
-      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.2);
-    }
-
-    /* ========================================================= */
-    /* PHYSICAL LOCATIONS                                         */
-    /* ========================================================= */
-    .locations-physical {
-      padding: 3.5rem 1.5rem 4rem;
-      background: #ffffff;
-            background-image: url("/images/paper-texture.png");
-      background-repeat: repeat; /* tile it */
-      background-size: 420px 420px; /* tweak smaller/larger as you like */
-      border-bottom: 1px solid rgba(15, 23, 42, 0.08);
-    }
-
-    .locations-inner {
+    /* ── Shared section wrapper ───────────────────────── */
+    .section-inner {
       max-width: 1100px;
       margin: 0 auto;
+    }
+
+    /* ── Locations section ────────────────────────────── */
+    .locations-section {
+      padding: 3.5rem 1.5rem 4rem;
+      background-color: #ffffff;
+      background-image: url("/images/paper-texture.png");
+      background-repeat: repeat;
+      background-size: 420px 420px;
+      border-bottom: 1px solid rgba(15, 23, 42, 0.08);
     }
 
     .locations-heading {
       text-align: center;
       font-family: "Belleza", sans-serif;
-      font-size: 1.35rem;
+      font-size: 1.2rem;
       letter-spacing: 0.18em;
       text-transform: uppercase;
       margin: 0 0 2.2rem;
       color: #111827;
     }
 
-    .locations-grid {
-      display: grid;
-      gap: 2rem;
+    /* ── Featured CDA card ────────────────────────────── */
+    .card--featured {
+      display: grid !important;
+      grid-template-columns: 1fr 340px;
+      border-radius: 22px;
+      overflow: hidden;
+      margin-bottom: 2rem;
+      min-height: 320px;
+      box-shadow: 0 22px 50px rgba(15, 23, 42, 0.1);
+      align-items: stretch;
+      padding: 0;
+      gap: 0;
     }
 
-    @media (min-width: 900px) {
-      .locations-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+    .card--featured-content {
+      padding: 2rem 2.2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .card--featured-map {
+      width: 340px;
+      height: 100%;
+      min-height: 320px;
+      flex-shrink: 0;
+    }
+
+    .card--featured-map iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 320px;
+      display: block;
+      border-radius: 0 20px 20px 0 !important;
+    }
+
+    @media (max-width: 768px) {
+      .card--featured {
+        grid-template-columns: 1fr;
+      }
+      .card--featured-map {
+        width: 100%;
+        min-height: 240px;
+      }
+      .card--featured-map iframe {
+        border-radius: 0 0 20px 20px !important;
+        min-height: 240px;
       }
     }
 
-    .location-card {
+    .location-contact {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+      margin: 0.25rem 0;
+    }
+
+    .location-contact a {
+      font-size: 0.9rem;
+      color: #4b5563;
+      text-decoration: none;
+    }
+
+    .location-contact a:hover {
+      color: #7d6fb3;
+      text-decoration: underline;
+    }
+
+    /* ── Standard cards ───────────────────────────────── */
+    .card {
       background: #ffffff;
       border-radius: 22px;
       padding: 2rem 1.8rem;
-      border: 1px solid rgba(15, 23, 42, 0.08);
       box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
       display: flex;
       flex-direction: column;
       gap: 0.55rem;
     }
 
-    .location-title {
+    .card--counseling {
+      border: 1.5px solid rgba(155, 142, 196, 0.5);
+    }
+
+    /* ── Three-column grid ────────────────────────────── */
+    .locations-grid {
+      display: grid;
+      gap: 2rem;
+    }
+
+    @media (min-width: 700px) {
+      .locations-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    /* ── Card content ─────────────────────────────────── */
+    .card-kicker {
+      margin: 0;
+      font-family: "Belleza", sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: 0.8rem;
+      color: #7d6fb3;
+    }
+
+    .card-title {
       font-family: "Belleza", sans-serif;
       font-size: 1.35rem;
       letter-spacing: 0.04em;
@@ -226,25 +314,82 @@ import Layout from "../layouts/Layout.astro";
     }
 
     .location-services {
-      margin: 0.2rem 0 0;
-      font-size: 0.9rem;
+      margin: 0.2rem 0 0.6rem;
+      font-size: 0.82rem;
       text-transform: uppercase;
       letter-spacing: 0.1em;
-      color: #0f172a;
+      color: #111827;
       font-weight: 600;
     }
 
-    .location-link {
-      margin-top: 0.4rem;
-      font-size: 0.86rem;
+    /* ── Section heading ──────────────────────────────── */
+    .locations-heading {
+      text-align: center;
+      font-family: "Belleza", sans-serif;
+      font-size: 1.2rem;
+      letter-spacing: 0.18em;
       text-transform: uppercase;
-      letter-spacing: 0.14em;
-      text-decoration: none;
+      margin: 0 0 2.2rem;
       color: #111827;
     }
 
-    .location-link:hover {
-      text-decoration: underline;
+    /* ── Outline button ───────────────────────────────── */
+    .btn-outline {
+      display: inline-block;
+      margin-top: auto;
+      padding: 0.75rem 1.6rem;
+      border-radius: 999px;
+      border: 1px solid;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      text-decoration: none;
+      background: #ffffff;
+      box-shadow: 0 6px 16px rgba(15, 23, 42, 0.1);
+      transition: background 0.15s ease, color 0.15s ease,
+        box-shadow 0.15s ease, transform 0.15s ease;
+      font-family: inherit;
+      cursor: pointer;
+    }
+
+    .btn-outline--counseling {
+      border-color: #7d6fb3;
+      color: #7d6fb3;
+    }
+
+    .btn-outline--counseling:hover {
+      background: #7d6fb3;
+      color: #ffffff;
+      transform: translateY(-1px);
+      box-shadow: 0 10px 24px rgba(125, 111, 179, 0.3);
+    }
+
+    /* ── CTA section ──────────────────────────────────── */
+    .locations-cta {
+      padding: 3rem 1.5rem 3.5rem;
+      background-color: #fbfbf9;
+      background-image: url("/images/paper-texture.png");
+      background-repeat: repeat;
+      background-size: 420px 420px;
+      border-top: 1px solid rgba(15, 23, 42, 0.06);
+      text-align: center;
+    }
+
+    .locations-cta h2 {
+      font-family: "Belleza", sans-serif;
+      font-size: 1.2rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin: 0 0 1rem;
+      color: #111827;
+    }
+
+    .locations-cta p {
+      max-width: 580px;
+      margin: 0 auto 1.6rem;
+      font-size: 0.96rem;
+      line-height: 1.8;
+      color: #4b5563;
     }
   </style>
 </Layout>

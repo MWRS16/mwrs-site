@@ -1,100 +1,145 @@
-<!-- Astro -->
 ---
 import Layout from "../../layouts/Layout.astro";
 ---
 
 <Layout
   title="Counseling & Equine-Assisted Therapy in Oldtown | MWRS"
-  description="Counseling and equine-assisted therapy in Oldtown, Idaho, at MWRS’s outdoor and equine therapy facility."
+  description="Counseling and equine-assisted therapy in Oldtown, Idaho, at MWRS's outdoor and equine therapy facility."
 >
-  <main class="subpage">
+  <main class="location-page">
+
     <!-- Hero -->
     <section class="subpage-hero">
-      <div class="subpage-hero-inner">
-        <h1>Oldtown Counseling &amp; Equine Therapy</h1>
+      <div class="section-inner">
+        <h1>Oldtown</h1>
         <p>
           MWRS offers counseling and equine-assisted therapy in Oldtown, Idaho,
           at our outdoor and equine therapy facility. This setting provides a
           calm, experiential alternative to traditional office-based sessions.
         </p>
-        <a href="/contact-us" class="subpage-btn">
+        <a href="/contact-us" class="btn-outline btn-outline--counseling">
           Ask about Oldtown sessions
         </a>
       </div>
     </section>
 
-    <!-- Light SEO body -->
-    <section class="subpage-section">
-      <div class="subpage-inner">
-        <h2>Counseling with room to move</h2>
-        <p>
-          Our Oldtown location is designed for clients who feel more comfortable
-          in outdoor or non-traditional spaces. In addition to standard
-          counseling sessions, we offer equine-assisted therapy for individuals,
-          teens, and families when appropriate.
-        </p>
-
-        <p>
-          Equine work can be especially helpful for clients who feel “talked
-          out,” teens who struggle with office settings, or anyone who connects
-          more easily through hands-on experience than through conversation
-          alone.
-        </p>
-
-        <h3>Services available at this location</h3>
-        <ul>
-          <li>Individual counseling for adults and teens</li>
-          <li>Family and parent support</li>
-          <li>Equine-assisted therapy (by appointment)</li>
-        </ul>
-
-        <h3>Address</h3>
-        <p>
-          251 Jacks Place<br />
-          Oldtown, ID 83822
-        </p>
-
-        <p>
-          Our intake team can help you decide whether Oldtown and equine work
-          might be a good fit for you or your family.
-        </p>
+    <!-- Info card -->
+    <section class="location-info-section">
+      <div class="location-info-inner">
+        <article class="location-info-card">
+          <div class="location-info-content">
+            <p class="card-kicker">Oldtown Office</p>
+            <h2 class="location-info-title">251 Jacks Place</h2>
+            <p class="location-info-address">Oldtown, ID 83822</p>
+            <div class="location-contact">
+              <a href="tel:2082612255">P: 208.261.2255</a>
+              <a href="tel:2084737271">F: 208.473.7271</a>
+              <a href="mailto:info@mwrservices.org">info@mwrservices.org</a>
+            </div>
+            <p class="location-info-note">
+              Our Oldtown location is designed for clients who feel more
+              comfortable in outdoor or non-traditional settings. Our intake
+              team can help you decide whether Oldtown and equine work might
+              be a good fit for you or your family.
+            </p>
+            <div class="location-services-offered">
+              <a href="/services" class="service-tag service-tag--counseling">Counseling</a>
+              <a href="#equine" class="service-tag service-tag--equine">Equine-Assisted Therapy</a>
+            </div>
+          </div>
+          <div class="location-map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2726.5!2d-117.1327!3d48.1627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x549a9e5b5b5b5b5b%3A0x4!2s251+Jacks+Pl%2C+Oldtown%2C+ID+83822!5e0!3m2!1sen!2sus!4v1234567890"
+              width="100%"
+              height="100%"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="MWRS Oldtown office location"
+            ></iframe>
+          </div>
+        </article>
       </div>
     </section>
 
-    <!-- Bottom CTA -->
-    <section class="subpage-section subpage-cta">
-      <div class="subpage-inner">
-        <h2>Schedule in Oldtown</h2>
+    <!-- Service cards -->
+    <section class="location-services">
+      <div class="location-services-inner">
+        <div class="services-grid">
+
+          <article class="card card--counseling">
+            <p class="card-kicker">Counseling &amp; Therapy</p>
+            <h2 class="card-title">Meet with a counselor</h2>
+            <p class="card-lead">
+              Individual and family counseling in an outdoor, non-traditional
+              setting — a welcome alternative for clients who prefer to be
+              out of the office.
+            </p>
+            <ul class="card-list">
+              <li>Individual counseling for adults and teens</li>
+              <li>Family and parent support</li>
+              <li>Ideal for clients who prefer non-office environments</li>
+            </ul>
+            <a href="/contact-us" class="btn-outline btn-outline--counseling">
+              Start counseling →
+            </a>
+          </article>
+
+          <article class="card card--equine" id="equine">
+            <p class="card-kicker card-kicker--equine">Equine-Assisted Therapy</p>
+            <h2 class="card-title">Work with horses</h2>
+            <p class="card-lead">
+              Equine-assisted therapy offers a hands-on, experiential approach
+              for clients who connect more easily through activity than
+              conversation alone.
+            </p>
+            <ul class="card-list">
+              <li>Available for individuals, teens, and families</li>
+              <li>Especially helpful for clients who feel "talked out"</li>
+              <li>Teens who struggle in traditional office settings</li>
+              <li>By appointment — ask our intake team about availability</li>
+            </ul>
+            <a href="/contact-us" class="btn-outline btn-outline--equine">
+              Ask about equine therapy →
+            </a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="location-cta">
+      <div class="section-inner">
+        <h2>Ask about Oldtown sessions</h2>
         <p>
-          If you’re interested in equine-assisted therapy or outdoor-based
-          counseling, share a bit about what you’re hoping for, and we’ll help
+          If you're interested in equine-assisted therapy or outdoor-based
+          counseling, share a bit about what you're hoping for and we'll help
           you explore options at our Oldtown location.
         </p>
-        <a href="/contact-us" class="subpage-btn">
+        <a href="/contact-us" class="btn-outline btn-outline--counseling">
           Ask about Oldtown sessions
         </a>
       </div>
     </section>
+
   </main>
 
   <style>
-    .subpage {
+    .location-page {
       background: #f9fafb;
       min-height: 100vh;
     }
 
+    /* ── Hero ─────────────────────────────────────────── */
     .subpage-hero {
-      padding: 10rem 1.5rem 3rem;
-      background: #fbfbf9;
-           background-image: url("/images/paper-texture.png");
-      background-repeat: repeat; /* tile it */
-      background-size: 420px 420px; /* tweak smaller/larger as you like */
+      padding: 10rem 1.5rem 3.5rem;
+      background-color: #fbfbf9;
+      background-image: url("/images/paper-texture.png");
+      background-repeat: repeat;
+      background-size: 420px 420px;
       border-bottom: 1px solid rgba(15, 23, 42, 0.08);
-    }
-
-    .subpage-hero-inner {
-      max-width: 900px;
-      margin: 0 auto;
       text-align: center;
     }
 
@@ -108,59 +153,244 @@ import Layout from "../../layouts/Layout.astro";
     }
 
     .subpage-hero p {
-      margin: 0 0 1.6rem;
+      margin: 0 0 1.75rem;
       font-size: 1rem;
       line-height: 1.8;
       color: #4b5563;
     }
 
-    .subpage-btn {
-      display: inline-block;
-      padding: 0.85rem 1.9rem;
-      border-radius: 999px;
-      border: 1px solid #0f172a;
-      font-size: 0.9rem;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      text-decoration: none;
-      background: #ffffff;
-      color: #0f172a;
-      box-shadow: 0 6px 16px rgba(15, 23, 42, 0.12);
-      transition:
-        background 0.15s ease,
-        color 0.15s ease,
-        box-shadow 0.15s ease,
-        transform 0.15s ease;
-    }
-
-    .subpage-btn:hover {
-      background: #0f172a;
-      color: #ffffff;
-      transform: translateY(-1px);
-      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.2);
-    }
-
-    .subpage-section {
-      padding: 3rem 1.5rem 3.2rem;
-      background: #e5e9f3;
-            background-image: url("/images/paper-texture.png");
-      background-repeat: repeat; /* tile it */
-      background-size: 420px 420px; /* tweak smaller/larger as you like */
-      border-bottom: 1px solid rgba(15, 23, 42, 0.08);
-    }
-
-    .subpage-cta {
-      background: #fbfbf9;
-      text-align: center;
-      border-top: 1px solid rgba(15, 23, 42, 0.06);
-    }
-
-    .subpage-inner {
+    /* ── Shared wrappers ──────────────────────────────── */
+    .section-inner {
       max-width: 900px;
       margin: 0 auto;
     }
 
-    .subpage-section h2 {
+    /* ── Info card ────────────────────────────────────── */
+    .location-info-section {
+      padding: 3.5rem 1.5rem 4rem;
+      background-color: #ffffff;
+      background-image: url("/images/paper-texture.png");
+      background-repeat: repeat;
+      background-size: 420px 420px;
+      border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+    }
+
+    .location-info-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .location-info-card {
+      display: grid;
+      grid-template-columns: 1fr 400px;
+      border-radius: 22px;
+      overflow: hidden;
+      border: 1.5px solid rgba(155, 142, 196, 0.5);
+      box-shadow: 0 22px 50px rgba(15, 23, 42, 0.1);
+      background: #ffffff;
+    }
+
+    .location-info-content {
+      padding: 2.2rem 2.4rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .location-info-title {
+      margin: 0;
+      font-family: "Belleza", sans-serif;
+      font-size: 1.3rem;
+      letter-spacing: 0.04em;
+      color: #111827;
+      font-weight: 400;
+    }
+
+    .location-info-address {
+      margin: 0;
+      font-size: 0.95rem;
+      color: #4b5563;
+    }
+
+    .location-contact {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+      margin: 0.2rem 0;
+    }
+
+    .location-contact a {
+      font-size: 0.9rem;
+      color: #4b5563;
+      text-decoration: none;
+    }
+
+    .location-contact a:hover {
+      color: #7d6fb3;
+      text-decoration: underline;
+    }
+
+    .location-info-note {
+      margin: 0.2rem 0 0;
+      font-size: 0.88rem;
+      line-height: 1.6;
+      color: #6b7280;
+    }
+
+    .location-services-offered {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.4rem;
+    }
+
+    .service-tag {
+      display: inline-block;
+      padding: 0.3rem 0.8rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-family: "Belleza", sans-serif;
+      border: 1px solid rgba(15, 23, 42, 0.15);
+      color: #4b5563;
+      text-decoration: none;
+      transition: all 0.15s ease;
+    }
+
+    .service-tag:hover { background: rgba(15, 23, 42, 0.06); }
+
+    .service-tag--counseling {
+      border-color: rgba(155, 142, 196, 0.6);
+      color: #7d6fb3;
+    }
+
+    .service-tag--counseling:hover { background: rgba(155, 142, 196, 0.1); }
+
+    /* Equine — warm earthy tone */
+    .service-tag--equine {
+      border-color: rgba(180, 140, 90, 0.5);
+      color: #9a6f3a;
+    }
+
+    .service-tag--equine:hover { background: rgba(180, 140, 90, 0.1); }
+
+    .location-map {
+      min-height: 360px;
+    }
+
+    .location-map iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 360px;
+      display: block;
+      border-radius: 0 20px 20px 0;
+    }
+
+    @media (max-width: 900px) {
+      .location-info-card {
+        grid-template-columns: 1fr;
+      }
+      .location-map {
+        min-height: 260px;
+      }
+      .location-map iframe {
+        border-radius: 0 0 20px 20px !important;
+        min-height: 260px;
+      }
+    }
+
+    /* ── Service cards ────────────────────────────────── */
+    .location-services {
+      padding: 3.5rem 1.5rem 4rem;
+      background-color: #f9fafb;
+      background-image: url("/images/paper-texture.png");
+      background-repeat: repeat;
+      background-size: 420px 420px;
+      border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+    }
+
+    .location-services-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .services-grid {
+      display: grid;
+      gap: 2rem;
+    }
+
+    @media (min-width: 900px) {
+      .services-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    .card {
+      border-radius: 22px;
+      padding: 2.1rem 2rem 2rem;
+      background: #ffffff;
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .card--counseling { border: 1.5px solid rgba(155, 142, 196, 0.5); }
+
+    /* Equine card — warm earthy border */
+    .card--equine { border: 1.5px solid rgba(180, 140, 90, 0.4); }
+
+    .card-kicker {
+      margin: 0;
+      font-family: "Belleza", sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: 0.78rem;
+      color: #7d6fb3;
+    }
+
+    .card-kicker--equine { color: #9a6f3a; }
+
+    .card-title {
+      margin: 0;
+      font-size: 1.25rem;
+      font-weight: 400;
+      color: #111827;
+    }
+
+    .card-lead {
+      margin: 0.25rem 0 0.5rem;
+      font-size: 0.96rem;
+      line-height: 1.7;
+      color: #4b5563;
+    }
+
+    .card-list {
+      margin: 0 0 1rem;
+      padding-left: 1.1rem;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #4b5563;
+      flex: 1;
+    }
+
+    .card-list li + li { margin-top: 0.2rem; }
+
+    /* ── CTA ──────────────────────────────────────────── */
+    .location-cta {
+      padding: 3rem 1.5rem 3.5rem;
+      background-color: #fbfbf9;
+      background-image: url("/images/paper-texture.png");
+      background-repeat: repeat;
+      background-size: 420px 420px;
+      border-top: 1px solid rgba(15, 23, 42, 0.06);
+      text-align: center;
+    }
+
+    .location-cta h2 {
       font-family: "Belleza", sans-serif;
       font-size: 1.2rem;
       letter-spacing: 0.18em;
@@ -169,36 +399,53 @@ import Layout from "../../layouts/Layout.astro";
       color: #111827;
     }
 
-    .subpage-section h3 {
-      margin: 1.1rem 0 0.6rem;
-      font-size: 0.98rem;
-      font-weight: 500;
-      color: #111827;
-    }
-
-    .subpage-section p {
-      margin: 0 0 0.9rem;
+    .location-cta p {
+      max-width: 580px;
+      margin: 0 auto 1.6rem;
       font-size: 0.96rem;
       line-height: 1.8;
       color: #4b5563;
     }
 
-    .subpage-section ul {
-      margin: 0 0 1rem;
-      padding-left: 1.1rem;
-      font-size: 0.95rem;
-      line-height: 1.6;
-      color: #4b5563;
+    /* ── Outline buttons ──────────────────────────────── */
+    .btn-outline {
+      display: inline-block;
+      margin-top: auto;
+      padding: 0.75rem 1.6rem;
+      border-radius: 999px;
+      border: 1px solid;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      text-decoration: none;
+      background: #ffffff;
+      box-shadow: 0 6px 16px rgba(15, 23, 42, 0.1);
+      transition: background 0.15s ease, color 0.15s ease,
+        box-shadow 0.15s ease, transform 0.15s ease;
     }
 
-    .subpage-section li + li {
-      margin-top: 0.2rem;
+    .btn-outline--counseling {
+      border-color: #7d6fb3;
+      color: #7d6fb3;
     }
 
-    .subpage-cta p {
-      max-width: 620px;
-      margin-left: auto;
-      margin-right: auto;
+    .btn-outline--counseling:hover {
+      background: #7d6fb3;
+      color: #ffffff;
+      transform: translateY(-1px);
+      box-shadow: 0 10px 24px rgba(125, 111, 179, 0.3);
+    }
+
+    .btn-outline--equine {
+      border-color: #9a6f3a;
+      color: #9a6f3a;
+    }
+
+    .btn-outline--equine:hover {
+      background: #9a6f3a;
+      color: #ffffff;
+      transform: translateY(-1px);
+      box-shadow: 0 10px 24px rgba(154, 111, 58, 0.25);
     }
   </style>
 </Layout>
