@@ -8,17 +8,17 @@ import Layout from "../layouts/Layout.astro";
 >
   <!-- Hero -->
   <section class="hero">
-<video
-  class="hero-video"
-  autoplay
-  muted
-  loop
-  playsinline
-  preload="none"
-  poster="/images/mwrs-home-hero-poster.webp"
->
-  <source src="/videos/mwrs-bg-looped-small.mp4" type="video/mp4" />
-</video>
+    <video
+      class="hero-video"
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="none"
+      poster="/images/mwrs-home-hero-poster.webp"
+    >
+      <source src="/videos/mwrs-bg-looped-small.mp4" type="video/mp4" />
+    </video>
 
     <div class="hero-overlay"></div>
 
@@ -26,7 +26,7 @@ import Layout from "../layouts/Layout.astro";
       <div class="hero-text">
         <h1>A STEADIER WAY FORWARD</h1>
         <p>
-          Counseling and psychiatric medication management in Coeur d’Alene,
+          Counseling and psychiatric medication management in Coeur d'Alene,
           Idaho. Thoughtful care for individuals, couples, and families.
         </p>
         <a href="/contact-us" class="btn-hero">Contact Us</a>
@@ -48,9 +48,9 @@ import Layout from "../layouts/Layout.astro";
               Priest River, Ponderay, and Oldtown, with teletherapy available
               anywhere in Idaho.
             </p>
-            <span class="btn-outline btn-outline--counseling"
-              >Request a counseling appointment →</span
-            >
+            <span class="btn-outline btn-outline--counseling">
+              Request a counseling appointment →
+            </span>
           </article>
         </a>
 
@@ -66,9 +66,9 @@ import Layout from "../layouts/Layout.astro";
               concerns — with in-person visits in Coeur d'Alene and Ponderay,
               plus telehealth across Idaho.
             </p>
-            <span class="btn-outline btn-outline--medication"
-              >Request a medication appointment →</span
-            >
+            <span class="btn-outline btn-outline--medication">
+              Request a medication appointment →
+            </span>
           </article>
         </a>
       </div>
@@ -76,21 +76,21 @@ import Layout from "../layouts/Layout.astro";
   </section>
 
   <!-- Care guidance -->
-<section class="care-guidance">
-  <div class="care-guidance-inner">
-    <a href="/contact-us" class="care-guidance-link">
-      <div class="care-guidance-card">
-        <h2>Not sure where to start?</h2>
-        <p>
-          Some people are looking for counseling. Others want to explore whether
-          medication could help with anxiety, depression, ADHD, or other
-          concerns. We can help you figure out the right starting point.
-        </p>
-        <span class="btn-filled">Get Started →</span>
-      </div>
-    </a>
-  </div>
-</section>
+  <section class="care-guidance">
+    <div class="care-guidance-inner">
+      <a href="/contact-us" class="care-guidance-link">
+        <div class="care-guidance-card">
+          <h2>Not sure where to start?</h2>
+          <p>
+            Some people are looking for counseling. Others want to explore whether
+            medication could help with anxiety, depression, ADHD, or other
+            concerns. We can help you figure out the right starting point.
+          </p>
+          <span class="btn-filled">Get Started →</span>
+        </div>
+      </a>
+    </div>
+  </section>
 
   <!-- About -->
   <section class="about-mwrs">
@@ -127,11 +127,7 @@ import Layout from "../layouts/Layout.astro";
       right: 0;
       bottom: 0;
       height: 60px;
-      background: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0) 0%,
-        rgba(0, 0, 0, 0.18) 100%
-      );
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.18) 100%);
       z-index: 6;
       pointer-events: none;
     }
@@ -150,11 +146,7 @@ import Layout from "../layouts/Layout.astro";
       position: absolute;
       inset: 0;
       z-index: 5;
-      background: linear-gradient(
-        rgba(0, 0, 0, 0),
-        rgba(0, 0, 0, 0.1),
-        rgba(0, 0, 0, 0.04)
-      );
+      background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.04));
     }
 
     .hero-inner {
@@ -185,12 +177,10 @@ import Layout from "../layouts/Layout.astro";
       line-height: 1.6;
       margin-bottom: 1.5rem;
       color: #ffffff;
-      opacity: 1;
       font-weight: 300;
       letter-spacing: 0.015em;
     }
 
-    /* Hero button — white, stands alone over video */
     .btn-hero {
       display: inline-block;
       padding: 1rem 1.75rem;
@@ -221,7 +211,7 @@ import Layout from "../layouts/Layout.astro";
 
     /* ── Service paths ────────────────────────────────── */
     .service-paths {
-      padding: 3.5rem 1.5rem 4rem;
+      padding: 3.5rem 1.5rem 2.5rem;
       background-color: #fbfbf9;
     }
 
@@ -258,9 +248,7 @@ import Layout from "../layouts/Layout.astro";
       padding: 2.1rem 2rem;
       background: #ffffff;
       box-shadow: 0 18px 40px rgba(15, 23, 42, 0.1);
-      transition:
-        transform 0.18s ease,
-        box-shadow 0.18s ease;
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
       cursor: pointer;
     }
 
@@ -284,11 +272,11 @@ import Layout from "../layouts/Layout.astro";
       text-transform: uppercase;
       letter-spacing: 0.16em;
       font-size: 0.8rem;
-      color: #5f529b; /* lavender — default */
+      color: #5f529b;
     }
 
     .card-kicker--medication {
-      color: #4f7a6a; /* sage */
+      color: #4f7a6a;
     }
 
     .card-title {
@@ -318,10 +306,10 @@ import Layout from "../layouts/Layout.astro";
       transition: all 0.15s ease;
     }
 
-.btn-outline--counseling {
-  border-color: #52468a;
-  color: #52468a;
-}
+    .btn-outline--counseling {
+      border-color: #52468a;
+      color: #52468a;
+    }
 
     .btn-outline--counseling:hover,
     .card--counseling:hover .btn-outline--counseling {
@@ -351,6 +339,12 @@ import Layout from "../layouts/Layout.astro";
       margin: 0 auto;
     }
 
+    .care-guidance-link {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+    }
+
     .care-guidance-card {
       background: #ffffff;
       border-radius: 22px;
@@ -358,6 +352,12 @@ import Layout from "../layouts/Layout.astro";
       border: 1.5px solid rgba(15, 23, 42, 0.5);
       box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
       text-align: center;
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .care-guidance-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 22px 55px rgba(15, 23, 42, 0.16);
     }
 
     .care-guidance h2 {
@@ -376,49 +376,29 @@ import Layout from "../layouts/Layout.astro";
       color: #4b5563;
     }
 
-    /* ── Filled button — for low-contrast sections ───── */
-.btn-filled {
-  display: inline-block;
-  padding: 0.6rem 1.4rem;
-  border-radius: 999px;
-  background: transparent;
-  color: #0f172a;
-  border: 1px solid #0f172a;
-  text-decoration: none;
-  font-size: 0.85rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  transition: all 0.15s ease;
-}
+    /* ── Filled button ────────────────────────────────── */
+    .btn-filled {
+      display: inline-block;
+      padding: 0.6rem 1.4rem;
+      border-radius: 999px;
+      background: transparent;
+      color: #0f172a;
+      border: 1px solid #0f172a;
+      text-decoration: none;
+      font-size: 0.85rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      transition: all 0.15s ease;
+    }
 
-.btn-filled:hover,
-.care-guidance-card:hover .btn-filled {
-  background: #0f172a;
-  color: #ffffff;
-  transform: translateY(-1px);
-  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.25);
-}
-.care-guidance-card {
-  background: #ffffff;
-  border-radius: 22px;
-  padding: 2.5rem 2rem;
-  border: 1.5px solid rgba(15, 23, 42, 0.5);
-  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
-  text-align: center;
-  transition:
-    transform 0.18s ease,
-    box-shadow 0.18s ease;
-}
+    .btn-filled:hover,
+    .care-guidance-card:hover .btn-filled {
+      background: #0f172a;
+      color: #ffffff;
+      transform: translateY(-1px);
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.25);
+    }
 
-.care-guidance-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 22px 55px rgba(15, 23, 42, 0.16);
-}
-.care-guidance-link {
-  display: block;
-  text-decoration: none;
-  color: inherit;
-}
     /* ── About ────────────────────────────────────────── */
     .about-mwrs {
       padding: 2.75rem 1.5rem 3.25rem;
