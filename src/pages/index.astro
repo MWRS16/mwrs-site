@@ -8,16 +8,17 @@ import Layout from "../layouts/Layout.astro";
 >
   <!-- Hero -->
   <section class="hero">
-    <video
-      class="hero-video"
-      autoplay
-      muted
-      loop
-      playsinline
-      poster="/images/mwrs-home-hero-poster.webp"
-    >
-      <source src="/videos/mwrs-bg-looped-small.mp4" type="video/mp4" />
-    </video>
+<video
+  class="hero-video"
+  autoplay
+  muted
+  loop
+  playsinline
+  preload="none"
+  poster="/images/mwrs-home-hero-poster.webp"
+>
+  <source src="/videos/mwrs-bg-looped-small.mp4" type="video/mp4" />
+</video>
 
     <div class="hero-overlay"></div>
 
@@ -283,11 +284,11 @@ import Layout from "../layouts/Layout.astro";
       text-transform: uppercase;
       letter-spacing: 0.16em;
       font-size: 0.8rem;
-      color: #9b8ec4; /* lavender — default */
+      color: #6b5fa7; /* lavender — default */
     }
 
     .card-kicker--medication {
-      color: #8ab4a4; /* sage */
+      color: #4f7a6a; /* sage */
     }
 
     .card-title {
@@ -318,7 +319,7 @@ import Layout from "../layouts/Layout.astro";
     }
 
     .btn-outline--counseling {
-      border-color: #7d6fb3;
+      border-color: #5b4fa3;
       color: #7d6fb3;
     }
 
@@ -329,8 +330,8 @@ import Layout from "../layouts/Layout.astro";
     }
 
     .btn-outline--medication {
-      border-color: #6a9e8e;
-      color: #6a9e8e;
+      border-color: #4f7a6a;
+      color: #4f7a6a;
     }
 
     .btn-outline--medication:hover,
