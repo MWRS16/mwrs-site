@@ -7,7 +7,6 @@ import Layout from "../layouts/Layout.astro";
   description="Tell us what you're looking for and our team will match you with a counselor or prescriber for counseling or medication management, in person or via telehealth in Idaho."
 >
   <main class="contact-page">
-
     <!-- Hero -->
     <section class="contact-hero">
       <div class="section-inner">
@@ -19,13 +18,25 @@ import Layout from "../layouts/Layout.astro";
         </p>
 
         <div class="contact-hero-buttons">
-          <button type="button" class="btn-outline btn-outline--neutral" data-select-care="counseling">
+          <button
+            type="button"
+            class="btn-outline btn-outline--neutral"
+            data-select-care="counseling"
+          >
             I'm looking for counseling
           </button>
-          <button type="button" class="btn-outline btn-outline--neutral" data-select-care="medication">
+          <button
+            type="button"
+            class="btn-outline btn-outline--neutral"
+            data-select-care="medication"
+          >
             I'm looking for medication care
           </button>
-          <button type="button" class="btn-outline btn-outline--neutral" data-select-care="both_care">
+          <button
+            type="button"
+            class="btn-outline btn-outline--neutral"
+            data-select-care="both_care"
+          >
             I'm looking for counseling and medication care
           </button>
         </div>
@@ -48,7 +59,11 @@ import Layout from "../layouts/Layout.astro";
             method="POST"
             action="https://formspree.io/f/xwpgrywz"
           >
-            <input type="hidden" name="_redirect" value="https://mwrservices.org/thank-you" />
+            <input
+              type="hidden"
+              name="_redirect"
+              value="https://mwrservices.org/thank-you"
+            />
             <input type="hidden" name="_subject" value="New intake request" />
 
             <div class="form-field">
@@ -57,14 +72,22 @@ import Layout from "../layouts/Layout.astro";
                 <option value="">Please choose one…</option>
                 <option value="counseling">Counseling</option>
                 <option value="medication">Medication management</option>
-                <option value="both_care">Counseling and medication management</option>
+                <option value="both_care"
+                  >Counseling and medication management</option
+                >
               </select>
             </div>
 
             <div class="field-grid">
               <div class="form-field">
                 <label for="name">Name</label>
-                <input id="name" name="name" type="text" autocomplete="name" required />
+                <input
+                  id="name"
+                  name="name"
+                  type="text"
+                  autocomplete="name"
+                  required
+                />
               </div>
               <div class="form-field">
                 <label for="phone">Phone number</label>
@@ -84,7 +107,13 @@ import Layout from "../layouts/Layout.astro";
             <div class="field-grid">
               <div class="form-field">
                 <label for="email">Email address</label>
-                <input id="email" name="email" type="email" autocomplete="email" required />
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  required
+                />
               </div>
               <div class="form-field">
                 <label for="dob">Date of birth</label>
@@ -131,13 +160,18 @@ import Layout from "../layouts/Layout.astro";
                 <option value="kaiser">Kaiser</option>
                 <option value="magellan">Magellan</option>
                 <option value="medicaid_idaho">Medicaid (Idaho)</option>
+                <option value="medicaid_wa_pending"
+                  >Medicaid (Washington) — pending</option
+                >
                 <option value="medicare">Medicare</option>
                 <option value="molina_idaho">Molina of Idaho</option>
                 <option value="new_directions_eap">New Directions EAP</option>
                 <option value="optum">Optum</option>
                 <option value="pacific_source">Pacific Source</option>
                 <option value="premera_blue_cross">Premera Blue Cross</option>
-                <option value="regence_bcbs_any">Regence BCBS (Any State)</option>
+                <option value="regence_bcbs_any"
+                  >Regence BCBS (Any State)</option
+                >
                 <option value="tricare_west">TriCare West</option>
                 <option value="triwest_va">TriWest/VA</option>
                 <option value="uhc">UHC</option>
@@ -149,26 +183,94 @@ import Layout from "../layouts/Layout.astro";
               <legend>Preferred office</legend>
               <p class="field-hint">Please choose at least one option.</p>
 
-              <div class="checkbox-grid office-grid office-grid--counseling" data-office-for="counseling both_care">
-                <label><input type="checkbox" name="office_cda" value="Coeur d'Alene" data-office-option="counseling" /> Coeur d'Alene</label>
-                <label><input type="checkbox" name="office_ponderay" value="Ponderay" data-office-option="counseling" /> Ponderay</label>
-                <label><input type="checkbox" name="office_priest_river" value="Priest River" data-office-option="counseling" /> Priest River</label>
-                <label><input type="checkbox" name="office_oldtown" value="Oldtown" data-office-option="counseling" /> Oldtown</label>
-                <label><input type="checkbox" name="office_telehealth_only" value="Telehealth only" data-office-option="counseling" /> Telehealth only</label>
+              <div
+                class="checkbox-grid office-grid office-grid--counseling"
+                data-office-for="counseling both_care"
+              >
+                <label
+                  ><input
+                    type="checkbox"
+                    name="office_cda"
+                    value="Coeur d'Alene"
+                    data-office-option="counseling"
+                  /> Coeur d'Alene</label
+                >
+                <label
+                  ><input
+                    type="checkbox"
+                    name="office_ponderay"
+                    value="Ponderay"
+                    data-office-option="counseling"
+                  /> Ponderay</label
+                >
+                <label
+                  ><input
+                    type="checkbox"
+                    name="office_priest_river"
+                    value="Priest River"
+                    data-office-option="counseling"
+                  /> Priest River</label
+                >
+                <label
+                  ><input
+                    type="checkbox"
+                    name="office_oldtown"
+                    value="Oldtown"
+                    data-office-option="counseling"
+                  /> Oldtown</label
+                >
+                <label
+                  ><input
+                    type="checkbox"
+                    name="office_telehealth_only"
+                    value="Telehealth only"
+                    data-office-option="counseling"
+                  /> Telehealth only</label
+                >
               </div>
 
-              <div class="checkbox-grid office-grid office-grid--medication" data-office-for="medication">
-                <label><input type="checkbox" name="office_cda_med" value="Coeur d'Alene" data-office-option="medication" /> Coeur d'Alene</label>
-                <label><input type="checkbox" name="office_ponderay_med" value="Ponderay" data-office-option="medication" /> Ponderay</label>
-                <label><input type="checkbox" name="office_telehealth_only_med" value="Telehealth only" data-office-option="medication" /> Telehealth only</label>
+              <div
+                class="checkbox-grid office-grid office-grid--medication"
+                data-office-for="medication"
+              >
+                <label
+                  ><input
+                    type="checkbox"
+                    name="office_cda_med"
+                    value="Coeur d'Alene"
+                    data-office-option="medication"
+                  /> Coeur d'Alene</label
+                >
+                <label
+                  ><input
+                    type="checkbox"
+                    name="office_ponderay_med"
+                    value="Ponderay"
+                    data-office-option="medication"
+                  /> Ponderay</label
+                >
+                <label
+                  ><input
+                    type="checkbox"
+                    name="office_telehealth_only_med"
+                    value="Telehealth only"
+                    data-office-option="medication"
+                  /> Telehealth only</label
+                >
               </div>
             </fieldset>
 
             <div class="intake-subsection" data-section="counseling">
               <h3 class="subheading">Counseling details</h3>
               <div class="form-field">
-                <label for="counselingType">What type of counseling are you seeking?</label>
-                <select id="counselingType" name="counseling_type" data-required-when="counseling">
+                <label for="counselingType"
+                  >What type of counseling are you seeking?</label
+                >
+                <select
+                  id="counselingType"
+                  name="counseling_type"
+                  data-required-when="counseling"
+                >
                   <option value="">Please choose…</option>
                   <option value="individual">Individual counseling</option>
                   <option value="couples">Couples counseling</option>
@@ -181,11 +283,21 @@ import Layout from "../layouts/Layout.astro";
               <div class="field-grid" id="couplesFields" hidden>
                 <div class="form-field">
                   <label for="partnerName">Other participant's full name</label>
-                  <input id="partnerName" name="partner_name" type="text" autocomplete="name" />
+                  <input
+                    id="partnerName"
+                    name="partner_name"
+                    type="text"
+                    autocomplete="name"
+                  />
                 </div>
                 <div class="form-field">
                   <label for="partnerEmail">Other participant's email</label>
-                  <input id="partnerEmail" name="partner_email" type="email" autocomplete="email" />
+                  <input
+                    id="partnerEmail"
+                    name="partner_email"
+                    type="email"
+                    autocomplete="email"
+                  />
                 </div>
               </div>
             </div>
@@ -194,8 +306,14 @@ import Layout from "../layouts/Layout.astro";
               <h3 class="subheading">Medication management details</h3>
               <div class="field-grid">
                 <div class="form-field">
-                  <label for="prevDiagnosis">Have you received a mental health diagnosis before?</label>
-                  <select id="prevDiagnosis" name="previous_diagnosis" data-required-when="medication">
+                  <label for="prevDiagnosis"
+                    >Have you received a mental health diagnosis before?</label
+                  >
+                  <select
+                    id="prevDiagnosis"
+                    name="previous_diagnosis"
+                    data-required-when="medication"
+                  >
                     <option value="">Please choose…</option>
                     <option value="yes">Yes</option>
                     <option value="no">No</option>
@@ -203,8 +321,14 @@ import Layout from "../layouts/Layout.astro";
                   </select>
                 </div>
                 <div class="form-field">
-                  <label for="currentMeds">Are you currently taking any psychiatric medication?</label>
-                  <select id="currentMeds" name="current_medication" data-required-when="medication">
+                  <label for="currentMeds"
+                    >Are you currently taking any psychiatric medication?</label
+                  >
+                  <select
+                    id="currentMeds"
+                    name="current_medication"
+                    data-required-when="medication"
+                  >
                     <option value="">Please choose…</option>
                     <option value="yes">Yes</option>
                     <option value="no">No</option>
@@ -213,8 +337,14 @@ import Layout from "../layouts/Layout.astro";
               </div>
               <div class="field-grid">
                 <div class="form-field">
-                  <label for="psychEval">Are you interested in a psychiatric evaluation?</label>
-                  <select id="psychEval" name="psych_evaluation_interest" data-required-when="medication">
+                  <label for="psychEval"
+                    >Are you interested in a psychiatric evaluation?</label
+                  >
+                  <select
+                    id="psychEval"
+                    name="psych_evaluation_interest"
+                    data-required-when="medication"
+                  >
                     <option value="">Please choose…</option>
                     <option value="yes">Yes</option>
                     <option value="no">No</option>
@@ -222,8 +352,14 @@ import Layout from "../layouts/Layout.astro";
                   </select>
                 </div>
                 <div class="form-field">
-                  <label for="medConsult">Are you interested in ongoing medication management?</label>
-                  <select id="medConsult" name="medication_management_interest" data-required-when="medication">
+                  <label for="medConsult"
+                    >Are you interested in ongoing medication management?</label
+                  >
+                  <select
+                    id="medConsult"
+                    name="medication_management_interest"
+                    data-required-when="medication"
+                  >
                     <option value="">Please choose…</option>
                     <option value="yes">Yes</option>
                     <option value="no">No</option>
@@ -236,8 +372,14 @@ import Layout from "../layouts/Layout.astro";
             <div class="intake-subsection" data-section="both_care">
               <h3 class="subheading">Counseling + medication details</h3>
               <div class="form-field">
-                <label for="bothCareCounselingType">What type of counseling are you interested in?</label>
-                <select id="bothCareCounselingType" name="both_care_counseling_type" data-required-when="both_care">
+                <label for="bothCareCounselingType"
+                  >What type of counseling are you interested in?</label
+                >
+                <select
+                  id="bothCareCounselingType"
+                  name="both_care_counseling_type"
+                  data-required-when="both_care"
+                >
                   <option value="">Please choose…</option>
                   <option value="individual">Individual counseling</option>
                   <option value="cbt">CBT</option>
@@ -253,18 +395,37 @@ import Layout from "../layouts/Layout.astro";
               </div>
               <div class="field-grid" id="bothCouplesFields" hidden>
                 <div class="form-field">
-                  <label for="bothPartnerName">Other participant's full name</label>
-                  <input id="bothPartnerName" name="both_partner_name" type="text" autocomplete="name" />
+                  <label for="bothPartnerName"
+                    >Other participant's full name</label
+                  >
+                  <input
+                    id="bothPartnerName"
+                    name="both_partner_name"
+                    type="text"
+                    autocomplete="name"
+                  />
                 </div>
                 <div class="form-field">
-                  <label for="bothPartnerEmail">Other participant's email</label>
-                  <input id="bothPartnerEmail" name="both_partner_email" type="email" autocomplete="email" />
+                  <label for="bothPartnerEmail">Other participant's email</label
+                  >
+                  <input
+                    id="bothPartnerEmail"
+                    name="both_partner_email"
+                    type="email"
+                    autocomplete="email"
+                  />
                 </div>
               </div>
               <div class="field-grid">
                 <div class="form-field">
-                  <label for="bothPrevDiagnosis">Have you received a mental health diagnosis before?</label>
-                  <select id="bothPrevDiagnosis" name="both_previous_diagnosis" data-required-when="both_care">
+                  <label for="bothPrevDiagnosis"
+                    >Have you received a mental health diagnosis before?</label
+                  >
+                  <select
+                    id="bothPrevDiagnosis"
+                    name="both_previous_diagnosis"
+                    data-required-when="both_care"
+                  >
                     <option value="">Please choose…</option>
                     <option value="yes">Yes</option>
                     <option value="no">No</option>
@@ -272,8 +433,14 @@ import Layout from "../layouts/Layout.astro";
                   </select>
                 </div>
                 <div class="form-field">
-                  <label for="bothCurrentMeds">Are you currently taking any psychiatric medication?</label>
-                  <select id="bothCurrentMeds" name="both_current_medication" data-required-when="both_care">
+                  <label for="bothCurrentMeds"
+                    >Are you currently taking any psychiatric medication?</label
+                  >
+                  <select
+                    id="bothCurrentMeds"
+                    name="both_current_medication"
+                    data-required-when="both_care"
+                  >
                     <option value="">Please choose…</option>
                     <option value="yes">Yes</option>
                     <option value="no">No</option>
@@ -282,8 +449,14 @@ import Layout from "../layouts/Layout.astro";
               </div>
               <div class="field-grid">
                 <div class="form-field">
-                  <label for="bothPsychEval">Are you interested in a psychiatric evaluation?</label>
-                  <select id="bothPsychEval" name="both_psych_evaluation_interest" data-required-when="both_care">
+                  <label for="bothPsychEval"
+                    >Are you interested in a psychiatric evaluation?</label
+                  >
+                  <select
+                    id="bothPsychEval"
+                    name="both_psych_evaluation_interest"
+                    data-required-when="both_care"
+                  >
                     <option value="">Please choose…</option>
                     <option value="yes">Yes</option>
                     <option value="no">No</option>
@@ -291,8 +464,14 @@ import Layout from "../layouts/Layout.astro";
                   </select>
                 </div>
                 <div class="form-field">
-                  <label for="bothMedConsult">Are you interested in ongoing medication management?</label>
-                  <select id="bothMedConsult" name="both_medication_management_interest" data-required-when="both_care">
+                  <label for="bothMedConsult"
+                    >Are you interested in ongoing medication management?</label
+                  >
+                  <select
+                    id="bothMedConsult"
+                    name="both_medication_management_interest"
+                    data-required-when="both_care"
+                  >
                     <option value="">Please choose…</option>
                     <option value="yes">Yes</option>
                     <option value="no">No</option>
@@ -303,24 +482,36 @@ import Layout from "../layouts/Layout.astro";
             </div>
 
             <div class="form-field">
-              <label for="goals">Briefly describe what you're hoping to work on</label>
+              <label for="goals"
+                >Briefly describe what you're hoping to work on</label
+              >
               <textarea
                 id="goals"
                 name="goals"
                 rows="4"
                 placeholder="You can keep this brief. We'll talk more about the details in your first visit."
-                required
-              ></textarea>
+                required></textarea>
             </div>
 
             <fieldset class="form-field acknowledgements">
               <legend>Before you submit</legend>
               <label class="checkbox-inline">
-                <input type="checkbox" name="acknowledge_not_emergency" value="yes" required />
-                I understand this form is not for emergencies and does not guarantee services.
+                <input
+                  type="checkbox"
+                  name="acknowledge_not_emergency"
+                  value="yes"
+                  required
+                />
+                I understand this form is not for emergencies and does not guarantee
+                services.
               </label>
               <label class="checkbox-inline">
-                <input type="checkbox" name="consent_contact" value="yes" required />
+                <input
+                  type="checkbox"
+                  name="consent_contact"
+                  value="yes"
+                  required
+                />
                 I consent to MWRS contacting me by phone or email regarding this inquiry.
               </label>
             </fieldset>
@@ -330,14 +521,13 @@ import Layout from "../layouts/Layout.astro";
         </article>
       </div>
     </section>
-
   </main>
 
   <style>
     .contact-page {
       background: #f9fafb;
       min-height: 100vh;
-      background-image: url("/images/paper-texture.png");
+      background-image: url("/images/paper-texture.webp");
       background-repeat: repeat;
       background-size: 420px 420px;
     }
@@ -346,7 +536,7 @@ import Layout from "../layouts/Layout.astro";
     .contact-hero {
       padding: 10rem 1.5rem 3.5rem;
       background-color: #fbfbf9;
-      background-image: url("/images/paper-texture.png");
+      background-image: url("/images/paper-texture.webp");
       background-repeat: repeat;
       background-size: 420px 420px;
       border-bottom: 1px solid rgba(15, 23, 42, 0.08);
@@ -531,7 +721,9 @@ import Layout from "../layouts/Layout.astro";
       font-family: inherit;
       background: #f9fafb;
       outline: none;
-      transition: border-color 0.15s ease, box-shadow 0.15s ease,
+      transition:
+        border-color 0.15s ease,
+        box-shadow 0.15s ease,
         background 0.15s ease;
     }
 
@@ -662,7 +854,9 @@ import Layout from "../layouts/Layout.astro";
     const partnerName = document.querySelector("#partnerName");
     const partnerEmail = document.querySelector("#partnerEmail");
 
-    const bothCareCounselingTypeSelect = document.querySelector("#bothCareCounselingType");
+    const bothCareCounselingTypeSelect = document.querySelector(
+      "#bothCareCounselingType",
+    );
     const bothCouplesFields = document.querySelector("#bothCouplesFields");
     const bothPartnerName = document.querySelector("#bothPartnerName");
     const bothPartnerEmail = document.querySelector("#bothPartnerEmail");
@@ -688,41 +882,70 @@ import Layout from "../layouts/Layout.astro";
       const isCouples =
         careSelect?.value === "counseling" &&
         ["couples", "marriage"].includes(counselingTypeSelect?.value);
-      if (couplesFields) couplesFields.style.display = isCouples ? "grid" : "none";
-      if (partnerName) { partnerName.required = isCouples; if (!isCouples) partnerName.value = ""; }
-      if (partnerEmail) { partnerEmail.required = isCouples; if (!isCouples) partnerEmail.value = ""; }
+      if (couplesFields)
+        couplesFields.style.display = isCouples ? "grid" : "none";
+      if (partnerName) {
+        partnerName.required = isCouples;
+        if (!isCouples) partnerName.value = "";
+      }
+      if (partnerEmail) {
+        partnerEmail.required = isCouples;
+        if (!isCouples) partnerEmail.value = "";
+      }
     }
 
     function updateBothCouplesFields() {
       const isCouples =
         careSelect?.value === "both_care" &&
         ["couples", "marriage"].includes(bothCareCounselingTypeSelect?.value);
-      if (bothCouplesFields) bothCouplesFields.style.display = isCouples ? "grid" : "none";
-      if (bothPartnerName) { bothPartnerName.required = isCouples; if (!isCouples) bothPartnerName.value = ""; }
-      if (bothPartnerEmail) { bothPartnerEmail.required = isCouples; if (!isCouples) bothPartnerEmail.value = ""; }
+      if (bothCouplesFields)
+        bothCouplesFields.style.display = isCouples ? "grid" : "none";
+      if (bothPartnerName) {
+        bothPartnerName.required = isCouples;
+        if (!isCouples) bothPartnerName.value = "";
+      }
+      if (bothPartnerEmail) {
+        bothPartnerEmail.required = isCouples;
+        if (!isCouples) bothPartnerEmail.value = "";
+      }
     }
 
     function getActiveOfficeInputs(careType) {
       if (!intakeForm) return [];
-      if (careType === "medication") return intakeForm.querySelectorAll('input[data-office-option="medication"]');
-      if (careType === "counseling" || careType === "both_care") return intakeForm.querySelectorAll('input[data-office-option="counseling"]');
+      if (careType === "medication")
+        return intakeForm.querySelectorAll(
+          'input[data-office-option="medication"]',
+        );
+      if (careType === "counseling" || careType === "both_care")
+        return intakeForm.querySelectorAll(
+          'input[data-office-option="counseling"]',
+        );
       return [];
     }
 
     function validateOfficeSelection(careType) {
       const officeInputs = getActiveOfficeInputs(careType);
       if (!officeInputs.length) return true;
-      const oneChecked = Array.from(officeInputs).some((input) => input.checked);
+      const oneChecked = Array.from(officeInputs).some(
+        (input) => input.checked,
+      );
       officeInputs.forEach((input) => {
-        input.setCustomValidity(oneChecked ? "" : "Please choose at least one office option.");
+        input.setCustomValidity(
+          oneChecked ? "" : "Please choose at least one office option.",
+        );
       });
       if (!oneChecked) officeInputs[0].reportValidity();
       return oneChecked;
     }
 
     if (careSelect) careSelect.addEventListener("change", updateCareView);
-    if (counselingTypeSelect) counselingTypeSelect.addEventListener("change", updateCouplesFields);
-    if (bothCareCounselingTypeSelect) bothCareCounselingTypeSelect.addEventListener("change", updateBothCouplesFields);
+    if (counselingTypeSelect)
+      counselingTypeSelect.addEventListener("change", updateCouplesFields);
+    if (bothCareCounselingTypeSelect)
+      bothCareCounselingTypeSelect.addEventListener(
+        "change",
+        updateBothCouplesFields,
+      );
 
     heroButtons.forEach((btn) => {
       btn.addEventListener("click", () => {
@@ -741,7 +964,9 @@ import Layout from "../layouts/Layout.astro";
     }
 
     if (intakeForm) {
-      const officeInputs = intakeForm.querySelectorAll("input[data-office-option]");
+      const officeInputs = intakeForm.querySelectorAll(
+        "input[data-office-option]",
+      );
       officeInputs.forEach((input) => {
         input.addEventListener("change", () => {
           if (careSelect) validateOfficeSelection(careSelect.value);
@@ -755,9 +980,12 @@ import Layout from "../layouts/Layout.astro";
 
         const formData = new FormData(intakeForm);
         let subject = "New intake request";
-        if (careType === "counseling") subject = "New intake: Counseling request";
-        else if (careType === "medication") subject = "New intake: Medication management request";
-        else if (careType === "both_care") subject = "New intake: Counseling + medication management request";
+        if (careType === "counseling")
+          subject = "New intake: Counseling request";
+        else if (careType === "medication")
+          subject = "New intake: Medication management request";
+        else if (careType === "both_care")
+          subject = "New intake: Counseling + medication management request";
         formData.set("_subject", subject);
 
         if (submitBtn) submitBtn.disabled = true;

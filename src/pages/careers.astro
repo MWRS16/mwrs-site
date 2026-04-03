@@ -7,7 +7,6 @@ import Layout from "../layouts/Layout.astro";
   description="Learn about careers at Mental Wellness & Relationship Services (MWRS), a family-run counseling and medication management practice serving North Idaho and beyond."
 >
   <main class="careers-page">
-
     <!-- Hero -->
     <section class="subpage-hero">
       <div class="section-inner">
@@ -47,10 +46,21 @@ import Layout from "../layouts/Layout.astro";
 
         <h3>What we tend to look for</h3>
         <ul>
-          <li>Idaho or Washington licensed (or license-eligible) mental health clinicians</li>
-          <li>Interest in relational work: couples, families, systems, or trauma-informed care</li>
-          <li>Comfort with a hybrid model of in-person and telehealth sessions</li>
-          <li>Clinicians who value collaboration, clear communication, and healthy boundaries</li>
+          <li>
+            Idaho or Washington licensed (or license-eligible) mental health
+            clinicians
+          </li>
+          <li>
+            Interest in relational work: couples, families, systems, or
+            trauma-informed care
+          </li>
+          <li>
+            Comfort with a hybrid model of in-person and telehealth sessions
+          </li>
+          <li>
+            Clinicians who value collaboration, clear communication, and healthy
+            boundaries
+          </li>
         </ul>
 
         <p>
@@ -86,7 +96,11 @@ import Layout from "../layouts/Layout.astro";
           method="POST"
           action="https://formspree.io/f/mdkqwbng"
         >
-          <input type="hidden" name="_redirect" value="https://mwrservices.org/thank-you" />
+          <input
+            type="hidden"
+            name="_redirect"
+            value="https://mwrservices.org/thank-you"
+          />
 
           <div class="form-field">
             <label for="careers-name">Name</label>
@@ -95,16 +109,31 @@ import Layout from "../layouts/Layout.astro";
 
           <div class="form-field">
             <label for="careers-email">Email address</label>
-            <input id="careers-email" name="email" type="email" inputmode="email" required />
+            <input
+              id="careers-email"
+              name="email"
+              type="email"
+              inputmode="email"
+              required
+            />
           </div>
 
           <div class="form-field">
-            <label for="careers-license">License / role (e.g., LCPC, LCSW, LMFT, LPC, LMSW, PMHNP)</label>
+            <label for="careers-phone">Phone number</label>
+            <input id="careers-phone" name="phone" type="tel" inputmode="tel" />
+          </div>
+
+          <div class="form-field">
+            <label for="careers-license"
+              >License / role (e.g., LCPC, LCSW, LMFT, LPC, LMSW, PMHNP)</label
+            >
             <input id="careers-license" name="license_role" type="text" />
           </div>
 
           <div class="form-field">
-            <label for="careers-location">Preferred location or telehealth</label>
+            <label for="careers-location"
+              >Preferred location or telehealth</label
+            >
             <input
               id="careers-location"
               name="location_preference"
@@ -114,7 +143,9 @@ import Layout from "../layouts/Layout.astro";
           </div>
 
           <div class="form-field">
-            <label for="careers-message">Briefly share what you're looking for</label>
+            <label for="careers-message"
+              >Briefly share what you're looking for</label
+            >
             <textarea
               id="careers-message"
               name="message"
@@ -122,20 +153,33 @@ import Layout from "../layouts/Layout.astro";
             ></textarea>
           </div>
 
+          <div class="form-field">
+            <label for="careers-resume"
+              >Resume / cover letter (PDF or Word)</label
+            >
+            <input
+              id="careers-resume"
+              name="attachment"
+              type="file"
+              accept=".pdf,.doc,.docx"
+            />
+          </div>
+
           <button type="submit" class="btn-outline btn-outline--counseling">
             Send interest
           </button>
 
           <p id="careers-form-success" class="form-success" hidden>
-            Thanks for reaching out — we've received your interest and will review it soon.
+            Thanks for reaching out — we've received your interest and will
+            review it soon.
           </p>
           <p id="careers-form-error" class="form-error" hidden>
-            Something went wrong sending your message. Please try again or email us directly.
+            Something went wrong sending your message. Please try again or email
+            us directly.
           </p>
         </form>
       </div>
     </section>
-
   </main>
 
   <style>
@@ -148,7 +192,7 @@ import Layout from "../layouts/Layout.astro";
     .subpage-hero {
       padding: 10rem 1.5rem 3rem;
       background-color: #fbfbf9;
-      background-image: url("/images/paper-texture.png");
+      background-image: url("/images/paper-texture.webp");
       background-repeat: repeat;
       background-size: 420px 420px;
       border-bottom: 1px solid rgba(15, 23, 42, 0.08);
@@ -261,8 +305,11 @@ import Layout from "../layouts/Layout.astro";
       text-decoration: none;
       background: #ffffff;
       box-shadow: 0 6px 16px rgba(15, 23, 42, 0.12);
-      transition: background 0.15s ease, color 0.15s ease,
-        box-shadow 0.15s ease, transform 0.15s ease;
+      transition:
+        background 0.15s ease,
+        color 0.15s ease,
+        box-shadow 0.15s ease,
+        transform 0.15s ease;
       cursor: pointer;
       font-family: inherit;
     }
@@ -313,7 +360,9 @@ import Layout from "../layouts/Layout.astro";
       font-family: inherit;
       background: #f9fafb;
       outline: none;
-      transition: border-color 0.15s ease, box-shadow 0.15s ease,
+      transition:
+        border-color 0.15s ease,
+        box-shadow 0.15s ease,
         background 0.15s ease;
     }
 
@@ -328,6 +377,15 @@ import Layout from "../layouts/Layout.astro";
       border-color: #7d6fb3;
       background: #ffffff;
       box-shadow: 0 0 0 1px rgba(125, 111, 179, 0.2);
+    }
+
+    .form-field input[type="file"] {
+      border-radius: 16px;
+      padding: 0.5rem 0.9rem;
+      background: #f9fafb;
+      border: 1px solid rgba(15, 23, 42, 0.18);
+      font-size: 0.86rem;
+      cursor: pointer;
     }
 
     /* ── Success / error ──────────────────────────────── */

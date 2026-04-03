@@ -20,8 +20,6 @@ import Layout from "../layouts/Layout.astro";
       <source src="/videos/mwrs-bg-looped-small.mp4" type="video/mp4" />
     </video>
 
-    <div class="hero-overlay"></div>
-
     <div class="hero-inner">
       <div class="hero-text">
         <h1>A STEADIER WAY FORWARD</h1>
@@ -75,6 +73,128 @@ import Layout from "../layouts/Layout.astro";
     </div>
   </section>
 
+  <!-- Team strip -->
+  <section class="team-strip">
+    <div class="team-strip-inner">
+      <p class="team-kicker">Our People</p>
+      <h2 class="team-heading">Meet the team</h2>
+      <div class="team-grid">
+        <a href="/our-team#violet-rudd" class="team-member">
+          <div class="team-avatar">
+            <img
+              src="/images/providers/violet-rudd.jpg"
+              alt="Violet Rudd"
+              loading="lazy"
+            />
+          </div>
+          <p class="team-name">Violet Rudd</p>
+          <p class="team-role">LMFT, Clinical Director</p>
+        </a>
+
+        <a href="/our-team#jared-bruder" class="team-member">
+          <div class="team-avatar">
+            <img
+              src="/images/providers/jared-bruder.jpg"
+              alt="Jared Bruder"
+              loading="lazy"
+              style="object-position: center 20%;"
+            />
+          </div>
+          <p class="team-name">Jared Bruder</p>
+          <p class="team-role">PMHNP</p>
+        </a>
+
+        <a href="/our-team#duann-chambers" class="team-member">
+          <div class="team-avatar">
+            <img
+              src="/images/providers/duann-chambers.jpg"
+              alt="DuAnn Chambers"
+              loading="lazy"
+            />
+          </div>
+          <p class="team-name">DuAnn Chambers</p>
+          <p class="team-role">LMFT</p>
+        </a>
+
+        <a href="/our-team#perry-broomfield" class="team-member">
+          <div class="team-avatar">
+            <img
+              src="/images/providers/perry-broomfield.jpg"
+              alt="Perry Broomfield"
+              loading="lazy"
+            />
+          </div>
+          <p class="team-name">Perry Broomfield</p>
+          <p class="team-role">LMSW</p>
+        </a>
+
+        <a href="/our-team#kevin-dayton" class="team-member">
+          <div class="team-avatar">
+            <img
+              src="/images/providers/kevin-dayton.jpg"
+              alt="Kevin Dayton"
+              loading="lazy"
+              style="object-position: center 20%;"
+            />
+          </div>
+          <p class="team-name">Kevin Dayton</p>
+          <p class="team-role">LCSW</p>
+        </a>
+
+        <a href="/our-team#mark-tetzlaff" class="team-member">
+          <div class="team-avatar">
+            <img
+              src="/images/providers/mark-tetzlaff.jpg"
+              alt="Mark Tetzlaff"
+              loading="lazy"
+            />
+          </div>
+          <p class="team-name">Mark Tetzlaff</p>
+          <p class="team-role">LMSW</p>
+        </a>
+
+        <a href="/our-team#beverly-oh" class="team-member">
+          <div class="team-avatar">
+            <img
+              src="/images/providers/beverly-oh.jpg"
+              alt="Beverly Oh"
+              loading="lazy"
+            />
+          </div>
+          <p class="team-name">Beverly Oh</p>
+          <p class="team-role">LPC</p>
+        </a>
+
+        <a href="/our-team#brandi-sanchez" class="team-member">
+          <div class="team-avatar">
+            <img
+              src="/images/providers/BrandiSanchez.jpg"
+              alt="Brandi Sanchez"
+              loading="lazy"
+              style="object-position: center 20%;"
+            />
+          </div>
+          <p class="team-name">Brandi Sanchez</p>
+          <p class="team-role">LMSW</p>
+        </a>
+
+        <a href="/our-team#zusje-greeff" class="team-member">
+          <div class="team-avatar">
+            <img
+              src="/images/providers/zusje-greeff.jpeg"
+              alt="Zusje Greeff"
+              loading="lazy"
+              style="object-position: center 10%;"
+            />
+          </div>
+          <p class="team-name">Zusje Greeff</p>
+          <p class="team-role">LMSW</p>
+        </a>
+      </div>
+      <a href="/our-team" class="team-cta">Meet the full team →</a>
+    </div>
+  </section>
+
   <!-- Care guidance -->
   <section class="care-guidance">
     <div class="care-guidance-inner">
@@ -82,9 +202,9 @@ import Layout from "../layouts/Layout.astro";
         <div class="care-guidance-card">
           <h2>Not sure where to start?</h2>
           <p>
-            Some people are looking for counseling. Others want to explore whether
-            medication could help with anxiety, depression, ADHD, or other
-            concerns. We can help you figure out the right starting point.
+            Some people are looking for counseling. Others want to explore
+            whether medication could help with anxiety, depression, ADHD, or
+            other concerns. We can help you figure out the right starting point.
           </p>
           <span class="btn-filled">Get Started →</span>
         </div>
@@ -117,19 +237,15 @@ import Layout from "../layouts/Layout.astro";
       overflow: hidden;
       color: #e5e7eb;
       padding: 6rem 1.5rem 3rem;
-      border-bottom: 3px solid #9b8ec4;
+      border-bottom: none;
     }
 
-    .hero::after {
+    .hero::before {
       content: "";
       position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      height: 60px;
-      background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.18) 100%);
-      z-index: 6;
-      pointer-events: none;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.1);
+      z-index: 1;
     }
 
     .hero-video {
@@ -140,13 +256,6 @@ import Layout from "../layouts/Layout.astro";
       object-fit: cover;
       object-position: center 40%;
       filter: brightness(0.8) contrast(1.1) saturate(1.05);
-    }
-
-    .hero-overlay {
-      position: absolute;
-      inset: 0;
-      z-index: 5;
-      background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.04));
     }
 
     .hero-inner {
@@ -201,9 +310,10 @@ import Layout from "../layouts/Layout.astro";
 
     /* ── Shared section backgrounds ───────────────────── */
     .service-paths,
+    .team-strip,
     .care-guidance,
     .about-mwrs {
-      background-image: url("/images/paper-texture.png");
+      background-image: url("/images/paper-texture.webp");
       background-repeat: repeat;
       background-size: 420px 420px;
       border-bottom: 1px solid rgba(15, 23, 42, 0.08);
@@ -213,6 +323,11 @@ import Layout from "../layouts/Layout.astro";
     .service-paths {
       padding: 3.5rem 1.5rem 2.5rem;
       background-color: #fbfbf9;
+      border-radius: 24px 24px 0 0;
+      margin-top: -24px;
+      position: relative;
+      z-index: 2;
+      border-top: 3px solid #9b8ec4;
     }
 
     .service-paths-inner {
@@ -248,7 +363,9 @@ import Layout from "../layouts/Layout.astro";
       padding: 2.1rem 2rem;
       background: #ffffff;
       box-shadow: 0 18px 40px rgba(15, 23, 42, 0.1);
-      transition: transform 0.18s ease, box-shadow 0.18s ease;
+      transition:
+        transform 0.18s ease,
+        box-shadow 0.18s ease;
       cursor: pointer;
     }
 
@@ -328,6 +445,122 @@ import Layout from "../layouts/Layout.astro";
       color: #ffffff;
     }
 
+    /* ── Team strip ──────────────────────────────────────── */
+    .team-strip {
+      background-color: #fbfbf9;
+      padding: 3.5rem 1.5rem 3rem;
+    }
+
+    .team-strip-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .team-kicker {
+      margin: 0 0 0.4rem;
+      font-family: "Belleza", sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: 0.8rem;
+      color: #5f529b;
+    }
+
+    .team-heading {
+      margin: 0 0 2.5rem;
+      font-family: "Belleza", sans-serif;
+      font-size: 1.4rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #111827;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(9, minmax(0, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .team-member {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .team-avatar {
+      width: 88px;
+      height: 88px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 3px solid #ffffff;
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.1);
+      flex-shrink: 0;
+      transition:
+        box-shadow 0.18s ease,
+        transform 0.18s ease;
+    }
+
+    .team-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    .team-member:hover .team-avatar {
+      box-shadow: 0 6px 20px rgba(15, 23, 42, 0.18);
+      transform: translateY(-2px);
+    }
+
+    .team-name {
+      margin: 0;
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: #111827;
+      line-height: 1.3;
+    }
+
+    .team-role {
+      margin: 0;
+      font-size: 0.7rem;
+      color: #52468a;
+      line-height: 1.3;
+    }
+
+    .team-cta {
+      display: inline-block;
+      border: 1px solid #52468a;
+      color: #52468a;
+      font-size: 0.9rem;
+      padding: 0.6rem 1.6rem;
+      border-radius: 999px;
+      text-decoration: none;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      transition: all 0.15s ease;
+    }
+
+    .team-cta:hover {
+      background: #7d6fb3;
+      color: #ffffff;
+    }
+
+    @media (max-width: 1024px) {
+      .team-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1.5rem 1rem;
+      }
+
+      .team-avatar {
+        width: 72px;
+        height: 72px;
+      }
+    }
+
     /* ── Care guidance ────────────────────────────────── */
     .care-guidance {
       padding: 2.5rem 1.5rem;
@@ -352,7 +585,9 @@ import Layout from "../layouts/Layout.astro";
       border: 1.5px solid rgba(15, 23, 42, 0.5);
       box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
       text-align: center;
-      transition: transform 0.18s ease, box-shadow 0.18s ease;
+      transition:
+        transform 0.18s ease,
+        box-shadow 0.18s ease;
     }
 
     .care-guidance-card:hover {
@@ -402,7 +637,7 @@ import Layout from "../layouts/Layout.astro";
     /* ── About ────────────────────────────────────────── */
     .about-mwrs {
       padding: 2.75rem 1.5rem 3.25rem;
-      background-color: #ffffff;
+      background-color: #fbfbf9;
     }
 
     .about-inner {
@@ -424,6 +659,28 @@ import Layout from "../layouts/Layout.astro";
       font-size: 0.98rem;
       line-height: 1.7;
       color: #4b5563;
+    }
+
+    /* ── Mobile hero ─────────────────────────────────── */
+    @media (max-width: 1024px) {
+      .hero-video {
+        display: none;
+      }
+
+      .hero {
+        background-image: url("/images/mwrs-mobile-poster.webp");
+        background-size: cover;
+        background-position: center top;
+        min-height: 60vh;
+      }
+
+      .hero::before {
+        background: rgba(0, 0, 0, 0.38);
+      }
+
+      .hero-inner {
+        z-index: 2;
+      }
     }
   </style>
 </Layout>
