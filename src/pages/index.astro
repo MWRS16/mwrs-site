@@ -6,225 +6,193 @@ import Layout from "../layouts/Layout.astro";
   title="Counseling & Medication Management in Idaho | Mental Wellness & Relationship Services"
   description="MWRS provides mental health counseling and psychiatric medication management for individuals, couples, and families across Idaho, with in-person and telehealth options."
 >
-  <!-- Hero -->
-  <section class="hero">
-    <video
-      class="hero-video"
-      autoplay
-      muted
-      loop
-      playsinline
-      preload="none"
-      poster="/images/mwrs-home-hero-poster.webp"
-    >
-      <source src="/videos/mwrs-bg-looped-small.mp4" type="video/mp4" />
-    </video>
+  <main>
 
-    <div class="hero-inner">
-      <div class="hero-text">
-        <h1>A STEADIER WAY FORWARD</h1>
-        <p>
-          Counseling and psychiatric medication management in Coeur d'Alene,
-          Idaho. Thoughtful care for individuals, couples, and families.
-        </p>
-        <a href="/contact-us" class="btn-hero">Contact Us</a>
-      </div>
-    </div>
-  </section>
+    <!-- Hero -->
+    <section class="hero">
+      <video
+        class="hero-video"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="none"
+        poster="/images/mwrs-home-hero-poster.webp"
+      >
+        <source src="/videos/mwrs-bg-looped-small.mp4" type="video/mp4" />
+      </video>
 
-  <!-- Service paths -->
-  <section class="service-paths">
-    <div class="service-paths-inner">
-      <div class="service-paths-grid">
-        <!-- Counseling card — lavender -->
-        <a href="/contact-us" class="card-wrap">
-          <article class="card card--counseling">
-            <p class="card-kicker">Counseling &amp; Therapy</p>
-            <h2 class="card-title">Meet with a counselor</h2>
-            <p class="card-text">
-              Individual, couples, and family counseling in Coeur d'Alene,
-              Priest River, Ponderay, and Oldtown, with teletherapy available
-              anywhere in Idaho.
-            </p>
-            <span class="btn-outline btn-outline--counseling">
-              Request a counseling appointment →
-            </span>
-          </article>
-        </a>
-
-        <!-- Medication card — sage -->
-        <a href="/psychiatry" class="card-wrap">
-          <article class="card card--medication">
-            <p class="card-kicker card-kicker--medication">
-              Medication Management
-            </p>
-            <h2 class="card-title">Meet with a prescriber</h2>
-            <p class="card-text">
-              Medication support for anxiety, depression, ADHD, and related
-              concerns — with in-person visits in Coeur d'Alene and Ponderay,
-              plus telehealth across Idaho.
-            </p>
-            <span class="btn-outline btn-outline--medication">
-              Request a medication appointment →
-            </span>
-          </article>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Team strip -->
-  <section class="team-strip">
-    <div class="team-strip-inner">
-      <p class="team-kicker">Our People</p>
-      <h2 class="team-heading">Meet the team</h2>
-      <div class="team-grid">
-        <a href="/our-team#violet-rudd" class="team-member">
-          <div class="team-avatar">
-            <img
-              src="/images/providers/violet-rudd.jpg"
-              alt="Violet Rudd"
-              loading="lazy"
-            />
-          </div>
-          <p class="team-name">Violet Rudd</p>
-          <p class="team-role">LMFT, Clinical Director</p>
-        </a>
-
-        <a href="/our-team#jared-bruder" class="team-member">
-          <div class="team-avatar">
-            <img
-              src="/images/providers/jared-bruder.jpg"
-              alt="Jared Bruder"
-              loading="lazy"
-              style="object-position: center 20%;"
-            />
-          </div>
-          <p class="team-name">Jared Bruder</p>
-          <p class="team-role">PMHNP</p>
-        </a>
-
-        <a href="/our-team#duann-chambers" class="team-member">
-          <div class="team-avatar">
-            <img
-              src="/images/providers/duann-chambers.jpg"
-              alt="DuAnn Chambers"
-              loading="lazy"
-            />
-          </div>
-          <p class="team-name">DuAnn Chambers</p>
-          <p class="team-role">LMFT</p>
-        </a>
-
-        <a href="/our-team#perry-broomfield" class="team-member">
-          <div class="team-avatar">
-            <img
-              src="/images/providers/perry-broomfield.jpg"
-              alt="Perry Broomfield"
-              loading="lazy"
-            />
-          </div>
-          <p class="team-name">Perry Broomfield</p>
-          <p class="team-role">LMSW</p>
-        </a>
-
-        <a href="/our-team#kevin-dayton" class="team-member">
-          <div class="team-avatar">
-            <img
-              src="/images/providers/kevin-dayton.jpg"
-              alt="Kevin Dayton"
-              loading="lazy"
-              style="object-position: center 20%;"
-            />
-          </div>
-          <p class="team-name">Kevin Dayton</p>
-          <p class="team-role">LCSW</p>
-        </a>
-
-        <a href="/our-team#mark-tetzlaff" class="team-member">
-          <div class="team-avatar">
-            <img
-              src="/images/providers/mark-tetzlaff.jpg"
-              alt="Mark Tetzlaff"
-              loading="lazy"
-            />
-          </div>
-          <p class="team-name">Mark Tetzlaff</p>
-          <p class="team-role">LMSW</p>
-        </a>
-
-        <a href="/our-team#beverly-oh" class="team-member">
-          <div class="team-avatar">
-            <img
-              src="/images/providers/beverly-oh.jpg"
-              alt="Beverly Oh"
-              loading="lazy"
-            />
-          </div>
-          <p class="team-name">Beverly Oh</p>
-          <p class="team-role">LPC</p>
-        </a>
-
-        <a href="/our-team#brandi-sanchez" class="team-member">
-          <div class="team-avatar">
-            <img
-              src="/images/providers/BrandiSanchez.jpg"
-              alt="Brandi Sanchez"
-              loading="lazy"
-              style="object-position: center 20%;"
-            />
-          </div>
-          <p class="team-name">Brandi Sanchez</p>
-          <p class="team-role">LMSW</p>
-        </a>
-
-        <a href="/our-team#zusje-greeff" class="team-member">
-          <div class="team-avatar">
-            <img
-              src="/images/providers/zusje-greeff.jpeg"
-              alt="Zusje Greeff"
-              loading="lazy"
-              style="object-position: center 10%;"
-            />
-          </div>
-          <p class="team-name">Zusje Greeff</p>
-          <p class="team-role">LMSW</p>
-        </a>
-      </div>
-      <a href="/our-team" class="team-cta">Meet the full team →</a>
-    </div>
-  </section>
-
-  <!-- Care guidance -->
-  <section class="care-guidance">
-    <div class="care-guidance-inner">
-      <a href="/contact-us" class="care-guidance-link">
-        <div class="care-guidance-card">
-          <h2>Not sure where to start?</h2>
+      <div class="hero-inner">
+        <div class="hero-text">
+          <h1>A STEADIER WAY FORWARD</h1>
           <p>
-            Some people are looking for counseling. Others want to explore
-            whether medication could help with anxiety, depression, ADHD, or
-            other concerns. We can help you figure out the right starting point.
+            Counseling and psychiatric medication management in Coeur d'Alene,
+            Idaho. Thoughtful care for individuals, couples, and families.
           </p>
-          <span class="btn-filled">Get Started →</span>
+          <a href="/contact-us" class="btn-hero">Contact Us</a>
         </div>
-      </a>
-    </div>
-  </section>
+      </div>
+    </section>
 
-  <!-- About -->
-  <section class="about-mwrs">
-    <div class="about-inner">
-      <h2>Thoughtful mental health care in North Idaho</h2>
-      <p>
-        Mental Wellness &amp; Relationship Services (MWRS) provides counseling,
-        equine-assisted therapy, and psychiatric medication management to
-        individuals, couples, and families across North Idaho from our offices
-        in Coeur d'Alene, Priest River, Ponderay, and Oldtown — with telehealth
-        available statewide.
-      </p>
-    </div>
-  </section>
+    <!-- Service paths -->
+    <section class="service-paths">
+      <div class="service-paths-inner">
+        <div class="service-paths-grid">
+
+          <!-- Counseling card — lavender -->
+          <a href="/contact-us" class="card-wrap">
+            <article class="card card--counseling">
+              <p class="card-kicker">Counseling &amp; Therapy</p>
+              <h2 class="card-title">Meet with a counselor</h2>
+              <p class="card-text">
+                Individual, couples, and family counseling in Coeur d'Alene,
+                Priest River, Ponderay, and Oldtown, with teletherapy available
+                anywhere in Idaho.
+              </p>
+              <span class="btn-outline btn-outline--counseling">
+                Request a counseling appointment →
+              </span>
+            </article>
+          </a>
+
+          <!-- Medication card — sage -->
+          <a href="/psychiatry" class="card-wrap">
+            <article class="card card--medication">
+              <p class="card-kicker card-kicker--medication">
+                Medication Management
+              </p>
+              <h2 class="card-title">Meet with a prescriber</h2>
+              <p class="card-text">
+                Medication support for anxiety, depression, ADHD, and related
+                concerns — with in-person visits in Coeur d'Alene and Ponderay,
+                plus telehealth across Idaho.
+              </p>
+              <span class="btn-outline btn-outline--medication">
+                Request a medication appointment →
+              </span>
+            </article>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Team strip -->
+    <section class="team-strip">
+      <div class="team-strip-inner">
+        <p class="team-kicker">Our People</p>
+        <h2 class="team-heading">Meet the team</h2>
+        <div class="team-grid">
+
+          <a href="/our-team#violet-rudd" class="team-member">
+            <div class="team-avatar">
+              <img src="/images/providers/violet-rudd.jpg" alt="Violet Rudd" loading="lazy" width="88" height="88" />
+            </div>
+            <p class="team-name">Violet Rudd</p>
+            <p class="team-role">LMFT, Clinical Director</p>
+          </a>
+
+          <a href="/our-team#jared-bruder" class="team-member">
+            <div class="team-avatar">
+              <img src="/images/providers/jared-bruder.jpg" alt="Jared Bruder" loading="lazy" width="88" height="88" style="object-position: center 20%;" />
+            </div>
+            <p class="team-name">Jared Bruder</p>
+            <p class="team-role">PMHNP</p>
+          </a>
+
+          <a href="/our-team#duann-chambers" class="team-member">
+            <div class="team-avatar">
+              <img src="/images/providers/duann-chambers.jpg" alt="DuAnn Chambers" loading="lazy" width="88" height="88" />
+            </div>
+            <p class="team-name">DuAnn Chambers</p>
+            <p class="team-role">LMFT</p>
+          </a>
+
+          <a href="/our-team#perry-broomfield" class="team-member">
+            <div class="team-avatar">
+              <img src="/images/providers/perry-broomfield.jpg" alt="Perry Broomfield" loading="lazy" width="88" height="88" />
+            </div>
+            <p class="team-name">Perry Broomfield</p>
+            <p class="team-role">LMSW</p>
+          </a>
+
+          <a href="/our-team#kevin-dayton" class="team-member">
+            <div class="team-avatar">
+              <img src="/images/providers/kevin-dayton.jpg" alt="Kevin Dayton" loading="lazy" width="88" height="88" style="object-position: center 20%;" />
+            </div>
+            <p class="team-name">Kevin Dayton</p>
+            <p class="team-role">LCSW</p>
+          </a>
+
+          <a href="/our-team#mark-tetzlaff" class="team-member">
+            <div class="team-avatar">
+              <img src="/images/providers/mark-tetzlaff.jpg" alt="Mark Tetzlaff" loading="lazy" width="88" height="88" />
+            </div>
+            <p class="team-name">Mark Tetzlaff</p>
+            <p class="team-role">LMSW</p>
+          </a>
+
+          <a href="/our-team#beverly-oh" class="team-member">
+            <div class="team-avatar">
+              <img src="/images/providers/beverly-oh.jpg" alt="Beverly Oh" loading="lazy" width="88" height="88" />
+            </div>
+            <p class="team-name">Beverly Oh</p>
+            <p class="team-role">LPC</p>
+          </a>
+
+          <a href="/our-team#brandi-sanchez" class="team-member">
+            <div class="team-avatar">
+              <img src="/images/providers/BrandiSanchez.jpg" alt="Brandi Sanchez" loading="lazy" width="88" height="88" style="object-position: center 20%;" />
+            </div>
+            <p class="team-name">Brandi Sanchez</p>
+            <p class="team-role">LMSW</p>
+          </a>
+
+          <a href="/our-team#zusje-greeff" class="team-member">
+            <div class="team-avatar">
+              <img src="/images/providers/zusje-greeff.jpeg" alt="Zusje Greeff" loading="lazy" width="88" height="88" style="object-position: center 10%;" />
+            </div>
+            <p class="team-name">Zusje Greeff</p>
+            <p class="team-role">LMSW</p>
+          </a>
+
+        </div>
+        <a href="/our-team" class="team-cta">Meet the full team →</a>
+      </div>
+    </section>
+
+    <!-- Care guidance -->
+    <section class="care-guidance">
+      <div class="care-guidance-inner">
+        <a href="/contact-us" class="care-guidance-link">
+          <div class="care-guidance-card">
+            <h2>Not sure where to start?</h2>
+            <p>
+              Some people are looking for counseling. Others want to explore
+              whether medication could help with anxiety, depression, ADHD, or
+              other concerns. We can help you figure out the right starting point.
+            </p>
+            <span class="btn-filled">Get Started →</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="about-mwrs">
+      <div class="about-inner">
+        <h2>Thoughtful mental health care in North Idaho</h2>
+        <p>
+          Mental Wellness &amp; Relationship Services (MWRS) provides counseling,
+          equine-assisted therapy, and psychiatric medication management to
+          individuals, couples, and families across North Idaho from our offices
+          in Coeur d'Alene, Priest River, Ponderay, and Oldtown — with telehealth
+          available statewide.
+        </p>
+      </div>
+    </section>
+
+  </main>
 
   <style>
     /* ── Hero ─────────────────────────────────────────── */
