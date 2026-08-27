@@ -7,15 +7,14 @@ import Layout from "../layouts/Layout.astro";
   description="Learn how billing, insurance, and online payments work at Mental Wellness & Relationship Services (MWRS), including how to pay your bill securely online."
 >
   <main class="billing-page">
-
     <!-- Hero -->
     <section class="subpage-hero">
       <div class="section-inner">
         <h1>Billing &amp; Payments</h1>
         <p>
-          This page outlines how billing works at Mental Wellness
-          &amp; Relationship Services (MWRS), including insurance,
-          statements, and options for paying your bill online.
+          This page outlines how billing works at Mental Wellness &amp;
+          Relationship Services (MWRS), including insurance, statements, and
+          options for paying your bill online.
         </p>
         <a
           href="https://mwrsllc.clientsecure.me/"
@@ -26,11 +25,11 @@ import Layout from "../layouts/Layout.astro";
           SimplePractice Client Portal
         </a>
         <p class="billing-note">
-          <strong>Note:</strong> This billing portal is hosted by our practice
-          management system (SimplePractice). To view statements or make a
-          payment, you will be prompted to sign in or recover access to your
-          client account. Payment information is processed securely through
-          SimplePractice and is not stored on our website.
+          <strong>Note:</strong> This billing portal is hosted by our practice management
+          system (SimplePractice). To view statements or make a payment, you will
+          be prompted to sign in or recover access to your client account. Payment
+          information is processed securely through SimplePractice and is not stored
+          on our website.
         </p>
       </div>
     </section>
@@ -46,22 +45,38 @@ import Layout from "../layouts/Layout.astro";
           portion is your responsibility.
         </p>
         <p>
-          If you owe a copay, coinsurance, or deductible amount, you may
-          receive a statement by mail or email. You can pay your balance
-          online, by phone, or by mailing a check to our main office.
+          If you owe a copay, coinsurance, or deductible amount, you may receive
+          a statement by mail or email. You can pay your balance online, by
+          phone, or by mailing a check to our main office.
         </p>
         <ul>
           <li>Insurance is billed after each eligible visit.</li>
-          <li>Your plan's EOB is the final word on what they will pay and what is assigned to you.</li>
-          <li>Statements are sent when there is a remaining balance after insurance.</li>
+          <li>
+            Your plan's EOB is the final word on what they will pay and what is
+            assigned to you.
+          </li>
+          <li>
+            Statements are sent when there is a remaining balance after
+            insurance.
+          </li>
           <li>You can pay online, by phone, or by check.</li>
         </ul>
-
+        <h2>Sliding Fee Discount Program</h2>
+        <p>
+          MWRS offers a Sliding Fee Discount Program for eligible patients based
+          on household size and income. The program is available to eligible
+          insured, uninsured, and underinsured patients.
+        </p>
+        <p>No one will be denied access to services due to inability to pay.</p>
+        <p>
+          Additional information and applications are available by contacting
+          our administrative team.
+        </p>
         <h2>If something on your bill doesn't look right</h2>
         <p>
-          Billing can be confusing, and it's okay to ask questions. If you
-          have concerns about a charge, need a copy of a statement, or want
-          to talk through options, our admin team is glad to help.
+          Billing can be confusing, and it's okay to ask questions. If you have
+          concerns about a charge, need a copy of a statement, or want to talk
+          through options, our admin team is glad to help.
         </p>
       </div>
     </section>
@@ -71,9 +86,9 @@ import Layout from "../layouts/Layout.astro";
       <div class="section-inner">
         <h2>Questions about a statement?</h2>
         <p>
-          If you have questions about a statement, charges, or payment
-          options, you can send a quick billing message below and our admin
-          team will follow up.
+          If you have questions about a statement, charges, or payment options,
+          you can send a quick billing message below and our admin team will
+          follow up.
         </p>
 
         <div class="billing-center">
@@ -94,7 +109,11 @@ import Layout from "../layouts/Layout.astro";
           >
             <input type="hidden" name="subject" value="Billing questions" />
             <input type="hidden" name="form_name" value="Billing questions" />
-            <input type="hidden" name="_redirect" value="https://mwrservices.org/thank-you" />
+            <input
+              type="hidden"
+              name="_redirect"
+              value="https://mwrservices.org/thank-you"
+            />
 
             <div class="form-field">
               <label for="billing-name">Name</label>
@@ -112,14 +131,15 @@ import Layout from "../layouts/Layout.astro";
             </div>
 
             <div class="form-field">
-              <label for="billing-message">Briefly describe your billing question</label>
+              <label for="billing-message"
+                >Briefly describe your billing question</label
+              >
               <textarea
                 id="billing-message"
                 name="message"
                 rows="3"
                 placeholder="Statement date, amount, or what doesn't look right."
-                required
-              ></textarea>
+                required></textarea>
             </div>
 
             <button type="submit" class="btn-outline btn-outline--counseling">
@@ -129,7 +149,6 @@ import Layout from "../layouts/Layout.astro";
         </div>
       </div>
     </section>
-
   </main>
 
   <style>
@@ -268,8 +287,11 @@ import Layout from "../layouts/Layout.astro";
       text-decoration: none;
       background: #ffffff;
       box-shadow: 0 6px 16px rgba(15, 23, 42, 0.12);
-      transition: background 0.15s ease, color 0.15s ease,
-        box-shadow 0.15s ease, transform 0.15s ease;
+      transition:
+        background 0.15s ease,
+        color 0.15s ease,
+        box-shadow 0.15s ease,
+        transform 0.15s ease;
       cursor: pointer;
       font-family: inherit;
     }
@@ -328,7 +350,9 @@ import Layout from "../layouts/Layout.astro";
       font-family: inherit;
       background: #f9fafb;
       outline: none;
-      transition: border-color 0.15s ease, box-shadow 0.15s ease,
+      transition:
+        border-color 0.15s ease,
+        box-shadow 0.15s ease,
         background 0.15s ease;
     }
 
